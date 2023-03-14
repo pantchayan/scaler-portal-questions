@@ -1,0 +1,2 @@
+Create an About me Section that contains person's image, necessary heading, intro, description, and social profile links 
+using relevant section, div, anchor, image and paragraph tags.

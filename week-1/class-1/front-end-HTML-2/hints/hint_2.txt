@@ -1,0 +1,4 @@
+Use the <h1> tag for heading.
+Use the <h3> tag for intro.
+Use the <p> tag for description text.
+Use <a> tags with enclosed <img> tags to add links to social profiles with relevant logos.

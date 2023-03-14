@@ -1,0 +1,6 @@
+Start by creating the basic structure of the HTML document using the <html>, <head>, and <body> tags.
+Add a <section> that will contain all the About Me components.
+To add person's image utilise <img> tag with proper 'src' and 'alt' attributes.
+Use <h1>, <h3> and <p> tags to specify heading, intro and decription text respectively.
+Use multiple <a> tags with enclosed <img> tags, to add links to social profiles with relevant logos.
+Further, you can divide and group different components under <div> tags as a good coding practice.
