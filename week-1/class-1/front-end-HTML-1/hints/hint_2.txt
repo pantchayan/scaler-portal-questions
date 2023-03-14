@@ -1,0 +1,4 @@
+Use the <h1> tags for name.
+Use the <h2> tag for Intro.
+Use the <h3> tag for Description heading.
+Use the <button> tag for adding a button to download resume

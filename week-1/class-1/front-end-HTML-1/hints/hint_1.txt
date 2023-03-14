@@ -1,0 +1,3 @@
+Use <a> tags for the redirectable options in Nav bar.
+Use the <img> tag to add an image to the webpage.
+Use the 'src' and 'alt' attributes of the <img> tag to specify the source and alternate text of the image respectively.

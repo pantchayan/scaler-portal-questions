@@ -1,0 +1,7 @@
+Start by creating the basic structure of the HTML document using the <html>, <head>, and <body> tags.
+Add a <header> section that will contain the Nav bar and Necesssary Details about the person.
+Inside <header> section add two <div> tags, one for Nav bar and other for person details.
+Use 4 <a> tags in Nav bar <div> to specify 4 redirectable options.
+Add person's image in second <div> using <img> tag with proper 'src' and 'alt' attributes.
+Use <h1>, <h2>, <h3> tags to specify person's Name, Intro, Description heading respectively.
+Finally, use <button> tag to add a button to download resume.

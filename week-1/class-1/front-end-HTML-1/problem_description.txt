@@ -1,0 +1,2 @@
+Create a simple Nav bar and Header section with just using plain HTML make the all the options redirectable , 
+upload a profile Image of a person for whom the portfolio is being created and add necessary details about the Person. 
