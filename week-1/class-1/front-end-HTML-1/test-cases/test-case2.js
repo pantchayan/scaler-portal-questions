@@ -1,33 +1,24 @@
 // Description:
 // Verify that the webpage has atleast one <a> tag making up the nav-bar.
-
 const puppeteer = require("puppeteer");
 
-describe("App.js", () => {
-  let browser;
-  let page;
+let browser;
 
-  const width = 1440;
-  const height = 700;
-
-  beforeEach(async () => {
-    browser = await puppeteer.launch({
-      headless: true,
-      slowMo: 25,
-      args: [`--window-size=${width},${height}`],
-      defaultViewport: {
-        width,
-        height,
-      },
-    });
-    page = await browser.newPage();
-    await page.goto("http://localhost:3000");
-  }, 100000);
-
-  it("Contains atleast one <a> tag making up the nav-bar.", async () => {
-    const heading = await page.$("a");
-    expect(heading).toBeTruthy();
+beforeAll(async () => {
+  browser = await puppeteer.launch({
+    executablePath: process.env.CHROMIUM_PATH,
+    args: ["--no-sandbox"], // This was important. Can't remember why
   });
+});
 
-  afterAll(() => browser.close());
+afterAll(async () => {
+  await browser.close();
+});
+
+test("Contains atleast one <a> tag making up the nav-bar.", async () => {
+  const page = await browser.newPage();
+  await page.goto("http://localhost:8080");
+
+  const heading = await page.$("a");
+  expect(heading).toBeTruthy();
 });

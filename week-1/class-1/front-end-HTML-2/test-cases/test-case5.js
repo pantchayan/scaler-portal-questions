@@ -1,32 +1,25 @@
 // Description:
 // Verify that the webpage has a paragraph of text using the <p> tag that contains description text.
+
 const puppeteer = require("puppeteer");
 
-describe("App.js", () => {
-  let browser;
-  let page;
+let browser;
 
-  const width = 1440;
-  const height = 700;
-
-  beforeEach(async () => {
-    browser = await puppeteer.launch({
-      headless: true,
-      slowMo: 25,
-      args: [`--window-size=${width},${height}`],
-      defaultViewport: {
-        width,
-        height,
-      },
-    });
-    page = await browser.newPage();
-    await page.goto("http://localhost:3000");
-  }, 100000);
-
-  it("has <p> tag for description text.", async () => {
-    const pHandles = await page.$("p");
-    expect(pHandles).toBeTruthy();
+beforeAll(async () => {
+  browser = await puppeteer.launch({
+    executablePath: process.env.CHROMIUM_PATH,
+    args: ["--no-sandbox"], // This was important. Can't remember why
   });
+});
 
-  afterAll(() => browser.close());
+afterAll(async () => {
+  await browser.close();
+});
+
+test("has <p> tag for description text", async () => {
+  const page = await browser.newPage();
+  await page.goto("http://localhost:8080");
+
+  const pHandles = await page.$("p");
+  expect(pHandles).toBeTruthy();
 });
