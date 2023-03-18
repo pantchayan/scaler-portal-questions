@@ -1,0 +1,5 @@
+Create the  ‘Get in Touch’ Form for your portfolio which should include the following: 
+1. Name input section 
+2. Email input section 
+3. Message input section 
+4. and a submit button

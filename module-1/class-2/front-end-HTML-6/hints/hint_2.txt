@@ -1,0 +1,5 @@
+For message input use <textarea> tag.
+For submit button use <input> tag with type as 'submit' and value as 'Send'.
+Enclose the input tags in seperate <label> tags.
+Use <span> tag above <input> tags to add the description of input.
+Specify relevant placeholders for each input.

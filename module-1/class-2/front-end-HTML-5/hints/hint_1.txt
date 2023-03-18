@@ -1,0 +1,2 @@
+Use the appropriate input type for each field.
+Use labels to associate each field with its respective input element.

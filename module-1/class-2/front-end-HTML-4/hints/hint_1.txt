@@ -1,0 +1,2 @@
+Use the table element to create the table structure.
+Use the thead and tbody elements to create the header and data sections of the table.

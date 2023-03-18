@@ -1,0 +1,4 @@
+Use the <section> tag that contains all the projects' components.
+Use the <h1> tag for section heading 'My Projects'.
+Group all the components for each project in seperate <div> tags.
+Use the <img> tag to add a logo for the project.

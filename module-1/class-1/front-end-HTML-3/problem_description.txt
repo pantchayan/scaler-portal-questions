@@ -1,0 +1,1 @@
+Create a Projects section where projects will be showcased with necessary headings, divs and Images with project logos and project description.

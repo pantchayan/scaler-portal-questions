@@ -1,0 +1,3 @@
+Use the 'src' and 'alt' attributes of the <img> tag to specify the source and alternate text of the image respectively.
+Use the <h2> tag for project heading.
+Use the <p> tag for project description.

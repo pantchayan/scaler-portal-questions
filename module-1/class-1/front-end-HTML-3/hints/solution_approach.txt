@@ -1,0 +1,7 @@
+Start by creating the basic structure of the HTML document using the <html>, <head>, and <body> tags.
+Add a <section> that will contain all the projects' components.
+Use <h1> tag to specify the heading for the section as 'My Projects'.
+Add a <div> tag, this will contain all the required project components for a single project.
+Inside the <div> tag, add <img>, <h2> and <p> tags to specify project's logo, heading and description respectively.
+Repeat the last two steps to add details for multiple projects.
+You can further divide and group different components under <div> tags as a good coding practice. 

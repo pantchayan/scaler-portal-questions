@@ -1,0 +1,9 @@
+Start by creating the basic structure of the form using the <form> element.
+Add a text input for the name field and associate it with a label.
+Add a number input for the age field and associate it with a label.
+Add radio buttons for the gender field and associate them with a label.
+Add a drop-down list for the favorite food field and associate it with a label.
+Add a checkbox for the "Do you like to cook?" field and associate it with a label.
+Add a textarea for the additional comments field and associate it with a label.
+Add a submit button to submit the form data.
+Add the action and method attributes to the form.

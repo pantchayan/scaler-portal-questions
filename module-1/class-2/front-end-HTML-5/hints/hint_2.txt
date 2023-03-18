@@ -1,0 +1,2 @@
+The form should have an action attribute that specifies where the form data should be sent when submitted.
+The form should have a method attribute that specifies how the form data should be submitted.

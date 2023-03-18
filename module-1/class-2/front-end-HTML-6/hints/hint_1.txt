@@ -1,0 +1,5 @@
+Use the <section> tag that contains the form.
+Use the <h1> tag for section heading 'Get in Touch'.
+Use the <form> tag to make the described form.
+For name input use <input> tag with type as 'text'.
+For email input use <input> tag with type as 'email'.

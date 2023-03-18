@@ -1,0 +1,3 @@
+Create the HTML structure of the table using the table, thead, tbody, tr, and td elements.
+Add the header information to the table using the th element inside the header row.
+Add the data for the 5 books to the table.
