@@ -1,0 +1,3 @@
+In the style.css file, use '*' selector to select all the HTML elements and then set their font-family as 'Lato', san-serif. 
+Further use 'header h1' as selector to grab the font with Person's Name and set its color property as '#5DA9E9'.
+At last select the image in header section using 'header img' and set its width property as '30%'. 

@@ -1,0 +1,2 @@
+1. Use concept of CSS selectors to grab the required HTML element.
+2. Use concepts and properties like: font-family, color, width and CSS units.
