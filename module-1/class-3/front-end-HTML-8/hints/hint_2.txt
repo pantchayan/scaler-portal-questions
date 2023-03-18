@@ -1,0 +1,2 @@
+Use HSL values to specify colors using hue, saturation, and lightness values.
+Use RGBA and HSLA values to set the opacity of colors.

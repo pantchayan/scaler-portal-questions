@@ -1,0 +1,3 @@
+Use color keywords to set the color of text and background.
+Use RGB values to specify colors using red, green, and blue values.
+Use HEX values to specify colors using a combination of hexadecimal digits.

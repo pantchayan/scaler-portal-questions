@@ -1,0 +1,2 @@
+Use attribute selectors to select elements based on the values of their attributes.
+Use pseudo-class selectors to select elements based on their state or position.

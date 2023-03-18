@@ -1,0 +1,3 @@
+Identify the elements that need to be styled.
+Determine the appropriate selector for each element.
+Write the CSS code to style the elements using the selected selectors.

@@ -19,7 +19,7 @@
         </div>
         <!-- Necessary Details -->
         <div>
-            <img src="./assets/profile-img.jpg" alt="Profile1">
+            <img src="profile-img.jpg" alt="Profile1">
             <h1>{PERSON_NAME}</h1>
             <h2>I'm a Frontend<br> <span>Developer</span></h2>
             <h3>Description:</h3>

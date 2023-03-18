@@ -1,0 +1,3 @@
+Identify the elements that need to be styled with different colors.
+Decide on the type of color value to use for each element.
+Write the CSS code to set the color of each element using the chosen color value. 

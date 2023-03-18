@@ -1,0 +1,3 @@
+Use type selectors to select HTML elements by their element type.
+Use class selectors to select elements by their class attribute.
+Use ID selectors to select elements by their id attribute.
