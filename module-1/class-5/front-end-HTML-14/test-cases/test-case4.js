@@ -1,7 +1,5 @@
 // Description:
-// Verify that the Color of link (a) is 'hsla(0, 100%, 50%, 0.8)' when hovered over -->
-
-
+// Verify that flex-wrap property is used to control the wrapping of items.
 const puppeteer = require("puppeteer");
 
 let browser;
@@ -17,18 +15,16 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Color of link (a) is 'hsla(0, 100%, 50%, 0.8)' when hovered over", async () => {
+test("Verify that flex-wrap property is used to control the wrapping of items.", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let aHandle = body.querySelector("a");
+    let box = body.querySelector(".container");
 
-    return (
-      window.getComputedStyle(aHandle, ":hover").color === "rgb(0, 0, 238)"
-    );
+    return window.getComputedStyle(box).flexWrap === "wrap";
   }, body);
 
   expect(check).toBeTruthy();

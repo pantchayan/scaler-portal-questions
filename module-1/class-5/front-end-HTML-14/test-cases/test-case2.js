@@ -1,5 +1,5 @@
 // Description:
-// Verify if the box is displayed with a width of 400px and a height of 200px.
+// Verify that justify-content property is used to control the alignment along the main axis.
 const puppeteer = require("puppeteer");
 
 let browser;
@@ -15,19 +15,16 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("the box is displayed with a width of 400px and a height of 200px.", async () => {
+test("Verify that justify-content property is used to control the alignment along the main axis.", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let box = body.querySelector(".box");
+    let box = body.querySelector(".container");
 
-    return (
-      window.getComputedStyle(box).width === "400px" &&
-      window.getComputedStyle(box).height === "200px"
-    );
+    return window.getComputedStyle(box).justifyContent === "center";
   }, body);
 
   expect(check).toBeTruthy();
