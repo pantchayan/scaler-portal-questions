@@ -1,0 +1,5 @@
+Create a container element to display the box.
+Set the width and height of the box using the width and height properties.
+Add a border to the box using the border property.
+Add a margin and padding to the box using the margin and padding properties.
+Set the background color of the box using the background-color property.

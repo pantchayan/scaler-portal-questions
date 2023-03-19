@@ -1,0 +1,2 @@
+Use the width and height properties to set the width and height of the box.
+Use the border property to add a border to the box.
