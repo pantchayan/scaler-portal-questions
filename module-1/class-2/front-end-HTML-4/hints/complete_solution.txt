@@ -1,35 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
+
 <body>
-    <!-- Projects Section -->
-    <section>
-        <div>
-            <h1>My Projects</h1>
-            <p>I mostly work with HTML, CSS, JavaScript</p>
-            <div>
-                <div>
-                    <img src="" alt="Project1">
-                    <h2>Project 1</h2>
-                    <p>Project 1 description.</p>
-                </div>
-                <div>
-                    <img src="" alt="Project2">
-                    <h2>Project 2</h2>
-                    <p>Project 2 description.</p>
-                </div>
-                <div>
-                    <img src="" alt="Project3">
-                    <h2>Project 3</h2>
-                    <p>Project 3 description.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Publication Date</th>
+                <th>Pages</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>The Great Gatsby</td>
+                <td>F. Scott Fitzgerald</td>
+                <td>April 10, 1925</td>
+                <td>180</td>
+            </tr>
+            <tr>
+                <td>To Kill a Mockingbird</td>
+                <td>Harper Lee</td>
+                <td>July 11, 1960</td>
+                <td>281</td>
+            </tr>
+            <tr>
+                <td>1984</td>
+                <td>George Orwell</td>
+                <td>June 8, 1949</td>
+                <td>326</td>
+            </tr>
+            <tr>
+                <td>Pride and Prejudice</td>
+                <td>Jane Austen</td>
+                <td>January 28, 1813</td>
+                <td>282</td>
+            </tr>
+            <tr>
+                <td>The Catcher in the Rye</td>
+                <td>J.D. Salinger</td>
+                <td>July 16, 1951</td>
+                <td>277</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
+
 </html>
