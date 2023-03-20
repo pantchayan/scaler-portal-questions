@@ -1,5 +1,5 @@
 // Description:
-// Verify that the first box is positioned static.
+// Verify that flex-wrap property is used to control the wrapping of items.
 const puppeteer = require("puppeteer");
 
 let browser;
@@ -15,16 +15,16 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the first box is positioned static.", async () => {
+test("Verify that flex-wrap property is used to control the wrapping of items.", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let box = body.querySelector(".static");
+    let box = body.querySelector(".container");
 
-    return window.getComputedStyle(box).position === "static";
+    return window.getComputedStyle(box).flexWrap === "wrap";
   }, body);
 
   expect(check).toBeTruthy();

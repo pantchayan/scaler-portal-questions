@@ -1,5 +1,5 @@
 // Description:
-// Verify that flex-wrap property is used to control the wrapping of items.
+// Verify that the first box is positioned relative.
 const puppeteer = require("puppeteer");
 
 let browser;
@@ -15,16 +15,16 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that flex-wrap property is used to control the wrapping of items.", async () => {
+test("Verify that the first box is positioned relative.", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let box = body.querySelector(".container");
+    let box = body.querySelector(".relative");
 
-    return window.getComputedStyle(box).flexWrap === "wrap";
+    return window.getComputedStyle(box).position === "relative";
   }, body);
 
   expect(check).toBeTruthy();

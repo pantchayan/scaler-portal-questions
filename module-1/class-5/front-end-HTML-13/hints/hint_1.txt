@@ -1,2 +1,4 @@
-Use the position property to set the position of the boxes.
-Use top, left, bottom, and right properties to adjust the position of the boxes relative to their parent container. -->
+
+Use display: flex to turn an element into a flex container.
+Use flex-direction property to control the direction of the main axis.
+Use justify-content property to control the alignment along the main axis.

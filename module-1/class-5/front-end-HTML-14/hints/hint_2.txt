@@ -1,2 +1,0 @@
-Use align-items property to control the alignment along the cross axis.
-Use flex-wrap property to control the wrapping of items.

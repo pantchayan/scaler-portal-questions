@@ -1,5 +1,5 @@
 // Description:
-// Verify that the first box is positioned fixed.
+// Verify that align-items property is used to control the alignment along the cross axis.
 const puppeteer = require("puppeteer");
 
 let browser;
@@ -15,16 +15,16 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the first box is positioned fixed.", async () => {
+test("Verify that align-items property is used to control the alignment along the cross axis.", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let box = body.querySelector(".fixed");
+    let box = body.querySelector(".container");
 
-    return window.getComputedStyle(box).position === "fixed";
+    return window.getComputedStyle(box).alignItems === 'center'
   }, body);
 
   expect(check).toBeTruthy();

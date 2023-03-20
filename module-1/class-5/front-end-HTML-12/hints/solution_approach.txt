@@ -1,0 +1,4 @@
+Create an HTML page with 4 div containers representing each box.
+Apply different position values to each box using the position property.
+Use top, left, bottom, and right properties to adjust the position of each box relative to their parent container.
+Add styling to the boxes to give them a visual appearance.

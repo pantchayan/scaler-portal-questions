@@ -1,3 +1,0 @@
-Decide on the layout that needs to be created using Flexbox.
-Identify the elements that need to be styled as flex containers.
-Write the CSS code to set the values of display, flex-direction, justify-content, align-items, and flex-wrap for each flex container.
