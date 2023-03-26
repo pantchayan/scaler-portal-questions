@@ -1,0 +1,3 @@
+Create a container for the grid layout.
+Use CSS Grid to create a masonry-style grid layout.
+Create HTML tags for each box and add a title and a description.
