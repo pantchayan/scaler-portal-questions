@@ -22,7 +22,7 @@ test("Verify that content inside pin_container is centered using justify-content
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let container = body.querySelector(".pin-container");
+    let container = body.querySelector(".pin_container");
 
     return window.getComputedStyle(container).justifyContent === "center";
   }, body);
