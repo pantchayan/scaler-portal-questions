@@ -22,7 +22,7 @@ test("Verify that position property of pin_container is set to 'absolute'", asyn
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let container = body.querySelector(".pin-container");
+    let container = body.querySelector(".pin_container");
 
     return window.getComputedStyle(container).position === "absolute";
   }, body);
