@@ -22,7 +22,7 @@ test("Verify that display property of pin_container is set to 'grid'", async () 
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let container = body.querySelector(".pin-container");
+    let container = body.querySelector(".pin_container");
 
     return window.getComputedStyle(container).display === "grid";
   }, body);
