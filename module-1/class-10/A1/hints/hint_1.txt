@@ -1,0 +1,3 @@
+Use Map to double all the numbers in the array.
+Use Filter to remove all the numbers that are less than 10.
+Use Reduce to sum up all the remaining numbers in the array.

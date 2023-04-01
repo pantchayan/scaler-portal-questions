@@ -1,0 +1,8 @@
+
+function doubleAndSum(arr) {
+    return arr
+      .map(num => num * 2)
+      .filter(num => num >= 10)
+      .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+}
+  

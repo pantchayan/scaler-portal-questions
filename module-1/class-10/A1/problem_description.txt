@@ -1,0 +1,11 @@
+Problem Description:
+
+You are given an array of numbers. You need to perform the following operations on this array:
+
+Steps:
+Double all the numbers in the array.
+Filter out all the numbers that are less than 10.
+Sum up all the remaining numbers in the array.
+
+WRITE THE CODE INSIDE THE doubleAndSum(arr) FUNCTION
+and RETURN the output.
