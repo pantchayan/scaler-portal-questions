@@ -1,3 +1,10 @@
+// Write your code solution here, inside this function
+function doubleAndSum() {
+  
+}
+
+
+
 // WARNING!!
 // DO NOT CHANGE THIS CODE
 let testProcess = () => {

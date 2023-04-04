@@ -21,14 +21,15 @@ test("Test-case 2", async () => {
 
   const bodyHandle = await page.$("body");
 
-  await page.evaluate(async (body) => {
-    body.querySelector("input").value = "5, 10, 15, 20, 25";
+  await page.evaluate((body) => {
+    let questionDiv = body.querySelector("div.question");
+    questionDiv.innerText = "5, 10, 15, 20, 25";
   }, bodyHandle);
 
   await page.click("button");
-  const check = await page.evaluate(async (body) => {
-    let ans = await body.querySelector("div.solution").innerText;
-    return ans == "150";
+  const check = page.evaluate((body) => {
+    let ansDiv = body.querySelector("div.solution").innerText;
+    return ansDiv == "150";
   }, bodyHandle);
 
   await expect(check).toBeTruthy();
