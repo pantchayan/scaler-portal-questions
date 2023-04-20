@@ -1,0 +1,134 @@
+Basic HTML
+1. Which tag is used to create a numbered list in HTML?
+a) <ol>
+b) <ul>
+c) <li>
+d) <ll>
+
+Answer:
+a) <ol>, it stands for ordered list.
+
+2. Which of the following is not example of block element?
+a) <h1>
+b) <ul>
+c) <p>
+d) <a>
+
+Answer:
+d) <a>
+
+Basic CSS
+3. In how many ways can CSS be written in?
+a) 1
+b) 3
+c) 2
+d) 4
+
+Answer:
+b) 3 CSS can be written in 3 ways: Inline, External, and Internal CSS.
+
+4. How can we select an element with a specific ID in CSS?
+a) #
+b) .
+c) ^
+d) *
+
+Answer:
+a) # : To select an element with ID 'personal', we write '#personal' in CSS.
+
+5. Which of the following CSS properties specifies the stack order of elements?
+a) overlap
+b) z-index
+c) stacked
+d) None of the above
+
+Answer:
+b) The z-index property specifies the stack order of an element.
+
+6. What function is used to insert values of a CSS variable?
+a) var()
+b) variable()
+c) x()
+d) calc()
+
+Answer:
+a) The var() function is used to insert values of a CSS variable. var(--name, value) is the correct syntax of writing the var() function.
+
+CSS Flexbox
+7. flex-direction allows you to do what?
+a) define how elements will wrap when the browser width is changed
+b) define how to position elements vertically
+c) defines how position elements horizontally
+d) define the direction of how elements are positioned based on either row or column
+
+Answer:
+d) define the direction of how elements are positioned based on either row or column
+
+8. How can you center your flex items along the main axis?
+a) align-self: center
+b) justify-content: center
+c) justify-self: center
+d) align-items: center
+
+Answer:
+b) justify-content: center
+
+CSS Grid
+10. You are creating a grid layout. What does 1fr mean in the following code?
+
+grid-template-columns: 150px 150px 1fr 1fr;
+
+a) The first two columns will be two fraction units of the stated width.
+b) The second column will be double the stated width.
+c) The third and fourth columns is 1 fraction unit of the remaining space in the grid.
+d) The second column will be half of the remaining space in the grid.
+
+Answer:
+c) The third and fourth columns is 1 fraction unit of the remaining space in the grid.
+
+11. Which CSS property is used to specify the size of rows in a grid container?
+a) grid-row-start
+b) grid-row-end
+c) grid-template-rows
+d) grid-column-start
+
+Answer: c) grid-template-rows
+
+Media Queries
+12. What is a media query in CSS?
+a) A set of rules that apply to specific devices or screen sizes
+b) A way to declare global styles for a website
+c) A method to hide certain elements from the page
+
+Answer: a) A set of rules that apply to specific devices or screen sizes
+
+13. What is the correct syntax for a media query in CSS?
+a) @media (max-width: 768px) { }
+b) media-query (max-width: 768px) { }
+c) @media screen and (max-width: 768px) { }
+d) None of the above
+
+Answer: c) @media screen and (max-width: 768px) { }
+
+CSS Positions
+13. What is the default value for the position property?
+a) static
+b) relative
+c) absolute
+d) fixed
+
+Answer: a) static
+
+14. Which positioning value is used to position an element relative to the browser window?
+a) static
+b) relative
+c) absolute
+d) fixed
+
+Answer: d) fixed
+
+
+
+
+
+

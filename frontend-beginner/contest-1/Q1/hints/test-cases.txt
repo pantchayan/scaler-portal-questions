@@ -1,0 +1,9 @@
+Test Cases
+Verify that the p element has a font size of 24px.
+Verify that the p element has a text color of red.
+Verify that the p element has a background color of yellow.
+Verify that the p element has a margin of 10px on all sides.
+Verify that the p element has a padding of 20px on all sides.
+Verify that the p element has a 5px solid black border on all sides.
+Verify that the div element has a margin of 50px on all sides.
+Verify that the div element has a 10px dashed blue border on all sides.

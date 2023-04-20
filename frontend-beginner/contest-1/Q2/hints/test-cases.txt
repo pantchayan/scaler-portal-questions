@@ -1,0 +1,5 @@
+Verify that the header section has a height of 50px.
+Verify that the footer section has a height of 50px.
+Verify that the main content section takes up the remaining space.
+Verify that the header and footer sections are horizontally centered.
+Verify that the main content section is vertically centered.

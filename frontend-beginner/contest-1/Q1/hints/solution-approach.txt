@@ -1,0 +1,4 @@
+Create an HTML file named index.html with a div element and a p element inside it.
+Create a CSS file named style.css.
+Use the CSS Box Model to add margins, padding, and borders to the div and p elements.
+Save the files and open index.html in a web browser to view the styled page.

@@ -1,0 +1,27 @@
+You have been tasked with styling a webpage using CSS. 
+Your goal is to use the CSS Box Model to add margins, padding, and borders to various HTML elements.
+
+
+You have a HTML file named index.html with the following elements:
+
+a div element with the id of container
+a p element with the text "Hello, World!" inside the div
+
+Requirements- 
+
+In the CSS file named style.css.
+
+Add the following styles to the p element:
+
+Set the font size to 24px
+Set the text color to red
+Add a background color of yellow
+Add a 10px margin on all sides
+Add a 20px padding on all sides
+Add a 5px solid black border on all sides
+Add the following styles to the div element:
+
+Add a 50px margin on all sides
+Add a 10px dashed blue border on all sides
+
+Open index.html in a web browser to view the styled page.

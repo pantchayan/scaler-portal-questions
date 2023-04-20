@@ -1,0 +1,10 @@
+To create this layout, we can use the CSS flexbox properties. 
+We can create a container element that will hold all the sections of the page. 
+We can set the display property of this container element to "flex" to enable flexbox properties. 
+We can then set the flex direction to "column" so that the header, main content, and footer sections stack vertically.
+To make the header and footer sections horizontally centered, 
+we can set the align-items property of the container element to "center". This will align the items along the horizontal axis. 
+To make the main content section vertically centered, 
+we can set the align-items property of the container element to "center". This will align the items along the vertical axis.
+We can then set the height property of the header and footer sections to a fixed height and set the flex property of the main content section to "1". 
+This will make the main content section take up the remaining space.

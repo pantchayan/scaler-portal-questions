@@ -1,0 +1,4 @@
+Use the margin property to add space between elements.
+Use the padding property to add space inside elements.
+Use the border property to add a border around elements.
+Use the id attribute to target specific elements in your CSS file.

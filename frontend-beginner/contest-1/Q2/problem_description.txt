@@ -1,0 +1,13 @@
+You have been tasked with creating a web page layout using CSS flexbox. 
+The layout should consist of a header section, a main content section, and a footer section. 
+The header and footer sections should have a fixed height, while the main content section should take up the remaining space. 
+The header and footer sections should be horizontally centered, and the main content section should be vertically centered.
+
+How to Approach ->
+Use a container element to hold all the sections of the page.
+Set the display property of the container element to "flex".
+Set the flex direction property of the container element to "column".
+Set the justify-content property of the container element to "center".
+Set the align-items property of the container element to "center".
+Set the height property of the header and footer sections to a fixed height.
+Set the flex property of the main content section to "1".

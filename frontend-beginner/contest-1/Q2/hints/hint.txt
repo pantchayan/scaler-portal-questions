@@ -1,0 +1,7 @@
+We can set the display property of the container element to "flex" to enable flexbox properties. 
+We can then set the flex direction to "column" so that the header, main content, and footer sections stack vertically.
+
+To make the header and footer sections horizontally centered, 
+we can set the justify-content property of the container element to "center". 
+
+we can set the align-items property of the container element to "center". This will align the items along the vertical axis.
