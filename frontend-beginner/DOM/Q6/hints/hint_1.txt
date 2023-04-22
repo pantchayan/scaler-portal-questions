@@ -1,0 +1,3 @@
+1. Add an eventListener of 'change' to the select element to access the filter category.
+2. Use querySelectorAll to get access to an array of all the p elements.
+3. Traverse through the array of p elements and based on the value of selected category, set the style->display property of parentElement.

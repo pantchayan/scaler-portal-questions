@@ -1,0 +1,26 @@
+<!-- Complete Solution : -->
+<script>
+    let filter = document.querySelector('select')
+
+
+    filter.addEventListener('change', function () {
+        let filterValue = filter.value
+
+
+        let allTickets = document.querySelectorAll('p')
+
+        if (filterValue === 'none') {
+            for (let i = 0; i < allTickets.length; i++) {
+                allTickets[i].parentElement.style.display = 'block'
+            }
+        } else {
+            for (let i = 0; i < allTickets.length; i++) {
+                if (allTickets[i].getAttribute('data-category') != filterValue) {
+                    allTickets[i].parentElement.style.display = 'none'
+                } else {
+                    allTickets[i].parentElement.style.display = 'block'
+                }
+            }
+        }
+    })
+</script>

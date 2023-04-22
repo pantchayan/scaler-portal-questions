@@ -1,0 +1,7 @@
+/* complete soluttion */
+
+
+<script>
+    let p = document.querySelector('p')
+    p.innerText= '2 + 2 = 4'
+</script>

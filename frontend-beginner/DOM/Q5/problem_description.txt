@@ -1,0 +1,12 @@
+Write a JavaScript program to perform the following task:
+
+You are given an empty cell. 
+Whenever the mouse enters the cell, 
+a jail should be drawn over it.
+And it should be removed once it leaves.
+
+
+NOTE : 
+Here cursor is reffered as the mouse and the box as the empty cell.
+To draw the jail: 
+Use the background-image provided and set it as background for the cell when the mouse enters the cell.

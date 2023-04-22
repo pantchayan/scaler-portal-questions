@@ -1,6 +1,0 @@
-
-Define the grid container with grid-template-rows and grid-template-columns properties.
-Use grid-template-areas to define the layout of the elements.
-Position the header, navigation, main content area, and footer using grid-column and grid-row properties. -->
-
-

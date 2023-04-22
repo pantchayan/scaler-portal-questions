@@ -1,0 +1,7 @@
+<script>
+    // Use querySelector to select the element
+    let p = document.querySelector('p')
+
+    // Use innerText property to change the equation to '2 + 2 = 4' 
+    p.innerText= '2 + 2 = 4'
+</script>

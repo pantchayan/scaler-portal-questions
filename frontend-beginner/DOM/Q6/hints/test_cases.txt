@@ -1,0 +1,4 @@
+1. Verify that the 'none' filter is working.
+2. Verify that the 'Action' filter is working.
+3. Verify that the 'Romance' filter is working.
+4. Verify that the 'Comedy' filter is working.

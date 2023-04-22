@@ -1,0 +1,1 @@
+Verify that the equation has been changed to '2 + 2 = 4'

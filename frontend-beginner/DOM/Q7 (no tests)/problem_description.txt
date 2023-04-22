@@ -1,0 +1,13 @@
+Write a JavaScript program to keep a check on the password being entered in the given input field.
+
+Make sure that it:
+1. Checks if the capslock is on or off
+    1.1 If its on, it should show "caps on" on the screen, and not allow to type.
+2. It should only allow to type when 'shift' key is pressed down.
+
+i.e., make sure the user can only type when 'shift' is pressed down along with capslock as off.
+
+NOTE :
+Set display property of p element containing "caps on" warning 
+as 'block' to show it, and as 'none' to hide it.
+Use event.preventDefault() on the keypress event to prevent the typing in the input field.

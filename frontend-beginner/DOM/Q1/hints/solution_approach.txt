@@ -1,0 +1,22 @@
+// this method is used to identify and select the Element
+
+    let btn = document.querySelector("button");
+
+// 1. Use eventListener of 'click' on button.
+    btn.addEventListener("click", function () {
+        console.log("button clicked");
+
+        // 2. Utilise createElement to create a new <div> element
+        let divElem = document.createElement("div");
+        //create Element lets you Create a new Element in the DOM
+
+        3. Use innerText property to set text as 'Hello'
+        divElem.innerText = "Hello";
+        // inner text is a property by which you can access and add or remove Text inisde an element
+
+        // 4. Use querySelector and appendChild to add the <div> element to <body>
+        let bodyElem = document.querySelector("body");
+
+        bodyElem.appendChild(divElem);
+        // this method allows you to add new Children inside your selected element
+    });

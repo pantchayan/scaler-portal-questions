@@ -1,0 +1,4 @@
+Add eventListener of 'mouseover' on the cell to draw the jail.
+Use style->background property to set the background image (draw jail).
+Add eventListener of 'mouseout' on the cell to remove the jail.
+Use style->background property to set the background as 'none' (remove jail).

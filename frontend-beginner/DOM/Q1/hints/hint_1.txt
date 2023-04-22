@@ -1,0 +1,4 @@
+Use eventListener of 'click' on button.
+Utilise createElement to create a new <div> element
+Use innerText property to set text as 'Hello'
+Use querySelector and appendChild to add the <div> element to <body> -->

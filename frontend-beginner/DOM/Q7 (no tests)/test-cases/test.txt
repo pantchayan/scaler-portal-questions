@@ -1,0 +1,10 @@
+const bodyHandle = await page.$("body");
+
+  await page.keyboard.press("CapsLock");
+
+  const check = await page.evaluate((body) => {
+    let p = body.querySelector("p");
+    return window.getComputedStyle(p).display != "none";
+  }, bodyHandle);
+
+  expect(check).toBeTruthy();

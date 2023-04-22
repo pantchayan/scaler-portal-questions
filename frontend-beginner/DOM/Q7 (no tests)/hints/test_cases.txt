@@ -1,0 +1,2 @@
+1. Verify that warning text is displayed when capslock is on.
+2. Verify that the user can only type in when Shift key pressed and capslock is off.

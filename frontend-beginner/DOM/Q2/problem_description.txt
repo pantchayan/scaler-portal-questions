@@ -1,0 +1,4 @@
+Problem Description:
+Write a program in JavaScript to do the below mentioned task:
+
+Fix the list of elements by adding the missing element using DOM methods like querySelectorAll and insertBefore.

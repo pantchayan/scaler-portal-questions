@@ -1,0 +1,15 @@
+<script>
+    let cell = document.querySelector('.cell')
+
+    // 1. Add eventListener of 'mouseover' on the cell to draw the jail.
+    cell.addEventListener('mouseover', function () {
+    // 2. Use style->background property to set the background image (draw jail).
+        cell.style.background = 'url(./jail.jpg)'
+    })
+
+    // 3. Add eventListener of 'mouseout' on the cell to remove the jail.
+    cell.addEventListener('mouseout', function () {
+    // 4. Use style->background property to set the background as 'none' (remove jail).
+        cell.style.background = 'none'
+    })
+</script>

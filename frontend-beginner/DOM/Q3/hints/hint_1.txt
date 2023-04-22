@@ -1,0 +1,2 @@
+Use querySelector to select the element
+Use innerText property to change the equation to '2 + 2 = 4' 

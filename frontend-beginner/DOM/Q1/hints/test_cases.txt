@@ -1,0 +1,2 @@
+Verify that a new <div> is added to <body> when button is clicked.
+Verify that the inner text of the <div> is 'Hello'

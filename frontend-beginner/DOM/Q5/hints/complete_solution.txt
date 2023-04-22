@@ -1,0 +1,13 @@
+<!-- Complete Solution -->
+
+<script>
+    let cell = document.querySelector('.cell')
+
+    cell.addEventListener('mouseover', function () {
+        cell.style.background = 'url(.jail.jpg)'
+    })
+
+    cell.addEventListener('mouseout', function () {
+        cell.style.background = 'none'
+    })
+</script>

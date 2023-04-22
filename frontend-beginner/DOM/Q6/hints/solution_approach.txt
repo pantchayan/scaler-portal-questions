@@ -1,0 +1,27 @@
+<!-- Solution Approach : -->
+<script>
+    let filter = document.querySelector('select')
+
+1. Add an eventListener of 'change' to the select element to access the filter category.
+    filter.addEventListener('change', function () {
+        let filterValue = filter.value
+
+2. Use querySelectorAll to get access to an array of all the p elements.
+        let allTickets = document.querySelectorAll('p')
+
+3. Traverse through the array of p elements and based on the value of selected category, set the style->display property of parentElement.
+        if (filterValue === 'none') {
+            for (let i = 0; i < allTickets.length; i++) {
+                allTickets[i].parentElement.style.display = 'block'
+            }
+        } else {
+            for (let i = 0; i < allTickets.length; i++) {
+                if (allTickets[i].getAttribute('data-category') != filterValue) {
+                    allTickets[i].parentElement.style.display = 'none'
+                } else {
+                    allTickets[i].parentElement.style.display = 'block'
+                }
+            }
+        }
+    })
+</script>

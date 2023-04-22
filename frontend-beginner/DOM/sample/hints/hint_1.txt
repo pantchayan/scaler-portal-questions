@@ -1,4 +1,0 @@
-
-Use the grid-template-rows and grid-template-columns properties to set up the grid layout.
-Use grid-column and grid-row properties to position elements within the grid.
-Use grid-template-areas property to organize the layout.

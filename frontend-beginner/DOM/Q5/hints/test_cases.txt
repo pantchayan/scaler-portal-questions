@@ -1,0 +1,2 @@
+1. Verify that the jail is drawn when the mouse hovers over the cell.
+2. Verify that the jail is removed when the mouse exits the cell.

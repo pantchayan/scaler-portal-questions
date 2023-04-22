@@ -1,0 +1,11 @@
+Write a script using JavaScript to make the filter work.
+
+The filter has 4 categories : none, Action, Romance, Comedy
+Each movie card is a div with an h3 and p element.
+The p element has a data-category attribute that hold the information about the category of the movie.
+Use the value of this data-category attribute to filter the movies based on the selected category from the drop down menu.
+
+NOTE:
+If the category is selected as 'none', show all the movies.
+To hide a movie card, change the style->display property of the div to 'none'.
+To show a movie card, change the style->display property of the div to 'block'.
