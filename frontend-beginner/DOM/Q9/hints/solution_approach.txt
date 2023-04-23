@@ -1,0 +1,26 @@
+<!-- Solution Approach -->
+
+<script>
+
+    let redDiv = document.querySelector(".red");
+3. To prevent red alert, utilise a boolean flag to keep account of when yellow box is clicked.  
+    let yellowWasClicked = false;
+
+1. Use 'click' eventListener to each of the boxes. (divs with 'red' and 'yellow' classes)
+
+    redDiv.addEventListener('click', (e) => {
+        if (yellowWasClicked) {
+            yellowWasClicked = false;
+        } else {
+
+2. Use window.alert('desired_msg') to generate an alert.
+            window.alert('red is clicked');
+        }
+    })
+    let yellowDiv = document.querySelector(".yellow");
+    yellowDiv.addEventListener('click', (e) => {
+        yellowWasClicked = true;
+        window.alert('yellow is clicked');
+
+    })
+</script>

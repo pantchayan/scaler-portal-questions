@@ -1,0 +1,19 @@
+
+<!-- Complete Solution -->
+<script>
+
+// Task 1:
+    let allDeleteBtns = document.querySelectorAll('li button');
+
+    for (let i = 0; i < allDeleteBtns.length; i++) {
+        allDeleteBtns[i].addEventListener('click', (e) => {
+            allDeleteBtns[i].parentElement.style.display = 'none';
+        })
+    }
+// Task 2:
+    let removeAllBtn = document.getElementById('all');
+
+    removeAllBtn.addEventListener('click', (e) => {
+        document.querySelector('ul').style.display = 'none';
+    })
+</script>

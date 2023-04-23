@@ -1,0 +1,24 @@
+<!-- Solution Approach -->
+<script>
+
+// 1. Add a 'click' eventListener to get the event when double button is clicked.
+    document.querySelector('#doubleHolder').addEventListener('click', function (e) {
+        if (e.target.classList.contains('double')) {
+// 2. Use createElement method to create the new buttons.
+            let btn = document.createElement('button');
+            btn.setAttribute('class', 'newClass')
+            btn.innerHTML = 'firstButton'
+
+            let btn2 = document.createElement('button');
+            btn2.setAttribute('class', 'newClass')
+            btn2.innerHTML = 'SecondButton'
+
+// 3. Use appendChild method to add the buttons to the parent div.
+            e.currentTarget.appendChild(btn)
+            e.currentTarget.appendChild(btn2)
+
+// 4. Use removeChild method to remove the double button from the parent div.
+            e.currentTarget.removeChild(e.target)
+        }
+    })
+</script>

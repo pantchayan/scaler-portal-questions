@@ -1,0 +1,5 @@
+1. Use querySelectorAll to get an array of individual delete buttons.
+2. Traverse through the array and add an eventListener of 'click' to all the delete buttons.
+3. Set the style->display property of corresponding li element to 'none' when clicked.
+4. Add an eventListener of 'click' to the Remove All button.
+5. Set the style->display property of ul element to 'none' when clicked.

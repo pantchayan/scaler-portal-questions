@@ -1,0 +1,2 @@
+1. Clicking on 'double button' destroys it (removes it from parent div).
+2. Two new buttons are created inside the parent div.

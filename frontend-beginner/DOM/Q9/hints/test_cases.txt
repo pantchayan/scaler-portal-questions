@@ -1,0 +1,2 @@
+1. Verify that the program alerts as 'yellow is clicked' when the yellow box is clicked.
+2. A single alert is generated when any of the box is clicked.

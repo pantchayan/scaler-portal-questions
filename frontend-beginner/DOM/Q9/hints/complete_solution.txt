@@ -1,0 +1,22 @@
+<!-- Complete Solution -->
+
+<script>
+    // FIXED CODE =====
+
+    let redDiv = document.querySelector(".red");
+    let yellowWasClicked = false;
+
+    redDiv.addEventListener('click', (e) => {
+        if (yellowWasClicked) {
+            yellowWasClicked = false;
+        } else {
+            window.alert('red is clicked');
+        }
+    })
+    let yellowDiv = document.querySelector(".yellow");
+    yellowDiv.addEventListener('click', (e) => {
+        yellowWasClicked = true;
+        window.alert('yellow is clicked');
+
+    })
+</script>
