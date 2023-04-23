@@ -18,15 +18,14 @@ afterAll(async () => {
 test("Verify that the Remove All button is working.", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
+const bodyHandle = await page.$("body");
 
-  const bodyHandle = await page.$("body");
-
-  const doubleBtn = await page.$(".double");
-  await doubleBtn.click();
+  const removeAllBtn = await page.$("#all");
+  await removeAllBtn.click();
 
   const check = await page.evaluate((body) => {
-    let newBtns = body.querySelectorAll("button");
-    return newBtns.length == 2;
+    let listElement = body.querySelector("ul");
+    return window.getComputedStyle(listElement).display == "none";
   }, bodyHandle);
 
   expect(check).toBeTruthy();
