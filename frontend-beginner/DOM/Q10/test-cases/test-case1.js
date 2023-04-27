@@ -21,12 +21,12 @@ test("Verify that the individual delete buttons are working.", async () => {
 
   const bodyHandle = await page.$("body");
 
-  const removeAllBtn = await page.$("#all");
-  await removeAllBtn.click();
+  const individualBtn = await page.$("li button");
+  await individualBtn.click();
 
   const check = await page.evaluate((body) => {
-    let listElement = body.querySelector("ul");
-    return window.getComputedStyle(listElement).display == "none";
+    let listItem = body.querySelector("li");
+    return window.getComputedStyle(listItem).display == "none";
   }, bodyHandle);
 
   expect(check).toBeTruthy();

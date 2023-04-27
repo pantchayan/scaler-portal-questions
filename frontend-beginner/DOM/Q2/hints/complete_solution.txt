@@ -2,21 +2,15 @@
 
 
 <script>
-    // this method is used to identify anbnd select the Element
+    let list = document.querySelector("ul")
 
-    let btn = document.querySelector("button");
-
-    btn.addEventListener("click", function () {
-        console.log("button clicked");
-        let divElem = document.createElement("div");
-        //create Element lets you Create a new Element in the DOM
-
-        divElem.innerText = "Hello";
-        // inner text is a property by which you can access and add or remove Text inisde an element
-
-        let bodyElem = document.querySelector("body");
-
-        bodyElem.appendChild(divElem);
-        // this method allows you to add new Children inside your selected element
-    });
+// 1. Use querySelectorAll to get access to all <li> tags in an array
+    let allListItems = document.querySelectorAll('li')
+// 2. Use the array of <li> to get access to target <li> elements
+    let eightElem = allListItems[6]
+// 3. Use createElement to create a <li> element
+    let sevenElem = document.createElement('li')
+    sevenElem.innerText = '7'
+// 4. Use insertBefore to add the element in the correct position
+    list.insertBefore(sevenElem, eightElem)
 </script>
