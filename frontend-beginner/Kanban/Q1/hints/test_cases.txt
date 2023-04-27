@@ -1,0 +1,6 @@
+Test cases:
+1. Verify that clicking on lightpink color box is working.
+2. Verify that clicking on lightgreen color box is working.
+3. Verify that clicking on lightblue color box is working.
+4. Verify that clicking on black color box is working.
+5. Verify that double clicking on any of the color box is working. 

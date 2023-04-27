@@ -1,0 +1,46 @@
+/* complete soluttion */
+
+
+<script>
+     let toolBoxColors = document.querySelectorAll(".color");
+        // TOOL BOX - COLOR FILTERS
+        for (let i = 0; i < toolBoxColors.length; i++) {
+            toolBoxColors[i].addEventListener("click", function () {
+                let selectedToolBoxColor = toolBoxColors[i].classList[0];
+
+                let filteredTickets = ticketsArr.filter(function (ticketObj) {
+                    return selectedToolBoxColor === ticketObj.ticketColor;
+                });
+
+                let allTickets = document.querySelectorAll(".ticket-cont");
+
+                for (let i = 0; i < allTickets.length; i++) {
+                    allTickets[i].remove();
+                }
+
+                filteredTickets.forEach(function (filteredObj) {
+                    createTicket(
+                        filteredObj.ticketTask,
+                        filteredObj.ticketColor,
+                        filteredObj.ticketID
+                    );
+                });
+            });
+
+            toolBoxColors[i].addEventListener("dblclick", function () {
+                let allTickets = document.querySelectorAll(".ticket-cont");
+
+                for (let i = 0; i < allTickets.length; i++) {
+                    allTickets[i].remove();
+                }
+
+                ticketsArr.forEach(function (ticketObj) {
+                    createTicket(
+                        ticketObj.ticketTask,
+                        ticketObj.ticketColor,
+                        ticketObj.ticketID
+                    );
+                });
+            });
+        }
+</script>
