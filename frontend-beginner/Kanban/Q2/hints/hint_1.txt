@@ -1,0 +1,6 @@
+Hints:
+1. Use document.querySelectorAll('.ticket-cont') to get access to all the tickets in the document and store them in an array.
+2. Traverse this array and add a 'click' eventListener to the button of each of the ticket container element in the array.
+3. Get access to the: button's parent div, button and ticket's task-are using relevant selectors
+4. Utilise the class of the parent div of button to find the current state
+5. Use conditional statements (if-else) to write the algorithm based on states, which is mentioned in the description.

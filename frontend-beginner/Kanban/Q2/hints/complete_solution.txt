@@ -1,0 +1,46 @@
+/* complete soluttion */
+
+<script>
+         // FETCHING ALL THE TICKET CONTAINERS IN AN ARRAY
+        let ticketContArr = document.querySelectorAll('.ticket-cont');
+
+        // TRAVERSING THROUGH THAT ARRAY
+        for (let i = 0; i < ticketContArr.length; i++) {
+            // ADDING CLICK EVENTLISTENER TO THE ICON
+            ticketContArr[i].querySelector('button').addEventListener('click', (e) => {
+                let ticket = ticketContArr[i];
+                let ticketTaskArea = ticket.querySelector('.task-area')
+                let buttonDiv = ticketContArr[i].children[3];
+                let button = buttonDiv.querySelector('button');
+
+                // CHANGING THE ICON, CLASS AND SETTING TEXT-ARE AS EDITABLE
+                if (buttonDiv.classList.contains('ticket-lock')) {
+                    button.innerText = 'Unlocked';
+                    buttonDiv.classList.remove('ticket-lock');
+                    buttonDiv.classList.add('ticket-unlock');
+                    ticketTaskArea.setAttribute("contenteditable", "true");
+
+                } else {
+                    button.innerText = 'Locked';
+                    buttonDiv.classList.remove('ticket-unlock');
+                    buttonDiv.classList.add('ticket-lock');
+                    ticketTaskArea.setAttribute("contenteditable", "false");
+                }
+
+
+                // UPDATING MAIN TICKET ARRAY
+                let id = ticket.querySelector('.ticket-id').innerText;
+                let ticketIdx = getTicketIdx(id);
+                ticketsArr[ticketIdx].ticketTask = ticketTaskArea.innerText;
+
+            })
+        }
+
+        function getTicketIdx(id) {
+            let ticketIdx = ticketsArr.findIndex(function (ticketObj) {
+                return ticketObj.ticketID === id;
+            })
+
+            return ticketIdx;
+        }
+    </script>

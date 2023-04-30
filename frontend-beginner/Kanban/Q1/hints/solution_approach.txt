@@ -1,7 +1,11 @@
-Hints:
-1. Access the toolBox color boxes array using querySelectorAll with '.color' selector.
-2. Traverse on this array and add an Element.addEventListener('click') on each of the box.
-3. In the callback function for this eventListener of 'click', code the algorithm for Task 1 mentioned in the problem description.
-4. Again, while traversing the array, add an Element.addEventListener('dblclick') on each of the box.
-5. In the callback function for this eventListener of 'dblclick', code the algorithm for Task 2 mentioned in the problem description.
-6. Don't overwrite the global array ticketsArr.
+To accomplish the tasks mentioned in the problem description, you can follow the steps below.
+
+First, access the color boxes array using the querySelectorAll method with the '.color' selector. This will give you an array of all the color boxes on the page.
+
+Next, traverse through this array using a loop, and add an EventListener with the 'click' event to each of the boxes. In the callback function for this EventListener, write the algorithm for Task 1.
+
+After that, while traversing through the same array, add another EventListener with the 'dblclick' event to each of the boxes. In the callback function for this EventListener, write the algorithm for Task 2.
+
+It's important to note that you should not overwrite the global array ticketsArr.
+
+By following these steps, you can ensure that your code will respond to both single-click and double-click events on the color boxes, and that it will execute the appropriate algorithms for Task 1 and Task 2, respectively.

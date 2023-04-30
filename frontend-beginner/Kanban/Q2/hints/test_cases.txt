@@ -1,0 +1,5 @@
+Test cases:
+1. Verify that clicking on lock button changes it to unlock button.
+2. Verify that clicking on unlock button changes it to lock button.
+3. Verify that when the state is locked, the task is uneditable.
+4. Verify that when the state is unlocked, the task is editable.
