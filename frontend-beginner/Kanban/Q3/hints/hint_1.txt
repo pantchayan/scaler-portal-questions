@@ -1,0 +1,5 @@
+Hints:
+1. Both the Algorithms, 1 and 2 from the problem description need to be implemented seperately.
+2. Algorithm 1 should be followed in the callback function for the 'click' eventListener on the div.remove-btn (delete button).
+3. Use document.querySelectorAll('.ticket-cont') to get access to all the tickets in the document and store them in an array.
+4. Traverse this array and add a 'click' eventListener to the ticket that handles Algorithm 2 from the description.

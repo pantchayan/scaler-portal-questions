@@ -1,4 +1,4 @@
-roblem Description:
+Problem Description:
 Write a JavaScript program in the <script> tag to:
 
 Implement the locking mehcanism feature for all the tickets present. 

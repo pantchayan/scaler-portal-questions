@@ -1,0 +1,6 @@
+Test cases:
+1. Verify that clicking on inactive delete button gives out an alert saying 'delete button has been activated'
+2. Verify that clicking on inactive delete button turns the background color of the div.remove-btn to 'red'.
+3. Verify that clicking on inactive delete button turns the background color of the div.remove-btn to 'inherit'.
+4. Verify that when the delete button is active, clicking on a ticket removes it from UI.
+5. Verify that when the delete button is inactive, clicking on a ticket does nothing.
