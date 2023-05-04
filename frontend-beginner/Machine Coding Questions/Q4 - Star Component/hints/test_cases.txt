@@ -1,0 +1,5 @@
+Test cases:
+1. Verify that when hovered over, the color of stars till target star is changed to yellow .
+2. Verify that when mouse leaves, the color of stars beyond star point is changed to grey. 
+3. Verify that when clicked, the color of stars till target star is changed to yellow.
+4. Verify that when clicked, the Rating Count (span#count) changes to the star point.

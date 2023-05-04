@@ -1,0 +1,5 @@
+Hints:
+1. Add eventListener of 'mouseover', 'click', and 'mouseleave' on the div#star-container to write the program. 
+2. You can utilise Event.target.dataset.index to find the index of the star that being hovered over or clicked on.
+3. Keep a global star count variable, and loop through all the span.star based on that to either add class of 'star-filled' or remove it.
+4. You can loop twice, first to remove the class of 'star-filled' from all the span.star and then loop to add class of 'star-filled' till the star point value.
