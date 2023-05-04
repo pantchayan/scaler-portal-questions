@@ -1,0 +1,11 @@
+To accomplish the tasks mentioned in the problem description, you can follow the steps below.
+
+First, access the color boxes array using the querySelectorAll method with the '.color' selector. This will give you an array of all the color boxes on the page.
+
+Next, traverse through this array using a loop, and add an EventListener with the 'click' event to each of the boxes. In the callback function for this EventListener, write the algorithm for Task 1.
+
+After that, while traversing through the same array, add another EventListener with the 'dblclick' event to each of the boxes. In the callback function for this EventListener, write the algorithm for Task 2.
+
+It's important to note that you should not overwrite the global array ticketsArr.
+
+By following these steps, you can ensure that your code will respond to both single-click and double-click events on the color boxes, and that it will execute the appropriate algorithms for Task 1 and Task 2, respectively.

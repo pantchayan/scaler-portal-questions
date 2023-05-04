@@ -1,0 +1,5 @@
+Test cases:
+1. Verify that add button is working.
+2. Verify that subtract button is working.
+3. Verify that increment input field is working.
+3. Verify that reset button is working.

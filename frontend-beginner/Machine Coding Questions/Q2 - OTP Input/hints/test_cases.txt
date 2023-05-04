@@ -1,0 +1,5 @@
+Test cases:
+1. Verify that the input fields only take a number as valid input.
+2. Verify that the focus movies to the next input field whenever a single digit is entered.
+3. Verify that when Backspace or Delete key is pressed, it removes the input from current field.
+4. Verify that when Backspace or Delete key is pressed, the focus gets back to previous field.

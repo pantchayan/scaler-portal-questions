@@ -1,0 +1,21 @@
+1. Traverse on the data array to access individual object.
+2. Use document.createElement('div') to create a div that will hold all the spans containing individual stars.
+3. Follow the step 4 of algorithm and utilise 2 loops to add spans containing filled and empty stars to the above div.
+4. `<div class="card">
+        <div class="details">
+            <span class="product__name">${product.title}</span>
+            <br>
+            <span class="product__category">${product.category}</span>
+            <div class="all__star">
+              ${allStarDiv.innerHTML}
+            </div>
+            <div class="rating__count">Rating Count : <span>${product.rating.count}</span></div>
+        </div>
+        <div class="btn">
+            <button class="btn__buy">Buy Now</button>
+        </div>
+    </div>`
+
+    Use this as the template and add the innerHTML of your stars div to the div.all__star as mentioned above.
+5. Utilise template literal as mentioned above to inject the values inside the HTML template.
+6. Finally, when done use document.getElementById('container').innerHTML += `THE ABOVE TEMPLATE` to add the card to the document inside div#container.

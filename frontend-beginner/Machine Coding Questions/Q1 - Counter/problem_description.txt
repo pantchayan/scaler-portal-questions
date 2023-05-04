@@ -1,0 +1,14 @@
+Problem Description:
+Write JS program to successfuly make the given Counter function.
+
+The counter has several components with dedicated functions, here is the list for the same:
+1. span#number => contains the current number value.
+2. input#increment => field that takes the input for the increment number/factor. (default is 1)
+3. button#add => when clicked updates the span#number by adding increment number to it.
+4. button#subtract => when clicked updates the span#number by subtracting increment number from it.
+5. button#reset => changes the span#number to 0 again.
+
+Make sure the input for increment number is always parsed to Integer using parseInt(input). 
+
+Use the above information to write the entire JS program in the script.js file or script tag.
+Refer to the test cases to further understand the criterias to submit the problem successfully.

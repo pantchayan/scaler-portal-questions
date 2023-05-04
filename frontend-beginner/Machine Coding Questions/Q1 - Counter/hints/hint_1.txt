@@ -1,0 +1,7 @@
+Hints:
+1. Use ID's to get the DOM reference of mentioned Elements
+2. Maintain a global variable to keep account of the increment number/ factor.
+3. add eventListener of 'change' to the input#increment and update the increment number/ factor in its callback.
+4. add eventListener of 'click' to the buttons and update the span#number in their callbacks.
+5. add eventListener of 'click' to the reset button and change the span#number to 0 in its callback.
+6. Utilise parseInt('number_as_string') to change number as text to integer after accessing span#number's innerText.

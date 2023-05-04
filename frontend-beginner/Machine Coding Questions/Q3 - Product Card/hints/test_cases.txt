@@ -1,0 +1,6 @@
+Test cases:
+1. Verify that a total of 20 product cards (div.card) are present in the Document.
+2. Verify that the cards hold correct title.
+3. Verify that the cards hold correct category.
+4. Verify that the cards hold correct rating count. 
+5. Verify that a card contains correct star rating. (number of empty and filled stars checked using class of span)

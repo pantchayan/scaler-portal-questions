@@ -27,7 +27,7 @@ test("Verify that clicking on inactive delete button turns the background color 
     await dialog.accept();
   });
 
-  await page.goto("http://localhost:3000");
+  await page.goto("http://localhost:8080");
 
   const bodyHandle = await page.$("body");
 
