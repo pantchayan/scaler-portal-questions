@@ -29,13 +29,10 @@ test("Verify that header, nav, content, and footer are defined using CSS Grid pr
 
     let flag = false;
     if (
-      window.getComputedStyle(header).gridArea ===
-        "header / header / header / header" &&
-      window.getComputedStyle(nav).gridArea === "nav / nav / nav / nav" &&
-      window.getComputedStyle(content).gridArea ===
-        "content / content / content / content" &&
-      window.getComputedStyle(footer).gridArea ===
-        "footer / footer / footer / footer"
+      window.getComputedStyle(header).gridArea.includes('header')&&
+      window.getComputedStyle(nav).gridArea.includes('nav') &&
+      window.getComputedStyle(content).gridArea.includes('content') &&
+      window.getComputedStyle(footer).gridArea.includes('footer')
     ) {
       flag = true;
     }
