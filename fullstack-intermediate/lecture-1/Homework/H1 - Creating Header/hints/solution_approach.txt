@@ -1,0 +1,7 @@
+Start by creating the basic structure of the HTML document using the <html>, <head>, and <body> tags.
+Add a <header> section that will contain the Nav bar, Banner Image, Headings and Buttons.
+Inside <header> section add two <div> tags, one for Nav bar and other for remaining landing page components.
+Use 5 <a> tags in Nav bar <div> to specify 5 redirectable options.
+Add Banner image in second <div> using <img> tag with proper ‘src’ and ‘alt’ attributes.
+Use <h1>, <h2> tags to specify headings respectively.
+Finally, use 2 <button> tags to add 2 buttons.

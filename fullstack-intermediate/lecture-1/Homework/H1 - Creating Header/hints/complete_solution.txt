@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Header</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href=”#”>Features</a>
+            <a href=”#”>Details</a>
+            <a href=”#”>Reviews</a>
+            <a href=”#”>Plans</a>
+            <a href=”#”>Sign Up</a>
+        </div>
+        <div>
+            <img src='food.jpg' alt='food-img' height="200px">
+            <h1>MEAL PLANS.</h1>
+            <h2>FOR DEVELOPERS.</h2>
+
+            <button>Book Now</button>
+            <button>Show me more</button>
+        </div>
+    </header>
+</body>
+</div>
+
+</html>

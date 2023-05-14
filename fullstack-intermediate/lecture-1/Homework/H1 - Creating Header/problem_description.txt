@@ -1,0 +1,20 @@
+Create a simple Nav bar and Header section with just using plain HTML.
+
+For the nav bar:
+1. Use <a> tags to add the redirectable links.
+
+For the header section:
+Use <header> tag, inside of which:
+1. Use <img> tag to add a Banner image.
+    1.1. Set the src as 'food.jpg'
+    1.2. Set the alt as 'food-img'
+    1.3. Set the height attribute as '200px'
+2. Use Heading tags to add the titles.
+    2.1. Use <h1> tag for 'MEAL PLANS.'
+    2.2. Use <h2> tag for 'FOR DEVELOPERS.'
+3. Use the Button tags to add 2 buttons for:
+    3.1. Book Now
+    3.2. Show me more
+
+Further, refer to the test cases to understand necessary requirements to submit the problem.
+Below is the basic structure of the expected output:

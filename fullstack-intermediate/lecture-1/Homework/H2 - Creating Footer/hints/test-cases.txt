@@ -1,0 +1,4 @@
+1. Verify that the webpage contains <footer> tag.
+2. Verify that the webpage has <li> tag inscribed inside an <a> tag.
+3. Verify that the webpage has <img> tag inscribed inside an <a> tag.
+4. Verify that the webpage contains a <p> tag.

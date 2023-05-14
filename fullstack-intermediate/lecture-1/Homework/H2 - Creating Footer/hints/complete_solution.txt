@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Header</title>
+</head>
+
+<body>
+    <footer>
+        <h1>Footer Section</h1>
+        <div>
+            <div>
+                <ul>
+                    <a href="#">
+                        <li>About us</li>
+                    </a>
+                    <a href="#">
+                        <li>ios App</li>
+                    </a>
+                    <a href="#">
+                        <li>Android App</li>
+                    </a>
+                </ul>
+            </div>
+            <div>
+                <a href='#'>
+                    <img src="#" alt="logo1">
+                </a>
+                <a href='#'>
+                    <img src="#" alt="logo2">
+                </a>
+                <a href='#'>
+                    <img src="#" alt="logo3">
+                </a>
+                <a href='#'>
+                    <img src="#" alt="logo4">
+                </a>
+            </div>
+        </div>
+        <div>
+            <p>Copyright 2019 EVERYONE. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</div>
+
+</html>

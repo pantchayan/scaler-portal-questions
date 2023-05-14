@@ -1,0 +1,13 @@
+1. Pay attention to the instructions in the description and the test cases.
+2. Use the following structure to make the clickable unordered list:
+                <ul>
+                    <a href="#">
+                        <li>About us</li>
+                    </a>
+                    <a href="#">
+                        <li>ios App</li>
+                    </a>
+                    <a href="#">
+                        <li>Android App</li>
+                    </a>
+                </ul> 

@@ -1,0 +1,4 @@
+3. Use the following structure to make the clickable logo:
+ <a href='#'>
+    <img src="#" alt="logo1">
+ </a> 

@@ -1,0 +1,2 @@
+Use the <h1> and <h2> tags for heading
+Use the <button> tag for adding a buttons

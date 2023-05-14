@@ -1,0 +1,5 @@
+Verify that the webpage has a <header> section.
+Verify that the webpage has atleast one <a> tag making up the nav-bar.
+Verify that the webpage has an image using the <img> tag with 'src' and 'alt' attributes
+Verify that the webpage has <h1> and <h2> tags respectively.
+Verify that the webpage has a <button> tag.

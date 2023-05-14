@@ -1,0 +1,15 @@
+Create a simple Footer section with just using plain HTML.
+
+Use <footer> tag to contain all the components, like:
+
+1. Clickable list items:
+    1.1. Use ul>(a>li) format to make an unordered list of clickable links
+    1.2. The list should have 'About us', 'ios App', and 'Android App' as list items
+2. Clickable logos:
+    2.1. Use a>img format to make a logo (img) clickable
+    2.2. There should be four such a>img components
+3. <p> tag containing copyright information. 
+
+
+Further, refer to the test cases to understand necessary requirements to submit the problem.
+Below is the basic structure of the expected output:
