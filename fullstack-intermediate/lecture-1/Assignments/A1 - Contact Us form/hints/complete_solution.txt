@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>CONTACT US</h2>
+    <div class="container__parent">
+        <form>
+            <label>Name</label>
+            <br>
+            <input type="text" id="name" name="Name" placeholder="Your Name" required>
+            <br>
+            <label>Email</label>
+            <br>
+            <input type="email" id="email" name="email" placeholder="Your Email">
+            <br>
+            <label>How did you find us</label>
+            <br>
+            <select name="" id="find">
+                <option value="">
+                    friends
+                </option>
+                <option value="">search</option>
+                <option value="">advertsiment</option>
+                <option value="">other</option>
+            </select>
+            <br>
+
+            <label>Drop us a line</label>
+            <br>
+            <textarea name="" id="message" placeholder="Your Message"></textarea>
+            <br>
+            <input type="checkbox" class="checkbox">
+            <span class="checkbox-conditions">I have read and agree with all the Privacy Policy and
+                Terms Conditions</span>
+            <br>
+            <input type="submit" value="Submit">
+            <br>
+
+        </form>
+    </div>
+</body>
+
+</html>

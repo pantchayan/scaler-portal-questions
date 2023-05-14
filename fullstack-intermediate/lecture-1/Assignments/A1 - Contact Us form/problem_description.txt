@@ -1,0 +1,19 @@
+Create the ‘Contact Us’ Form for a website which should include the following:
+
+1. Name input (an input of text type and 'name' as id)
+
+2. Email input (an input of email type and 'email' as id)
+
+3. A drop down input (utilising select tag with 'find' as id)
+    3.1. Label is 'How did you find us?' with options as 'friends', 'search', 'ads', and 'others'
+
+4. Message input (a textarea with 'message' as id)
+
+5. A check box for terms and conditions (input of 'checkbox' type)
+    5.1. Followed by a span consisting 'I have read and agree with all the Privacy Policy and Terms Conditions'
+
+6. and a submit button (an input of submit type)
+
+Further, refer to the test cases to understand necessary requirements to submit the problem.
+
+Below is the basic structure of the expected output:

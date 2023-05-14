@@ -1,0 +1,2 @@
+Use the <img> tag to add a logo for the feature.
+Use the ‘src’ and ‘alt’ attributes of the <img> tag to specify the source and alternate text of the image respectively.

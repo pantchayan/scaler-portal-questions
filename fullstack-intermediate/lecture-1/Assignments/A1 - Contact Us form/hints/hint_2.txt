@@ -1,0 +1,2 @@
+3. Use <form> tag to contain all the input fields and drop down menu.
+4. Set relevant type attribute for each input field and also mention the ids as per instructions.

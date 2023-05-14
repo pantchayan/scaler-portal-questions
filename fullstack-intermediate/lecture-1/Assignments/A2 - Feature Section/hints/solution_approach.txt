@@ -1,0 +1,7 @@
+Start by creating the basic structure of the HTML document using the <html>, <head>, and <body> tags.
+Add a <section> that will contain all the feature's components.
+Use <h1> tag to specify the heading for the section as ‘Awesome Features’.
+Add a <div> tag, this will contain all the required feature components for a single feature.
+Inside the <div> tag, add <img>, <h2> and <p> tags to specify feature’s logo, heading and description respectively.
+Repeat the last two steps to add details for multiple features.
+You can further divide and group different components under <div> tags as a good coding practice.

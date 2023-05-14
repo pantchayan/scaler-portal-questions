@@ -1,0 +1,15 @@
+
+Create a Features section where features will be showcased with necessary headings, divs and Images with feature logos and feature description.
+
+Use the following tags in proper flow:
+1. <section> tag to hold all the content for the Feature Section
+2. <h1> tag that holds the section heading of 'Awesome Features'
+3. <div> tag that groups all the tags associated with a single feature
+4. For each feature use -
+4.1 <img> tag for feature's image
+4.2 <h3> tag for feature's name
+4.1 <p> tag for feature's description
+
+Further, refer to the test cases to understand necessary requirements to submit the problem.
+
+Below is the basic structure of the expected output:

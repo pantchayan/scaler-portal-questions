@@ -1,0 +1,4 @@
+Verify that the webpage has a proper structure using the <html>, <head>, and <body> tags.
+Verify that the webpage has a <section> tag.
+Verify that the webpage has a <h1> tag that contains the heading 'Awesome Features'.
+Verify that the webpage has <div> tag that groups feature's components like <img>, <h3> and <p>.

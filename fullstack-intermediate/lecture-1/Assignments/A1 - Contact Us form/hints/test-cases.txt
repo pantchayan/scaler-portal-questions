@@ -1,0 +1,4 @@
+Verify that the webpage has a proper structure using the <html>, <head>, and <body> tags.
+Verify that the webpage has a <h2> tag that contains the heading 'CONTACT US'.
+Verify that the webpage has <form> tag with 4 <input> tags, 1 <select> tag and 1 <textarea> tags.
+Verify that the webpage has ids of 'name', 'email', 'find', and 'message'.
