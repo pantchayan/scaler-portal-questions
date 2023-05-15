@@ -1,0 +1,17 @@
+Create a Pricing's section with just using plain HTML.
+
+The Pricing section is inscribed under <section> tag, 
+with a section heading written using <h2> tag,
+and the section will hold 3 meal plans, 
+each of which will be defined using <div>, inside which there will be:
+
+1. Plan heading in <h3>
+2. Plan pricing in <h4>
+3. Monthly charges in <p>
+4. An Unordered List consisting meal features
+5. A plan Sign Up button at the end using <button>
+
+Additionally you can use <hr> tags to draw a line between each plan. 
+
+Further, refer to the test cases to understand necessary requirements to submit the problem.
+Below is the basic structure of the expected output:

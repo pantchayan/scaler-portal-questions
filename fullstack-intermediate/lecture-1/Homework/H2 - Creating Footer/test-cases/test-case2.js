@@ -21,7 +21,7 @@ test("Verify that the webpage has <li> tag inscribed inside an <a> tag.", async 
 
   const body = await page.$("body");
 
-  const liEnclosed = await page.evaluate((a) => {
+  const liEnclosed = await page.evaluate((body) => {
     let aTags = body.querySelectorAll("a");
     for (let i = 0; i < aTags.length; i++) {
       if (aTags[i].querySelector("li")) {

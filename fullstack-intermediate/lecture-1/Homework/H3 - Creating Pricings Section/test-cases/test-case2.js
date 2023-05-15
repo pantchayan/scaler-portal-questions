@@ -1,6 +1,5 @@
 // Description:
-// Verify that the webpage has <img> tag inscribed inside an <a> tag.
-
+// 2. Verify that the web page consists of three <h3>, <h4>, <p> tags.
 const puppeteer = require("puppeteer");
 
 let browser;
@@ -16,21 +15,18 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the webpage has <img> tag inscribed inside an <a> tag.", async () => {
+test("2. Verify that the web page consists of three <h3>, <h4>, <p> tags.", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
 
-  const imgEnclosed = await page.evaluate((body) => {
-    let aTags = body.querySelectorAll("a");
-    for (let i = 0; i < aTags.length; i++) {
-      if (aTags[i].querySelector("img")) {
-        return true;
-      }
-    }
-    return false;
+  const check = await page.evaluate((body) => {
+    let h3 = body.querySelectorAll("h3");
+    let h4 = body.querySelectorAll("h4");
+    let p = body.querySelectorAll("p");
+    return h3.length >= 3 && h4.length >= 3 && p.length >= 3;
   }, body);
 
-  expect(imgEnclosed).toBeTruthy();
+  expect(check).toBeTruthy();
 });

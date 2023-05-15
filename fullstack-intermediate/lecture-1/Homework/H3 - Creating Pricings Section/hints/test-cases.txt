@@ -1,0 +1,4 @@
+1. Verify that the web page consists of one <section> and <h1> tag.
+2. Verify that the web page consists of three <h3>, <h4>, <p> tags.
+3. Verify that the web page consists of three <ul> tags.
+4. Verify that the web page consists of three <button> tags.
