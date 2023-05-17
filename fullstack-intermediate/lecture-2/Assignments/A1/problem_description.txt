@@ -1,0 +1,4 @@
+Write internal CSS to select the elements that contain "Select me" as innerText
+and set the color as 'blue'.
+
+Further, refer to the test cases to understand necessary requirements to submit the problem.

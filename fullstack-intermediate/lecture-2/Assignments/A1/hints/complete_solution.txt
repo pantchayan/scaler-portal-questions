@@ -1,0 +1,7 @@
+        #the-one > p.c1{
+            color: blue;
+        }
+
+        #the-one > div.c1{
+            color: blue;
+        }

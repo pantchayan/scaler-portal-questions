@@ -1,5 +1,5 @@
 // Description:
-// Verify that the web page consists of one <section> and <h1> tag.
+// Verify that the <p> tag with 'Select me' is 'blue'
 
 const puppeteer = require("puppeteer");
 
@@ -16,12 +16,17 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the web page consists of one <section> and <h2> tag.", async () => {
+test("Verify that the <p> tag with 'Select me' is 'blue'", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
-  const sectionHandles = await page.$("section");
-  const h2Handles = await page.$("h2");
-  expect(sectionHandles).toBeTruthy();
-  expect(h2Handles).toBeTruthy();
+  const body = await page.$("body");
+
+  const check = await page.evaluate((body) => {
+    let p = body.querySelector("#the-one > p.c1");
+
+    return window.getComputedStyle(p).color === "rgb(0, 0, 255)";
+  }, body);
+
+  expect(check).toBeTruthy();
 });

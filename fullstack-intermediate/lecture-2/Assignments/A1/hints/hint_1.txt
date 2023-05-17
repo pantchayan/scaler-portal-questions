@@ -1,0 +1,3 @@
+1. Use #the-one as selector for the div that contains the target p and div elements.
+2. Use Parent > Child, format to get the immediate ancestors for the parent div#the-one.
+3. Use p.c1 to select the target p tag inside the div#the-one

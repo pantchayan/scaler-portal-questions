@@ -1,0 +1,3 @@
+1. Verify that the style is not applied using inline css
+2. Verify that the <p> tag with 'Select me' is 'blue'
+3. Verify that the <div> tag with 'Select me' is 'blue'
