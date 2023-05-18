@@ -1,0 +1,19 @@
+        div.card {
+            height: 400px;
+            width: 400px;
+            line-height: 25px;
+            color: #7D5A44;
+            border: 30px solid #7D5A44;
+            background-color: #EBE0C7;
+
+        }
+
+        div.card h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        div.card h1 span {
+            text-decoration: overline;
+            font-size: 15px;
+        }

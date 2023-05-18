@@ -1,0 +1,6 @@
+1. Verify that for the div.card the height and width is 400px each
+2. Verify that the div.card has a line-height of 25px
+3. Verify that the div.card has a border of '30px solid #7D5A44' value
+5. Verify that the div.card has color property of value #7D5A44 and background color of #EBE0C7
+4. Verify that the h1 has text-align set to 'center' and padding of '20px'
+6. Verify that the text '(Menu)' in h1 span has text-decoration set to 'overline' and font-size of '15px' 

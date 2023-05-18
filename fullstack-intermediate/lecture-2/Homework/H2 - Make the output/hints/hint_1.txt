@@ -1,0 +1,5 @@
+1. Pay attention and follow every instruction in the problem description and test cases. 
+2. Use '.card h1' as a selector to select the entire h1, 
+   and under this selector apply the styles required for content in entire h1
+3. Use '.card h1 span' as a selector to select the span inside of h1,
+   and under this selector, apply the respective styles required.
