@@ -1,5 +1,5 @@
 // Description:
-// Verify that the <div> tag with 'Select me' is 'blue'
+// Verify that for div.container the margin from bottom is 30px and from right is 15px.
 
 const puppeteer = require("puppeteer");
 
@@ -16,16 +16,15 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the <div> tag with 'Select me' is 'blue'", async () => {
+test("Verify that for div.container the margin from bottom is 30px and from right is 15px.", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let div = body.querySelector("#the-one > div.c1");
-
-    return window.getComputedStyle(div).color === "rgb(0, 0, 255)";
+    let div = body.querySelector(".container");
+    return window.getComputedStyle(div).margin == "0px 15px 30px 0px";
   }, body);
 
   expect(check).toBeTruthy();

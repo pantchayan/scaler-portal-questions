@@ -1,5 +1,5 @@
 // Description:
-// Verify that the <div> tag with 'Select me' is 'blue'
+// Verify that the text-align property for h3 is set to 'center'.
 
 const puppeteer = require("puppeteer");
 
@@ -16,16 +16,15 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the <div> tag with 'Select me' is 'blue'", async () => {
+test("Verify that the text-align property for h3 is set to 'center'.", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let div = body.querySelector("#the-one > div.c1");
-
-    return window.getComputedStyle(div).color === "rgb(0, 0, 255)";
+    let h3 = body.querySelector("h3");
+    return window.getComputedStyle(h3).textAlign == "center";
   }, body);
 
   expect(check).toBeTruthy();

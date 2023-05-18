@@ -1,6 +1,5 @@
 // Description:
-// Verify that the <div> tag with 'Select me' is 'blue'
-
+// Verify that the items in div.container-parent are aligned in center using justify-content and align-items properties. 
 const puppeteer = require("puppeteer");
 
 let browser;
@@ -16,16 +15,18 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the <div> tag with 'Select me' is 'blue'", async () => {
+test("Verify that the items in div.container-parent are aligned in center using justify-content and align-items properties", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let div = body.querySelector("#the-one > div.c1");
-
-    return window.getComputedStyle(div).color === "rgb(0, 0, 255)";
+    let div = body.querySelector(".container-parent");
+    return (
+      window.getComputedStyle(div).justifyContent === "center" &&
+      window.getComputedStyle(div).alignItems === "center"
+    );
   }, body);
 
   expect(check).toBeTruthy();

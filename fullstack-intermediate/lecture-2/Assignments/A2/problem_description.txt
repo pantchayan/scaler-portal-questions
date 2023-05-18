@@ -1,0 +1,17 @@
+Write internal CSS to add the below mentioned styles to the feature card.
+
+For div.container-parent:
+1. Set the display as flex.
+2. Set the width as '100%'
+3. Using some flex properties, align items in 'center' on vertical and horizontal axis 
+
+For div.container:
+1. Set margin from bottom as 30px and from right as 15px.
+2. Set the value of box-shadow property as: '0 10px 22px 10px rgba(27, 38, 49, 0.1)'
+3. Set width as 15%
+4. add padding of 20px from every side.
+
+For the heading h3:
+1. Set the text-align as 'center'
+
+Further, refer to the test cases to understand necessary requirements to submit the problem.

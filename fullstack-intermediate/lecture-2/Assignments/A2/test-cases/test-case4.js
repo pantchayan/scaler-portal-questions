@@ -1,5 +1,5 @@
 // Description:
-// Verify that the <div> tag with 'Select me' is 'blue'
+// Verify that the div.container has a padding of 20px from every side.
 
 const puppeteer = require("puppeteer");
 
@@ -16,16 +16,16 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the <div> tag with 'Select me' is 'blue'", async () => {
+test("Verify that the div.container has a padding of 20px from every side.", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
+  
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let div = body.querySelector("#the-one > div.c1");
-
-    return window.getComputedStyle(div).color === "rgb(0, 0, 255)";
+    let div = body.querySelector(".container");
+    return window.getComputedStyle(div).padding == "20px";
   }, body);
 
   expect(check).toBeTruthy();

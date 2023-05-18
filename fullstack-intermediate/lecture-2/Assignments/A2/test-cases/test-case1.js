@@ -1,5 +1,5 @@
 // Description:
-// Verify that the <div> tag with 'Select me' is 'blue'
+// Verify that for div.container-parent the display is set to flex.
 
 const puppeteer = require("puppeteer");
 
@@ -16,16 +16,16 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the <div> tag with 'Select me' is 'blue'", async () => {
+test("Verify that for div.container-parent the display is set to flex.", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
+  
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let div = body.querySelector("#the-one > div.c1");
-
-    return window.getComputedStyle(div).color === "rgb(0, 0, 255)";
+    let div = body.querySelector(".container-parent");
+    return window.getComputedStyle(div).display === 'flex';
   }, body);
 
   expect(check).toBeTruthy();

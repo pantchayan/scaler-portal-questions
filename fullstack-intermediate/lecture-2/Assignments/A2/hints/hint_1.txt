@@ -1,0 +1,2 @@
+1. Pay attention to the instructions in the description and test-cases.
+2. To align items in center on vertical and horizontal axis, utilise justify-content and align-items properties.

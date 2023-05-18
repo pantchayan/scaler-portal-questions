@@ -1,0 +1,6 @@
+1. Verify that for div.container-parent the display is set to flex.
+2. Verify that the items in div.container-parent are aligned in center using justify-content and align-items properties. 
+3. Verify that for div.container the margin from bottom is 30px and from right is 15px.
+4. Verify that the div.container has a padding of 20px from every side.
+5. Verify that the box-shadow property for div.container is set to '0 10px 22px 10px rgba(27, 38, 49, 0.1)'
+6. Verify that the text-align property for h3 is set to 'center'.
