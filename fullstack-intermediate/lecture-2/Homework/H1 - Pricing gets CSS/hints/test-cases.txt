@@ -1,0 +1,6 @@
+1. Verify that for the div.card the width is 250px and line-height is set as 30px
+2. Verify that the div.card has a padding of 25px on top, 10px on left, 50px on bottom, and 10px on right.
+3. Verify that the div.card has a border of '2px solid lightgray' value
+4. Verify that the h3 and h4 have text-align set to 'center'
+5. Verify that the text '$399' in h4 has color of '#f63854', font-size of '40px' and font-weight of 500
+6. Verify that the text '/month' in h4 span has a color of 'gray' and font-size of '15px'

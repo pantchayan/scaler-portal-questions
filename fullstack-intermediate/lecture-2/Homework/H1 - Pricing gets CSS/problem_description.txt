@@ -1,0 +1,33 @@
+Write internal CSS to add the below mentioned styles to the pricing card.
+
+For the div.card:
+1. Set the width as 250px
+2. Apply a border of solid style, 2px width, abd lightgray color.
+3. Add padding of 25px on top, 10px on left, 50px on bottom, and 10px on right.
+4. Set line-height to 30px
+5. Add a box-shadow of '0 10px 22px 10px rgba(27, 38, 49, 0.1)'
+
+For the h3:
+1. Set the text-align to center
+2. Add a padding of 20px at bottom
+
+Now, in the h4 tag there is a <span> that contains the text '/month'
+
+For the entire h4:
+1. Set text-align as 'center'
+2. Add padding-bottom of 10px
+
+For the content in h4 apart from <span>, i.e., '$399':
+1. Set color to '#f63854' 
+2. Set the font-size to '40px'
+3. Set the font-weight to 500
+
+For the content in h4 inside of <span>, i.e., '/month':
+1. Set color to 'gray'
+2. Set the font-size to 15px
+
+You have been provided with some HTML and CSS as preset boilerplate. 
+Don't make any changes to them.
+
+Further, refer to the test cases to understand necessary requirements to submit the problem.
+The end result should be similar to the one given below:
