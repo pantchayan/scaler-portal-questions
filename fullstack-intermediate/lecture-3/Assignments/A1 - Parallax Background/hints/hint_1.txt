@@ -1,0 +1,8 @@
+The solution is quite straight forward. Pay attention to the instructions provided in the problem description and test cases.
+The background property needs to be set in the following manner:
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), lightblue; 
+
+and the background-attachment property needs to be set in the following manner:
+background-attachment: fixed; 
+
+Use a valid selector to select header element 

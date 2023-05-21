@@ -1,0 +1,8 @@
+1. Verify that a.btn have display value as 'inline-block' and color value as 'white'
+2. Verify that a.btn have margin-right of 15px and background color of '#f63854'.
+3. Verify that a.btn have padding from top and bottom set to 15px and from right and left set to 25px
+4. Verify that a.btn have border-radius of 64px and border of 1px, solid, #f63854 value
+5. Verify that a.btn have the value of transition property set to 'transform 0.3s, color 0.3s, background-color 0.3s'
+6. Verify that a.btn-empty has color set to #f63854 and background-color set to 'transparent'
+7. Verify that whenever hovered upon, the buttons (a.btn) transform to scale by factor of 1.2
+8. Verify that whenever hovered upon, a.btn-empty has the text color set to white and background color set to #f63854

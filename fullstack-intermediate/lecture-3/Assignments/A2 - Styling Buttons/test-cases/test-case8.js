@@ -1,5 +1,5 @@
 // Description:
-// Verify that the div.card has a border of '30px solid #7D5A44' value
+//Verify that whenever hovered upon, a.btn-empty has the text color set to white and background color set to #f63854
 
 const puppeteer = require("puppeteer");
 
@@ -16,17 +16,20 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the div.card has a border of '30px solid #7D5A44' value", async () => {
+test("Verify that whenever hovered upon, a.btn-empty has the text color set to white and background color set to #f63854", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
+  const button = await page.$("a.btn-empty");
+
+  await button.hover();
 
   const check = await page.evaluate((body) => {
-    let div = body.querySelector(".card");
+    let btn = body.querySelector("a.btn-empty");
     return (
-      window.getComputedStyle(div).color === "rgb(125, 90, 68)" &&
-      window.getComputedStyle(div).backgroundColor === "rgb(235, 224, 199)"
+      window.getComputedStyle(btn).color == "rgb(255, 255, 255)" &&
+      window.getComputedStyle(btn).backgroundColor == "rgb(246, 56, 84)"
     );
   }, body);
 

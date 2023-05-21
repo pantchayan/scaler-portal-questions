@@ -1,0 +1,6 @@
+1. Verify that h2 has font-size of 30px and color as gray
+2. Verify that h2 has text-transform with value set as 'uppercase'
+3. Verify that h2::after has content property set to "" 
+4. Verify that h2::after has color property set to #f63854
+5. Verify that h2::after has display property set to block and border-bottom set as 'solid'
+6. Verify that h2::after has margin property set to '30px 65px'

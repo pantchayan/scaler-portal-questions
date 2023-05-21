@@ -1,6 +1,8 @@
 // Description:
-// Verify that the div.card has a line-height of 25px
+// Verify that h2 has font-size of 30px and color as gray
+
 const puppeteer = require("puppeteer");
+
 let browser;
 
 beforeAll(async () => {
@@ -14,15 +16,18 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the div.card has a line-height of 25px", async () => {
+test("Verify that h2 has font-size of 30px and color as gray", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let div = body.querySelector(".card");
-    return window.getComputedStyle(div).lineHeight === "25px";
+    let h2 = body.querySelector("h2");
+    return (
+      window.getComputedStyle(h2).color == "rgb(128, 128, 128)" &&
+      window.getComputedStyle(h2).fontSize == "30px"
+    );
   }, body);
 
   expect(check).toBeTruthy();

@@ -1,0 +1,33 @@
+Writing CSS to style the 'I'm hungry' button and give the card a border. 
+
+What you are given?
+You are provided with HTML and CSS boilerplate code, in which you have:
+1. div.card that contains div.signup-button which encloses a.btn element
+2. there is also some preset CSS provided to style the card.
+Don't change any of the boilerplate code.
+
+What you need to do?
+
+You need to style the div.signup-button and a.btn, 
+to make it look like a button and also add a border to the card. 
+
+Ouput should look like this:
+
+<IMAGE GOES HERE>
+
+To achieve this, you have to write internal CSS as per the instructions given below.
+
+For div.signup-button:
+1. set the text-align value as 'center'
+2. set the position value as 'relative' 
+3. and top value as '45px'
+
+For div.card:
+1. apply a border of width 1px, style solid and color as lightgrey.
+2. also set border-radius to 4%
+
+For a.btn:
+1. utilise the CSS code from Lecture 2: A2 - Styling Buttons.
+2. also, add hover scaling to the button.
+
+Further, refer to the test cases to understand necessary requirements to submit the problem.

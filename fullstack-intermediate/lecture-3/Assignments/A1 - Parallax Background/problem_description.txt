@@ -1,0 +1,23 @@
+Writing CSS to acheive a parallax effect in the background.
+
+What you are given?
+
+You are provided with HTML and CSS boilerplate code, in which you have:
+1. A <header> tag and a <section> tag
+2. Both containing a <h2> tag
+3. Height of both, header and section, is set to 100vh.
+
+Don't change any of the boilerplate code.
+
+What you need to do?
+
+You need to write CSS to:
+1. Set background property of header with linear gradient and color value of:
+    1.1. 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), lightblue'
+2. Set the background-attachment property of header with the value of 'fixed'
+
+By doing so, you would be able to achieve parallax effect on the header.
+While working on your local machine you can replace the color 'lightblue' with any image url that you want to set as a background.
+ 
+Further, refer to the test cases to understand necessary requirements to submit the problem.
+The end result should be similar to the one given below:

@@ -1,5 +1,5 @@
 // Description:
-// Verify that the div.card has a line-height of 25px
+// Verify that h2 has text-transform with value set as 'uppercase'
 const puppeteer = require("puppeteer");
 let browser;
 
@@ -14,15 +14,15 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the div.card has a line-height of 25px", async () => {
+test("Verify that h2 has text-transform with value set as 'uppercase'", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let div = body.querySelector(".card");
-    return window.getComputedStyle(div).lineHeight === "25px";
+    let h2 = body.querySelector("h2");
+    return window.getComputedStyle(h2).textTransform == "uppercase";
   }, body);
 
   expect(check).toBeTruthy();

@@ -1,0 +1,2 @@
+1. Verify that the value of background property is set to 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), lightblue'
+2. Verify that the value of background attachment property is set to 'fixed'

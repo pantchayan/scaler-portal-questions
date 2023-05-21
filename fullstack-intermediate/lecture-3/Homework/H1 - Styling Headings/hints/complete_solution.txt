@@ -1,0 +1,13 @@
+h2 {
+  font-size: 30px;
+  color: gray;
+  text-transform: uppercase;
+}
+
+h2::after {
+  content: "";
+  color: #f63854;
+  display: block;
+  border-bottom: solid;
+  margin: 30px 65px;
+}

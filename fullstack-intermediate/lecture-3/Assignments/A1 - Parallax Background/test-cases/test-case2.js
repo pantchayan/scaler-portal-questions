@@ -1,5 +1,5 @@
 // Description:
-// Verify that the div.card has a line-height of 25px
+// Verify that the background has color of 'lightblue'
 const puppeteer = require("puppeteer");
 let browser;
 
@@ -14,15 +14,15 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the div.card has a line-height of 25px", async () => {
+test("Verify that the background has color of 'lightblue'", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
-  const body = await page.$("body");
-
   const check = await page.evaluate((body) => {
-    let div = body.querySelector(".card");
-    return window.getComputedStyle(div).lineHeight === "25px";
+    let header = body.querySelector("header");
+    return window
+      .getComputedStyle(header)
+      .background.includes("rgb(173, 216, 230)");
   }, body);
 
   expect(check).toBeTruthy();

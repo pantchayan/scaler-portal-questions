@@ -1,0 +1,26 @@
+.card {
+            border-width: 1px;
+            border-color: lightgrey;
+            border-style: solid;
+            border-radius: 4%;
+        }
+
+        .signup-button {
+            text-align: center;
+            position: relative;
+            top: 45px;
+        }
+
+        .btn {
+            display: inline-block;
+            color: white;
+            padding: 15px 25px;
+            background-color: #f63854;
+            border-radius: 64px;
+            border: 1px solid #f63854;
+            transition: transform 0.3s, color 0.3s, background-color 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.2);
+        }

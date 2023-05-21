@@ -1,5 +1,5 @@
 // Description:
-// Verify that the div.card has a border of '30px solid #7D5A44' value
+// Verify that a.btn have display value as 'inline-block' and color value as 'white'
 
 const puppeteer = require("puppeteer");
 
@@ -16,17 +16,19 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the div.card has a border of '30px solid #7D5A44' value", async () => {
+test("Verify that a.btn have display value as 'inline-block' and color value as 'white'", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let div = body.querySelector(".card");
+    let btns = body.querySelectorAll("a.btn");
     return (
-      window.getComputedStyle(div).color === "rgb(125, 90, 68)" &&
-      window.getComputedStyle(div).backgroundColor === "rgb(235, 224, 199)"
+      window.getComputedStyle(btns[0]).display == "inline-block" &&
+      window.getComputedStyle(btns[1]).display === "inline-block" &&
+      window.getComputedStyle(btns[0]).color == "rgb(255, 255, 255)" &&
+      window.getComputedStyle(btns[1]).color == "rgb(255, 255, 255)"
     );
   }, body);
 

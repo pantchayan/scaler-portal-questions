@@ -1,0 +1,1 @@
+The solution is quite straight forward. Pay attention to the instructions provided in the problem description and test cases.

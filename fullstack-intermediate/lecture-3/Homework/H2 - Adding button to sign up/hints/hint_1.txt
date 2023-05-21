@@ -1,0 +1,2 @@
+The solution is quite straight forward. Pay attention to the instructions provided in the problem description and test cases.
+Make sure to not change the boilerplate code under any circumstances.

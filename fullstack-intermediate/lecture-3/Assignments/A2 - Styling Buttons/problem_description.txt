@@ -1,0 +1,41 @@
+Writing CSS to style the buttons
+
+What you are given?
+
+You are provided with HTML and CSS boilerplate code, in which you have:
+1. A div.btns element that contains two <a> tags 
+2. One <a> tag has class of 'btn' and other has class of 'btn' and 'btn-empty'
+3. Some preset CSS is used to remove text-decoration and add other styles.
+
+Don't change any of the boilerplate code.
+
+What you need to do?
+
+You need to style a.btn and a.btn.btn-empty elements into such buttons:
+
+<IMAGE GOES HERE>
+
+To achieve this, you have to write CSS as per the instructions given below.
+
+For a.btn (both the a element), set:
+1. display as 'inline-block' and text color as 'white'
+2. margin from right to 15px
+3. padding from top and bottom to 15px and from right and left to 25px
+4. background color to #f63854
+5. border radius as 64px 
+6. border of 1px width, solid style and #f63854 color
+7. set transition value of 'transform 0.3s, color 0.3s, background-color 0.3s'
+
+For a.btn-empty, set:
+1. text color as #f63854
+2. background color as 'transparent'
+
+When a.btn are hovered upon:
+1. set the transform property value to 'scale(1.2)'
+
+When a.btn-empty is hovered upon:
+1. set the text color to white
+2. and background color to #f63854
+
+Further, refer to the test cases to understand necessary requirements to submit the problem.
+The end result should be similar to the one given below:

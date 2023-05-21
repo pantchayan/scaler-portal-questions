@@ -1,6 +1,6 @@
 // Description:
 // Verify that the div.card has a padding of 25px on top, 10px on left, 50px on bottom, and 10px on right.
-
+const puppeteer = require("puppeteer");
 let browser;
 
 beforeAll(async () => {

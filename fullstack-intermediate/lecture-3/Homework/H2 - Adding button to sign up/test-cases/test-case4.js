@@ -1,6 +1,8 @@
 // Description:
-// Verify that the div.card has a line-height of 25px
+// Verify that div.card has a border of width 1px, style solid and color as lightgrey.
+
 const puppeteer = require("puppeteer");
+
 let browser;
 
 beforeAll(async () => {
@@ -14,15 +16,15 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the div.card has a line-height of 25px", async () => {
+test("Verify that div.card has a border of width 1px, style solid and color as lightgrey.", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let div = body.querySelector(".card");
-    return window.getComputedStyle(div).lineHeight === "25px";
+    let card = body.querySelector("div.card");
+    return window.getComputedStyle(card).border.includes("solid");
   }, body);
 
   expect(check).toBeTruthy();

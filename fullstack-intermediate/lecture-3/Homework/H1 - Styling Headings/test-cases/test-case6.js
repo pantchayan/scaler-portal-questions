@@ -1,6 +1,8 @@
 // Description:
-// Verify that the div.card has a line-height of 25px
+// Verify that h2::after has margin property set to '30px 65px'
+
 const puppeteer = require("puppeteer");
+
 let browser;
 
 beforeAll(async () => {
@@ -14,15 +16,15 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the div.card has a line-height of 25px", async () => {
+test("Verify that h2::after has margin property set to '30px 65px'", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let div = body.querySelector(".card");
-    return window.getComputedStyle(div).lineHeight === "25px";
+    let h2 = body.querySelector("h2");
+    return window.getComputedStyle(h2, ":after").margin == "30px 65px";
   }, body);
 
   expect(check).toBeTruthy();

@@ -1,0 +1,5 @@
+1. Verify that div.signup-button has text-align value set as 'center'
+2. Verify that div.signup-button has position value set as 'relative'
+3. Verify that div.signup-button has top value set as '45px'
+4. Verify that div.card has a border of width 1px, style solid and color as lightgrey.
+5. Verify that div.card has a border-radius of 4%

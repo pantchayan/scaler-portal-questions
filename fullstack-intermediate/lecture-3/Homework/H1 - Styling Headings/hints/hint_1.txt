@@ -1,0 +1,8 @@
+The solution is quite straight forward. Pay attention to the instructions provided in the problem description and test cases.
+For making the underline use:
+h2::after{
+    ...style rules
+}
+
+For making the text uppercase use:
+text-transform: uppercase;

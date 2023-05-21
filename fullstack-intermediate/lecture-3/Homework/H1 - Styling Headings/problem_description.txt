@@ -1,0 +1,30 @@
+Writing CSS to style the heading
+
+What you are given?
+
+You are provided with HTML and CSS boilerplate code, in which you have:
+1. A section tag that consists of h2 heading.
+2. Some preset CSS.
+Don't change any of the boilerplate code.
+
+What you need to do?
+
+You need to style h2 such that it looks this way:
+
+<IMAGE GOES HERE>
+
+To achieve this, you have to write CSS as per the instructions given below.
+
+For h2:
+1. font size is set to '30px' and color is set as 'gray'
+2. text transform property is utilised to make the entire heading 'uppercase'
+
+For making the underline, we use h2::after to make content after the h2 element,
+Inside which:
+1. content propety is set to "" (an empty string)
+2. color property is set to '#f63854'
+3. display property is set to 'block'
+4. border-bottom has value of solid
+5. and it has a margin from top and bottom of 30px and right and left of 65px.
+
+Further, refer to the test cases to understand necessary requirements to submit the problem.
