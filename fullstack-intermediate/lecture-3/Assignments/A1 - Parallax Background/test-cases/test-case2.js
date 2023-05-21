@@ -18,6 +18,7 @@ test("Verify that the background has color of 'lightblue'", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
+  const body = await page.$("body");
   const check = await page.evaluate((body) => {
     let header = body.querySelector("header");
     return window

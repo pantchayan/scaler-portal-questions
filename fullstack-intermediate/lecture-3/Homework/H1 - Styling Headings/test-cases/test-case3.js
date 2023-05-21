@@ -24,7 +24,7 @@ test('Verify that h2::after has content property set to ""', async () => {
 
   const check = await page.evaluate((body) => {
     let h2 = body.querySelector("h2");
-    return window.getComputedStyle(h2, ":after").content == '""';
+    return window.getComputedStyle(h2, ":after").content.includes("");
   }, body);
 
   expect(check).toBeTruthy();

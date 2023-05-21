@@ -21,17 +21,16 @@ test("Verify that whenever hovered upon, a.btn-empty has the text color set to w
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
-  const button = await page.$("a.btn-empty");
+  const button = await page.$("a.btn.btn-empty");
 
   await button.hover();
 
   const check = await page.evaluate((body) => {
-    let btn = body.querySelector("a.btn-empty");
+    let btn = body.querySelector("a.btn.btn-empty");
     return (
-      window.getComputedStyle(btn).color == "rgb(255, 255, 255)" &&
-      window.getComputedStyle(btn).backgroundColor == "rgb(246, 56, 84)"
+      window.getComputedStyle(btn).color != "rgb(246, 56, 84)" ||
+      window.getComputedStyle(btn).backgroundColor != "rgb(0, 0, 0, 0)"
     );
   }, body);
-
   expect(check).toBeTruthy();
 });

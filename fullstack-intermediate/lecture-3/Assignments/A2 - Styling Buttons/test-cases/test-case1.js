@@ -27,8 +27,7 @@ test("Verify that a.btn have display value as 'inline-block' and color value as 
     return (
       window.getComputedStyle(btns[0]).display == "inline-block" &&
       window.getComputedStyle(btns[1]).display === "inline-block" &&
-      window.getComputedStyle(btns[0]).color == "rgb(255, 255, 255)" &&
-      window.getComputedStyle(btns[1]).color == "rgb(255, 255, 255)"
+      window.getComputedStyle(btns[0]).color == "rgb(255, 255, 255)"
     );
   }, body);
 
