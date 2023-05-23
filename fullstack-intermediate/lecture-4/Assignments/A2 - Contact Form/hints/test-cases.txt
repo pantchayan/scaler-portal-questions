@@ -1,0 +1,5 @@
+1. Verify that the section.contact-form-section has display set as flex.
+2. Verify that the flex-direction for section.contact-form-section has value of 'column'.
+3. Verify that the items inside section.contact-form-section are aligned to center across y-axis.
+4. Verify that the div.container_parent has display set as flex.
+5. Verify that the div.container_parent has elements across horizontal axis are spaced evenly.

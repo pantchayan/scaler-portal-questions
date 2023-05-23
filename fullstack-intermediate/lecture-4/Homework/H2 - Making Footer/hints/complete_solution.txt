@@ -1,0 +1,14 @@
+        .footer-parent{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-text{
+            display: flex;
+            justify-content: start;
+        }
+
+        .social-link{
+            display: flex;
+            justify-content: end;
+        }

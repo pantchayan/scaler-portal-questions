@@ -1,0 +1,4 @@
+1. Verify that the div.footer-parent, ul.footer-text & ul.social-link have display set as flex.
+2. Verify that the div.footer-parent has elements across horizontal axis positioned as 'space-between'.
+3. Verify that the ul.footer-text has elements across horizontal axis positioned as 'start'.
+4. Verify that the ul.social-link has elements across horizontal axis positioned as 'end'.

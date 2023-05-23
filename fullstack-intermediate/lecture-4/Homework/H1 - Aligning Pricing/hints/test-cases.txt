@@ -1,0 +1,5 @@
+1. Verify that the section has display set as flex.
+2. Verify that the flex-direction for section has value of 'column'.
+3. Verify that the items inside section are aligned to center across y-axis.
+4. Verify that the div.cards-container has display set as flex.
+5. Verify that the div.cards-container has elements across horizontal axis are spaced evenly.

@@ -1,0 +1,2 @@
+1. Verify that the ul has display set as flex.
+2. Verify that the li elements are positioned as 'flex-end' across horizontal axis.

@@ -1,0 +1,5 @@
+Follow the instructions in the problem description and test cases.
+Make sure to not change the boileplate code.
+
+In div.footer-parent, ul.footer-text & ul.social-link:
+To set the children elements across horizontal axis, utilise justify-content property.

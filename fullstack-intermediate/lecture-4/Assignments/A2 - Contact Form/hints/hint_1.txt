@@ -1,0 +1,9 @@
+Follow the instructions in the problem description and test cases.
+Make sure to not change the boileplate code.
+
+For section.contact-form-section:
+To set the main axis of flex as y-axis, utilise flex-direction property and set its value as 'coloumn'
+To align items to center on the y-axis, utilise align-items property and set its value as 'center'
+
+For div.container_parent:
+To set the children elements across horizontal axis to 'space-evenly', utilise justify-content property.

@@ -1,0 +1,4 @@
+Follow the instructions in the problem description and test cases.
+Make sure to not change the boileplate code.
+
+For setting the <li> across horizontal axis, utilise justify-content property.

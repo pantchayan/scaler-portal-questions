@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    font-size: 1rem;
+    color: gray;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+section {
+    background-color: #212529;
+    height: 100vh;
+}
+
+video {
+    width: 40%
+}
+
+form {
+    width: 50%;
+}
+
+.entry-text {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    border: 2px solid grey;
+    border-radius: 3%;
+    width: 100%;
+    padding: 3%;
+    margin-bottom: 3%;
+}
+
+textarea {
+    height: 7rem;
+}
+
+input[type="checkbox"] {
+    margin-bottom: 5%;
+    /* padding-right: 1rem; */
+}
+
+
+.btn {
+    display: inline-block;
+    color: white;
+    margin-right: 1rem;
+    padding: 0.8rem 1.6rem;
+    background-color: #f63854;
+    border-radius: 4rem;
+    border: 0.1rem solid #f63854;
+    transition: transform 0.3s, color 0.3s, background-color 0.3s;
+}
+
+h2 {
+    font-size: 225%;
+    text-align: center;
+    /* font-weight: 300; */
+    text-transform: uppercase;
+    width: fit-content;
+    border-bottom: 4px solid #f63854;
+    margin: 0em 0em 1em 0em;
+}
+
+
+.btn-parent {
+    display: flex;
+    justify-content: center;
+}

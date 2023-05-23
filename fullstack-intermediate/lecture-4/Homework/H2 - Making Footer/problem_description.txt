@@ -1,0 +1,31 @@
+Write internal CSS and determine flexbox properties of the Footer.
+
+You are given HTML and some preset CSS as boilerplate. 
+
+In HTML:
+1. footer contains:
+    1.1. div.footer-parent element.
+    1.2. p.footer-p element containing copyright info.
+2. div.footer-parent element contains:
+    2.1. ul.footer-text -> contains redirectable links
+    2.2. ul.social-link -> contains social media logos inscribed in links 
+
+The output should look like this:
+
+<INSERT IMAGE>
+
+To acheive this you need to utlise Flexbox properties in the following manner.
+
+For div.footer-parent:
+1. Set the display to flex
+2. And position the children elements across horizontal axis to 'space-between'
+
+For ul.footer-text:
+1. Set the display to flex
+2. And position the children elements across horizontal axis to 'start'
+
+For ul.social-link:
+1. Set the display to flex
+2. And position the children elements across horizontal axis to 'end'
+
+Further, refer to the test cases to understand necessary requirements to submit the problem.
