@@ -7,7 +7,7 @@ In HTML:
     1.1. h2 element with content 'CONTACT US'
     1.2. div.container_parent 
 2. div.container_parent element contains:
-    2.1. video.element
+    2.1. img element
     2.2. form element
 
 The output should look like this:
