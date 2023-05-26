@@ -1,19 +1,19 @@
 <!-- Complete Solution -->
 <script>
 
-    document.querySelector('#doubleHolder').addEventListener('click', function (e) {
-        if (e.target.classList.contains('double')) {
-            let btn = document.createElement('button');
-            btn.setAttribute('class', 'newClass')
-            btn.innerHTML = 'firstButton'
+    let dblHolder = document.querySelector("#doubleHolder");
+        window.addEventListener("click",function(e){
+            if(e.target.classList.contains("double")){
+                e.target.remove();
+                let button = document.createElement("button");
+                button.setAttribute("class","double");
+                button.innerText = "double";
+                dblHolder.appendChild(button);
 
-            let btn2 = document.createElement('button');
-            btn2.setAttribute('class', 'newClass')
-            btn2.innerHTML = 'SecondButton'
-
-            e.currentTarget.appendChild(btn)
-            e.currentTarget.appendChild(btn2)
-            e.currentTarget.removeChild(e.target)
-        }
-    })
+                let button2 = document.createElement("button");
+                button2.setAttribute('class','double');
+                button2.innerText = "double";
+                dblHolder.appendChild(button2);
+            }
+        })
 </script>

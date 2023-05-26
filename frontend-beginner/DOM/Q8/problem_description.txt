@@ -3,4 +3,4 @@ Write a JavaScript program such that whenever the button is clicked :
 
 1. It is destroyed (removed from the parent div)
 2. Two new buttons are created in its place. (inside the same parent div)
-3. No changes should take place when the new buttons are clicked.
+3. The new buttons should also inherit the same feature. 

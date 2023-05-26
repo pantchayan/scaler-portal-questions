@@ -1,5 +1,5 @@
 // Description:
-// Clicking on 'double button' destroys it (removes it from parent div).
+// Clicking on 'double button' removes it and adds two new 'double' buttons inside the parent div.
 const puppeteer = require("puppeteer");
 
 let browser;
@@ -15,7 +15,7 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Clicking on 'double button' destroys it (removes it from parent div).", async () => {
+test("Clicking on 'double button' removes it and adds two new 'double' buttons inside the parent div.", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
@@ -25,8 +25,8 @@ test("Clicking on 'double button' destroys it (removes it from parent div).", as
   await doubleBtn.click();
 
   const check = await page.evaluate((body) => {
-    let doubleBtn = body.querySelector(".double");
-    return doubleBtn == null;
+    let newBtns = body.querySelectorAll("button");
+    return newBtns.length == 2;
   }, bodyHandle);
 
   expect(check).toBeTruthy();

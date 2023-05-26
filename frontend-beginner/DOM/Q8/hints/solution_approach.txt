@@ -6,12 +6,12 @@
         if (e.target.classList.contains('double')) {
 // 2. Use createElement method to create the new buttons.
             let btn = document.createElement('button');
-            btn.setAttribute('class', 'newClass')
-            btn.innerHTML = 'firstButton'
+            btn.setAttribute('class', 'double')
+            btn.innerHTML = 'double'
 
             let btn2 = document.createElement('button');
-            btn2.setAttribute('class', 'newClass')
-            btn2.innerHTML = 'SecondButton'
+            btn2.setAttribute('class', 'double')
+            btn2.innerHTML = 'double'
 
 // 3. Use appendChild method to add the buttons to the parent div.
             e.currentTarget.appendChild(btn)

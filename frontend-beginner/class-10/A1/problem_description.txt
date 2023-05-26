@@ -1,11 +1,19 @@
 Problem Description:
 
-You are given an array of numbers. You need to perform the following operations on this array:
+You are given an array of numbers. 
 
-Steps:
-Double all the numbers in the array.
-Filter out all the numbers that are less than 10.
-Sum up all the remaining numbers in the array.
+Complete a function to perform the following operations on this array: (in order)
+
+1. Double all the numbers in the array.
+2. Filter out all the numbers that are less than 10.
+3. Sum up all the remaining numbers in the array.
+
+For example:
+Input: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Output: 90
+
+Input: [5, 10, 15, 20, 25]
+Output: 150
 
 WRITE THE CODE INSIDE THE doubleAndSum(arr) FUNCTION
-and RETURN the output.
+and RETURN the correct output.

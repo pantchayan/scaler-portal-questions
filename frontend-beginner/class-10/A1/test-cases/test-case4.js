@@ -1,5 +1,5 @@
 // Description:
-// Test-case 4: ?
+// Hidden Test Case 3
 const puppeteer = require("puppeteer");
 
 let browser;
@@ -15,22 +15,30 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Test-case 4", async () => {
+test("Hidden Test Case 3", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
-  const bodyHandle = await page.$("body");
+  const html = await page.$("html");
 
-  await page.evaluate((body) => {
-    let questionDiv = body.querySelector("div.question");
-    questionDiv.innerText = "1, 3, 5, 7, 9";
-  }, bodyHandle);
+  const check = await page.evaluate((html) => {
+    let scriptContent = html.querySelector("#solution").innerHTML;
 
-  await page.click("button");
-  const check = page.evaluate((body) => {
-    let ansDiv = body.querySelector("div.solution").innerText;
-    return ansDiv == "42";
-  }, bodyHandle);
+    let functionBody = scriptContent.substring(
+      scriptContent.indexOf("{") + 1,
+      scriptContent.lastIndexOf("}")
+    );
 
-  await expect(check).toBeTruthy();
+    // Create a function and pass it the input array
+    let runCode = new Function("arr", functionBody);
+
+    // Define the input array
+    let inputArray = [1, 3, 5, 7, 9];
+
+    // Call the function with the input array
+    let result = runCode(inputArray);
+    // let scriptContent = html.querySelector("body").innerText;
+    return result === 42;
+  }, html);
+  expect(check).toBeTruthy();
 });

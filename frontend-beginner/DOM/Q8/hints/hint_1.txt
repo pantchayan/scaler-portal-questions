@@ -1,4 +1,5 @@
-1. Add a 'click' eventListener to get the event when double button is clicked.
+1. Add a 'click' eventListener to get the event when 'double' button is clicked.
 2. Use createElement method to create the new buttons.
+    2.1. Use set setAttribute to add class of 'double' to these new buttons.
 3. Use appendChild method to add the buttons to the parent div.
 4. Use removeChild method to remove the double button from the parent div.
