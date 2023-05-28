@@ -1,0 +1,20 @@
+Write internal CSS to make a Sticky Navbar
+
+You are given HTML and some preset CSS as boilerplate. 
+
+In HTML:
+1. nav contains:
+    1.1. ul.navigation element that has li elements
+2. header and section elements.
+
+The output should look like this:
+
+<INSERT IMAGE>
+
+To acheive this you need to utlise position properties in the following manner.
+
+For nav
+1. Set the position property as sticky.
+2. Set the top as 0.
+
+Further, refer to the test cases to understand necessary requirements to submit the problem.

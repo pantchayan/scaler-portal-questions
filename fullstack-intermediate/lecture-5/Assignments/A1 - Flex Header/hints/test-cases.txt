@@ -1,0 +1,5 @@
+1. Verify that the div.showcase has display set as flex.
+2. Verify that the flex-direction for div.showcase has value of 'column'.
+3. Verify that the items inside div.showcase are aligned to center across y-axis.
+4. Verify that the h1.main-heading has display set as flex.
+5. Verify that the h1.main-heading has flex-direction set to 'column'.

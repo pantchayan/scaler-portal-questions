@@ -1,0 +1,2 @@
+1. Verify that the nav has position property of value sticky.
+2. Verify that the nav has a top property of value 0.

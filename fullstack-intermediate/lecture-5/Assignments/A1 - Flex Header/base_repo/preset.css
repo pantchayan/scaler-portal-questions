@@ -1,0 +1,107 @@
+/*Presets  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    font-size: 1rem;
+    color: gray;
+}
+
+/* presets */
+section {
+    padding: 4rem 5rem;
+}
+
+/* Selectors */
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* Header */
+header,
+.comments {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.849)),
+        url(https://i.postimg.cc/Dw6PQ6T4/foodiesfeed-com-pizza-ready-for-baking.jpg);
+    height: 100vh;
+    /* background-size: 100%; */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-line {
+    font-size: 120%;
+    margin-right: 1.2rem;
+    margin-top: 1.1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid transparent;
+}
+
+.white-anchors {
+    color: white;
+}
+
+.nav-line:hover {
+    border-bottom: 0.1rem solid #f63854;
+}
+
+.main-heading {
+    line-height: 140%;
+    word-spacing: 0.2rem;
+    font-size: 350%;
+    color: white;
+    font-weight: 800;
+}
+
+.btns {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    color: white;
+}
+
+.developer {
+    color: #f63854;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    margin-right: 1rem;
+    padding: 0.8rem 1.6rem;
+    background-color: #f63854;
+    border-radius: 4rem;
+    border: 0.1rem solid #f63854;
+    transition: transform 0.3s, color 0.3s, background-color 0.3s;
+}
+
+.btn-empty {
+    color: #f63854;
+    background-color: transparent;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
+.btn-empty:hover {
+    color: white;
+    background-color: #f63854;
+}
+
+.showcase {
+    height: 60vh;
+    margin-left: 100px;
+}

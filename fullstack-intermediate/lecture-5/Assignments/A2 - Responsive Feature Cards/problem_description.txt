@@ -1,0 +1,24 @@
+Write internal CSS to make the features section responsive
+
+You are given HTML and some preset CSS as boilerplate. 
+
+In HTML:
+1. section.features contains:
+    1.1. h1 element
+    1.2. div.container-parent
+2. div.container-parent contains: (display set as flex)
+    2.2. 3 div.containter elements that are the feature cards.
+
+The output should look like this:
+
+<INSERT IMAGE>
+
+To acheive this you need to utlise media query in the following manner.
+
+Add a media query for screens smaller than 940px, in which:
+1. Using flex-direction, change the main-axis of the div.container-parent to y-axis
+2. In the div.container-parent, align the items across cross-axis to center.
+
+Note: smaller than 940px will have max-width set to 939px
+
+Further, refer to the test cases to understand necessary requirements to submit the problem.

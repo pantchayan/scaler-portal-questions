@@ -1,0 +1,9 @@
+Follow the instructions in the problem description and test cases.
+Make sure to not change the boileplate code.
+
+For div.showcase:
+To set the main axis of flex as y-axis, utilise flex-direction property and set its value as 'column'
+To align items to center on the y-axis, utilise justify-content property and set its value as 'center'
+
+For h1.main-heading:
+To set the children elements across horizontal axis to 'space-evenly', utilise justify-content property.

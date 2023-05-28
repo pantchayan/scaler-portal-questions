@@ -21,14 +21,14 @@ test("Clicking on any of these two buttons also removes it and adds two new 'dou
 
   const bodyHandle = await page.$("body");
 
-  const doubleBtn = await page.$(".double");
+  let doubleBtn = await page.$(".double");
   await doubleBtn.click();
 
   doubleBtn = await page.$(".double");
-  doubleBtn.click();
+  await doubleBtn.click();
 
   const check = await page.evaluate((body) => {
-    let newBtns = body.querySelectorAll("button");
+    let newBtns = body.querySelectorAll(".double");
     return newBtns.length == 3;
   }, bodyHandle);
 
