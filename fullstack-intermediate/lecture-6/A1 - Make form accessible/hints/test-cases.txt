@@ -1,0 +1,2 @@
+1. Verify that there are 4 labels in the HTML code.
+2. Verify that all the 4 inputs have tabindex attribute specified.

@@ -1,6 +1,8 @@
 // Description:
-// Verify that the nav has a top property of value 0px.
+// Verify that there are 4 labels in the HTML code.
+
 const puppeteer = require("puppeteer");
+
 let browser;
 
 beforeAll(async () => {
@@ -14,14 +16,15 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the nav has a top property of value 0.", async () => {
+test("Verify that there are 4 labels in the HTML code.", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
+
   const check = await page.evaluate((body) => {
-    let nav = body.querySelector("nav");
-    return window.getComputedStyle(nav).top === "0px";
+    let labels = body.querySelectorAll("label");
+    return labels.length == 4;
   }, body);
 
   expect(check).toBeTruthy();

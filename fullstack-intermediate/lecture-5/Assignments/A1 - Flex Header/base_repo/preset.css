@@ -28,8 +28,7 @@ li {
 /* Header */
 header,
 .comments {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.849)),
-        url(https://i.postimg.cc/Dw6PQ6T4/foodiesfeed-com-pizza-ready-for-baking.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.849));
     height: 100vh;
     /* background-size: 100%; */
     background-size: cover;

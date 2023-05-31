@@ -1,0 +1,19 @@
+Change the HTML code to make the Form accessible.
+
+You need to perform 2 tasks:
+
+Task 1:
+Replace the divs with labels for each of inputs like:
+input#name gets label[for='name']
+input#email gets label[for='email'] 
+select#how gets label[for='how']
+textarea#message gets label[for='message'] 
+
+Task 2:
+Add tabindex attribute with following values for the inputs:
+input#name => 1
+input#email => 2
+select#how => 3
+textarea#message => 4
+
+Further, refer to the test cases to understand necessary requirements to submit the problem.
