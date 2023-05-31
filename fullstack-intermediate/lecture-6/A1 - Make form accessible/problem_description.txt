@@ -1,6 +1,6 @@
 Change the HTML code to make the Form accessible.
 
-You need to perform 2 tasks:
+You need to perform 3 tasks:
 
 Task 1:
 Replace the divs with labels for each of inputs like:
@@ -15,5 +15,9 @@ input#name => 1
 input#email => 2
 select#how => 3
 textarea#message => 4
+
+Task 3:
+Replace the anchor tag of 'SEND MESSAGE', 
+with a button of type 'submit'
 
 Further, refer to the test cases to understand necessary requirements to submit the problem.

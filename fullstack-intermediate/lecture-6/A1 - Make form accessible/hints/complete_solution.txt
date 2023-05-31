@@ -20,4 +20,7 @@
             <label for="message">Drop us a line:</label>
             <textarea id="message" name="message" placeholder="Your Message" tabindex="4"></textarea>
         </div>
+        <div class="btn-parent">
+            <button type="submit" class="btn btn-full form-button" tabindex="5">SEND MESSAGE</button>
+        </div>
     </form>
