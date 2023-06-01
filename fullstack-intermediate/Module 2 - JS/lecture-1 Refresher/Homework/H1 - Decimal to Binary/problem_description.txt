@@ -1,0 +1,10 @@
+Problem Description:
+
+Complete the function ConvertToBinary(dec), which takes a decimal number and returns its binary.
+
+Sample Test Case 1:
+Input: 
+45
+
+Output:
+101101
