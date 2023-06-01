@@ -1,0 +1,37 @@
+function updateUsers(users, userObject, item) {
+  //write your code here
+  let userExist = false;
+  let userIndex = -1;
+  for (x in users) {
+    userExist = users[x].name === userObject.name ? true : false;
+    userIndex = users[x].name === userObject.name ? x : -1;
+  }
+
+  if (userExist) {
+    if (users[userIndex].orders) {
+      let alreadyOrdered = false;
+      for (y in users[userIndex].orders) {
+        alreadyOrdered =
+          users[userIndex].orders[y].name === item ? true : false;
+        if (alreadyOrdered) break;
+      }
+
+      if (alreadyOrdered) {
+        return { msg: "Already ordered!" };
+      }
+
+      users[userIndex].orders.push({
+        id: users[userIndex].orders.length + 1,
+        name: item,
+      });
+    } else {
+      users[userIndex].orders = [{ id: 1, name: item }];
+    }
+  } else {
+    if (item) {
+      userObject.orders = [{ id: 1, name: item }];
+    }
+    users.push(userObject);
+  }
+  return users;
+}
