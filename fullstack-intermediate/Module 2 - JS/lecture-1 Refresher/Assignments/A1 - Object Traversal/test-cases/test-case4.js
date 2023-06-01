@@ -30,7 +30,7 @@ test("Hidden Test Case 2", async () => {
     );
 
     // Create a function and pass it the input array
-    let runCode = new Function("arr", functionBody);
+    let runCode = new Function("users", "userObject", "item", functionBody);
 
     // Call the function with the input array
     let result = JSON.stringify(
@@ -48,11 +48,15 @@ test("Hidden Test Case 2", async () => {
         "Fan"
       )
     );
+
     // let scriptContent = html.querySelector("body").innerText;
-    return (
-      result ==
-      '[{"name":"Rajneesh","age":34,"address":{"local":"22 Alaknanda","city":"Dehradun","state":"UK"},"orders":[{"id":1,"name":"GOT Book Series"}]},{"name":"Bhavesh","age":37,"address":{"local":"48 DT Row","city":"Hyderabad","state":"AP"}},{"name":"Jasbir","age":38,"address":{"local":"196 Lama Bhavan","city":"Gangtok","state":"Sikkim"},"orders":[{"id":1,"name":"Chair"},{"id":2,"name":"PS5"}]},{"name":"Rajneesh","age":34,"address":{"local":"22 Alaknanda","city":"Dehradun","state":"UK"},"orders":[{"id":1,"name":"GOT Book Series"}]},{"name":"Ravi","age":24,"address":{"local":"25 Iroda","city":"Dehradun","state":"UK"},"orders":[{"id":1,"name":"Chair"}]},{"name":"Rajneesh","age":34,"address":{"local":"22 Alaknanda","city":"Dehradun","state":"UK"},"orders":[{"id":1,"name":"Fan"}]}]'
-    );
+    return {
+      result,
+      check:
+        result ==
+        '[{"name":"Rajneesh","age":34,"address":{"local":"22 Alaknanda","city":"Dehradun","state":"UK"},"orders":[{"id":1,"name":"GOT Book Series"}]},{"name":"Bhavesh","age":37,"address":{"local":"48 DT Row","city":"Hyderabad","state":"AP"}},{"name":"Jasbir","age":38,"address":{"local":"196 Lama Bhavan","city":"Gangtok","state":"Sikkim"},"orders":[{"id":1,"name":"Chair"},{"id":2,"name":"PS5"}]},{"name":"Rajneesh","age":34,"address":{"local":"22 Alaknanda","city":"Dehradun","state":"UK"},"orders":[{"id":1,"name":"Fan"}]}]',
+    };
   }, html);
-  expect(check).toBeTruthy();
+  console.log(check.result);
+  expect(check.check).toBeTruthy();
 });

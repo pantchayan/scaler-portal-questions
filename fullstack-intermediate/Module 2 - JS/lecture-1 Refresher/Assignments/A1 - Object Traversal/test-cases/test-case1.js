@@ -30,7 +30,7 @@ test("Sample Test Case 1", async () => {
     );
 
     // Create a function and pass it the input array
-    let runCode = new Function("arr", functionBody);
+    let runCode = new Function("users", "userObject", "item", functionBody);
 
     // Call the function with the input array
     let result = JSON.stringify(
