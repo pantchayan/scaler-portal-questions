@@ -1,0 +1,14 @@
+        function aclean(arr) {
+            let obj = {};
+
+            for (let i = 0; i < arr.length; i++) {
+                let sorted = arr[i].toLowerCase().split("").sort().join("");
+
+                if (!obj[sorted]) {
+                    obj[sorted] = arr[i];
+                }
+
+            }
+            console.log(obj)
+            return Object.values(obj);
+        }

@@ -1,0 +1,13 @@
+Problem Description:
+Write a function aclean(arr) that returns an array cleaned from anagrams. Keep the first occurence of anagram
+
+Anagrams are words that have the same number of same letters, but in different order.
+
+For instance: nap - pan ear - are - era cheaters - hectares - teachers
+
+Sample Test Case 1:
+Input: 
+["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+Output:
+['nap', 'teachers', 'ear']
