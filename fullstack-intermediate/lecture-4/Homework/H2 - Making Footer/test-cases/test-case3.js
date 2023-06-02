@@ -24,7 +24,10 @@ test("Verify that the ul.footer-text has elements across horizontal axis positio
   const check = await page.evaluate((body) => {
     let ulText = body.querySelector("ul.footer-text");
 
-    return window.getComputedStyle(ulText).justifyContent === "start";
+    return (
+      window.getComputedStyle(ulText).justifyContent === "start" ||
+      window.getComputedStyle(ulText).justifyContent === "flex-start"
+    );
   }, body);
 
   expect(check).toBeTruthy();

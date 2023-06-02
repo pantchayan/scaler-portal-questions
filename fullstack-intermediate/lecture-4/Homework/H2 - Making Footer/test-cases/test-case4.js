@@ -24,7 +24,10 @@ test("Verify that the ul.social-link has elements across horizontal axis positio
   const check = await page.evaluate((body) => {
     let ulIcon = body.querySelector("ul.social-link");
 
-    return window.getComputedStyle(ulIcon).justifyContent === "end";
+    return (
+      window.getComputedStyle(ulIcon).justifyContent === "end" ||
+      window.getComputedStyle(ulIcon).justifyContent === "flex-end"
+    );
   }, body);
 
   expect(check).toBeTruthy();
