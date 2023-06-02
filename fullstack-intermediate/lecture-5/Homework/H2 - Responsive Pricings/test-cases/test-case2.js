@@ -50,6 +50,34 @@ test("Verify that in that media query, div.cards-container has main-axis change 
       }
     }
 
+    if (cssProp && cssProp.includes(".cards-container") && cssProp.includes("flex-direction: column;")) {
+      return true;
+    }
+    mediaQuery = "only screen and (max-width: 767px)";
+
+    // Iterate over the loaded stylesheets
+    for (var i = 0; i < document.styleSheets.length; i++) {
+      var styleSheet = document.styleSheets[i];
+
+      // Iterate over the CSS rules in each stylesheet
+      for (var j = 0; j < styleSheet.cssRules.length; j++) {
+        var cssRule = styleSheet.cssRules[j];
+
+        // Check if the rule is a media query
+        if (cssRule instanceof CSSMediaRule) {
+          // Check if the media query matches your desired query
+          if (cssRule.media.mediaText === mediaQuery) {
+            // Iterate over the CSS rules inside the media query
+            for (var k = 0; k < cssRule.cssRules.length; k++) {
+              var matchingRule = cssRule.cssRules[k];
+              // Access the CSS properties or perform actions with the rule
+              cssProp += "" + matchingRule.cssText;
+            }
+          }
+        }
+      }
+    }
+
     return cssProp.includes(".cards-container") && cssProp.includes("flex-direction: column;");
   }, body);
 
