@@ -1,0 +1,2 @@
+Verify that the returned function is binded with snap function of object.
+Verify that when the function is called, it returns correct string output.

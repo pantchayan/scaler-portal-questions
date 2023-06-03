@@ -1,0 +1,5 @@
+        function combineArrays(arr1, arr2, finalArr) {
+            //write your code here ===============================================
+            finalArr.push.apply(finalArr , [ ...arr1 , ...arr2 ]);
+            return finalArr;
+        }

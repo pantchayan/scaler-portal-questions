@@ -1,0 +1,4 @@
+        function main() {
+            let bindedFunction = thanos.snap.bind(ironman);
+            return bindedFunction;
+        }

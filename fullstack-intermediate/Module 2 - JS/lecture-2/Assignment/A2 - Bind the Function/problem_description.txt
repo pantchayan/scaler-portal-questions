@@ -1,0 +1,31 @@
+Problem Description:
+Implement bind method below 
+THANOS has snapped the finger, use bind method in such a way that now iron man should be able to snap the finger again.
+
+Meaning -> 
+
+1. You are given boilerplate JS code with the following objects:
+
+        const thanos = {
+            name: "THANOS",
+            snap: function () {
+                return `${this.name} snapped the finger and half of the universe ${this.name == "THANOS" ? "disappeared" : "came back"}`;
+            }
+        }
+
+        const ironman = {
+            name: "IRON MAN"
+        }
+
+        console.log(thanos.snap())
+
+2. Notice that ironman object doesn't have a snap method.
+3. You need to utilise Javascript binding facility to make a binded function.
+4. This function will be a bind of :
+    4.1. snap function from thanos object
+    4.2. and ironman object  
+
+A variable called 'bindedFunction' has been declared in the main function.
+You need to update the main function and initialise the bindedFunction, such that the main function returns this bindedFunction.
+Test cases will then be evaluated in the backend.
+

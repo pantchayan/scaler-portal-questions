@@ -1,0 +1,31 @@
+Problem Description:
+Complete the combineArrays() function by implementing a program in Javascript that combines two arrays into a new one.
+
+Explanation:
+1. You have a function combineArrays that takes in 3 parameters:
+    1.1. arr1 -> Set of values 
+    1.2. arr2 -> Set of values
+    1.3. finalArr -> Empty array
+
+2. Inside the function body, write the code to successfully combine arr1 and arr2, and put the values in the finalArr.
+
+3. The function finally returns the combined finalArr.
+
+4. You can utilise 'apply' method to perform the above operation.
+
+5. Make sure the values in arr1 and arr2 aren't changed after the operation.
+
+Sample test case:
+
+Input:
+arr1 = ["Steve" , "Falcon" , "Bucky"]
+arr2 = ["Iron Man" , "Spider Man" , "Rhodey"]
+finalArr = []
+
+Output:
+arr1 = ["Steve" , "Falcon" , "Bucky"]
+arr2 = ["Iron Man" , "Spider Man" , "Rhodey"]
+finalArr = ["Steve", "Falcon", "Bucky", "Iron Man", "Spider Man", "Rhodey"]
+
+
+

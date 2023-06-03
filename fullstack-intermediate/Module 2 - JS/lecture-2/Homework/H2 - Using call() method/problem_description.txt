@@ -1,0 +1,32 @@
+Problem Description:
+Implement a program that utilises call() method in Javascript to make the provided function work on different objects.
+
+Explanation:
+1. You have a main function that takes in 2 parameters:
+    1.1. obj -> A object with different set of values.
+    1.2. func -> A simple function that utilises the values from the object provided and returns a string.
+
+2. You need to write a program using call() method, which makes the provided function 'func' use the object 'obj' to generate a string.
+3. You then need to catch the return string in the 'resultString' variable, which is then returned from the main function. 
+
+Note: 
+The value of obj and func will be totally different for all the test cases, so there is no scope of hard coding the problem.
+
+Sample test case:
+
+Input:
+let obj = {
+    name: "bucky",
+    team: "Team Cap",
+};
+let func = function () {
+    return `Hello avengers this is ${this.name} from ${this.team} lets fight !`;
+};
+
+console.log(main(obj, func))
+
+Output:
+Hello avengers this is bucky from Team Cap lets fight !
+
+
+
