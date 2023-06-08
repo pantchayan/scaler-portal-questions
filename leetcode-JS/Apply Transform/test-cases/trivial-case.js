@@ -1,5 +1,5 @@
 // Description:
-// Verify that the returned function is binded with snap function of object.
+// Trivial Case
 const puppeteer = require("puppeteer");
 
 let browser;
@@ -15,7 +15,7 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the returned function is binded with snap function of object.", async () => {
+test("Trivial Test Case", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
@@ -29,20 +29,9 @@ test("Verify that the returned function is binded with snap function of object."
       scriptContent.lastIndexOf("}")
     );
 
-    // Create a function and pass it the input array
-    let runCode = new Function(functionBody);
-
-    // Call the function with the input array
-    let bindedFunc = runCode();
-
-    let resultString = bindedFunc();
-    let typeOfFunc = bindedFunc.name;
-    // let scriptContent = html.querySelector("body").innerText;
-    return {
-      resultString,
-      check: typeOfFunc === "bound snap",
-    };
+    return !scriptContent.includes('Array.map');
   }, html);
-  // console.log(check.resultString);
-  expect(check.check).toBeTruthy();
+  // console.log(check.resultArr)
+  expect(check).toBeTruthy();
 });
+
