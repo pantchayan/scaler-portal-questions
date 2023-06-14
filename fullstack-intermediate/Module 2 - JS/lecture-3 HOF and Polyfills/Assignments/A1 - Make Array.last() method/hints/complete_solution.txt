@@ -1,0 +1,3 @@
+        function number(x, y, fn) {
+            return fn(x, y);
+        }

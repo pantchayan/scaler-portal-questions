@@ -1,0 +1,29 @@
+Write a pollyfill of 'reduce'
+
+You need to complete the function reduce, which recieves 2 inputs:
+1. 'arr'
+    1.1. An array of numbers 
+2. 'reducer'
+    2.1. A function that does some mathematical operation on 2 input numbers and returns the resultant.
+    2.2. reducer(num1, num2) returns a resultant.
+
+The function reduce(arr, reducer), when called, should behave in similar fashion as inbuilt Array.prototype.reduce() function in JavaScript.
+Refrain from using the inbuilt Array.protoype.reduce() function in JS, trivial test case would check for that. 
+
+Input : 
+arr = [2, 3, 4, 5]
+reducer = fn(a,b){ return a+b }
+
+reduce(arr, reducer)
+
+Output : 
+14
+
+Input : 
+arr = [2, 3, 4]
+reducer = fn(a,b){ return a-b }
+
+reduce(arr, reducer)
+
+Output : 
+-5
