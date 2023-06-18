@@ -1,0 +1,27 @@
+Write a pollyfill of 'map'
+
+You need to complete the function reduce, which recieves 2 inputs:
+1. 'arr'
+    1.1. An array of numbers 
+2. 'callback'
+    2.1. A function that does takes a number as input, performs some mathematical operation on that number and returns end value.
+    2.2. callback(num) returns a new number.
+    2.3. For each element of the input arr, you need to store the returned number in the answer. (mapped array)
+
+The function map(arr, callback), when called, should behave in similar fashion as inbuilt Array.prototype.map() function in JavaScript.
+Refrain from using the inbuilt Array.protoype.map() function in JS, trivial test case would check for that. 
+
+
+Example 1:
+arr = [1, 2, 3, 4, 5];
+callback = fn(num) => num * num;
+
+Output: 
+[1, 4, 9, 16, 25]
+
+Example 2:
+arr = [1, 2, 3, 4, 5];
+callback = fn(num) => num * 2;
+
+Output: 
+[2, 4, 6, 8, 10]
