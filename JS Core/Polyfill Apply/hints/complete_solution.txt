@@ -1,0 +1,24 @@
+function applyPolyfill(fn, context, args) {
+  // Check if the fn is a function
+  if (typeof fn !== 'function') {
+    throw new TypeError('fn must be a function');
+  }
+  
+  // Set the context if it's null or undefined
+  if (context == null) {
+    context = window;
+  }
+  
+  // Create a unique property on the context object to store the function
+  const uniqueProp = Symbol('applyPolyfill');
+  context[uniqueProp] = fn;
+  
+  // Call the function with the given context and arguments
+  const result = context[uniqueProp](...args);
+  
+  // Delete the unique property from the context object
+  delete context[uniqueProp];
+  
+  // Return the result
+  return result;
+}
