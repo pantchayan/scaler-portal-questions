@@ -1,0 +1,13 @@
+function flatten(array) {
+    let newArr = [];
+    for (let i = 0; i < array.length; i++) {
+        let element = array[i];
+        if (Array.isArray(element)) {
+            let parentArr = flatten(element);
+            newArr = [...newArr, ...parentArr]
+        } else {
+            newArr.push(element);
+        }
+    }
+    return newArr;
+}

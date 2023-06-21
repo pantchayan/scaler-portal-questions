@@ -1,0 +1,20 @@
+Complete the function 'flatten(array)',
+
+such that it takes an array and returns a single flatten array of values,
+regardless of how many nested array are in the input array.
+
+Below is an example to further understand the requirement from the question.
+
+Example:
+
+let array = [1,2,3,[4,5],[6,7,8,[9,10,11]]];
+
+console.log(flatten(array));
+
+Output:
+
+[1,2,3,4,5,6,7,8,9,10,11]
+
+
+Note:
+Please note that you need to create a new array which is flattened and then return it from the function.

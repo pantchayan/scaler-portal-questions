@@ -1,0 +1,6 @@
+Function.prototype.customCall = function(obj) {
+  obj.fnRef = this;
+  var result = obj.fnRef();
+  delete obj.fnRef;
+  return result;
+};
