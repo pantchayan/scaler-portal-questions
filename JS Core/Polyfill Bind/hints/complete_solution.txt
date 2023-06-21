@@ -1,0 +1,6 @@
+Function.prototype.customBind = function (obj) {
+ obj.fnRef = this;
+ return function (...args) {
+  return obj.fnRef(...args)
+ }
+}

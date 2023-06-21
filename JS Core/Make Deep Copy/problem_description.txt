@@ -1,0 +1,17 @@
+Complete the function 'makeDeepCopy(object)',
+
+such that it returns a deep copy of the object being passed as parameter.
+Below is the definition of deep copy of an object, to understand the problem task.
+
+Deep Copy:
+A deep copy of an object is a copy whose properties do not share the same references (point to the same underlying values) as those of the source object from which the copy was made. As a result, when you change either the source or the copy, you can be assured you're not causing the other object to change too
+
+Note:
+A simple object would be provided to you, 
+and the returned object from the function you write would be evaluated in the backend to ensure its a deep copy.
+
+Example:
+let ingredients_list = { dish: "noodles", recipe: { list: ["eggs", "flour", "water"] } };
+
+A change being made to the list array of the deep copy of the above object 'ingredients_list' 
+should not cause any change to the list elements of the original object.

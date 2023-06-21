@@ -1,0 +1,12 @@
+
+        function makeDeepCopy(object) {
+            let cloning = {};
+            Object.keys(object).map((prop) => {
+                if (Array.isArray(object[prop])) {
+                    cloning[prop] = [].concat(object[prop]);
+                } else if (typeof object[prop] === "object") {
+                    cloning[prop] = makeDeepCopy(object[prop]);
+                } else cloning[prop] = object[prop];
+            });
+            return cloning;
+        };
