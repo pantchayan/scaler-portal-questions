@@ -1,0 +1,110 @@
+# Title: Flattening Nested Objects
+
+## Description:
+You are given an object that contains nested objects. The task is to write a function to flatten the object, bringing all the keys of nested objects to the same level. Flattening means to create new key-value pairs where the keys represent the nested structure using dot notation.
+
+## Function Signature:
+```javascript
+function flattenObject(obj) => Object
+```
+
+## Constraints:
+- The input object can have nested objects of arbitrary depth.
+- The input object can have various data types as values, including objects, arrays, strings, numbers, etc.
+
+## Examples:
+
+### Example 1:
+
+#### Input:
+```javascript
+const obj = {
+  newObj: {
+    obj2: {
+      obj5: {
+        one: 1,
+      },
+    },
+  },
+  obj3: {
+    obj4: { 
+      two: 2 
+    },
+  },
+};
+```
+
+#### Output:
+```javascript
+{
+  'newObj.obj2.obj5.one': 1,
+  'obj3.obj4.two': 2,
+}
+```
+
+### Example 2:
+
+#### Input:
+```javascript
+const obj = {
+  name: {
+    first: "robin",
+    last: "negi",
+  },
+  address: {
+    city: {
+      name: "Gwalior",
+    },
+    landmark: "Badri Marg",
+    street: "22",
+  },
+};
+```
+
+#### Output:
+```javascript
+{
+  'name.first': 'robin',
+  'name.last': 'negi',
+  'address.city.name': 'Gwalior',
+  'address.landmark': 'Badri Marg',
+  'address.street': '22',
+}
+```
+
+### Example 3:
+
+#### Input:
+```javascript
+const obj = {
+  flavor: "vanilla",
+  topping: {
+    drizzle: "chocolava",
+    sprinkle: "choco-chips",
+  },
+  cone: {
+    type: "waffle",
+    crust: {
+      color: "dark",
+      texture: "soft",
+    },
+  },
+};
+```
+
+#### Output:
+```javascript
+{
+  flavor: 'vanilla',
+  'topping.drizzle': 'chocolava',
+  'topping.sprinkle': 'choco-chips',
+  'cone.type': 'waffle',
+  'cone.crust.color': 'dark',
+  'cone.crust.texture': 'soft',
+}
+```
+
+## Explanation:
+The function `flattenObject` takes an input object `obj` and iterates over its keys. If a key points to another object (nested object), it recursively calls itself on that object and prefixes the nested keys with the current key. If a key points to a non-object value, it assigns the key-value pair to the result object as is.
+
+By using this recursive approach, the function iterates through all levels of nesting, creating flattened key-value pairs using dot notation to represent the nested structure. Finally, it returns the resulting flattened object.
