@@ -1,0 +1,55 @@
+# Title: Function Chaining with Incrementing Count
+
+## Description:
+You are tasked with creating a function `fn` that allows for function chaining and keeps track of the number of function calls made. Each time the function is called, it returns another function, and the count of function calls is incremented. The function chain can be terminated by passing a specific value. 
+
+## Function Signature:
+```javascript
+function fn() => Function
+```
+
+## Constraints:
+- The function chain can have an arbitrary number of function calls.
+- The function chain is terminated by passing the value 0 to the innermost function.
+
+## Examples:
+
+### Example 1:
+```javascript
+fn()()()()(0)
+```
+#### Output:
+```
+4
+```
+
+### Example 2:
+```javascript
+fn()()()(0)
+```
+#### Output:
+```
+3
+```
+
+### Example 3:
+```javascript
+fn()()()()()(0)
+```
+#### Output:
+```
+5
+```
+
+## Explanation:
+The function `fn` returns another function each time it is called. The inner function increments a count variable each time it is invoked, except when the argument passed to it is 0. The count variable is scoped within the `fn` function, ensuring that it is shared across multiple calls.
+
+In Example 1, the initial call to `fn` returns the inner function. The subsequent parentheses invoke the returned function multiple times, incrementing the count each time. Finally, when the argument `0` is passed to the innermost function, the condition is met, and the current count value of 4 is returned.
+
+Similarly, in Example 2, the count is incremented three times before the termination condition is met with the argument `0`, resulting in a count of 3.
+
+Example 3 showcases a more extended function chain where the count is incremented five times before the termination condition is met. Therefore, the count value returned is 5.
+
+The count variable is correctly scoped within the `fn` function and maintains its value across multiple calls to the inner function, allowing for accurate counting and function chaining.
+
+Note: The function `fn` does not have any external dependencies and can be called multiple times independently, with each call creating its own separate count.

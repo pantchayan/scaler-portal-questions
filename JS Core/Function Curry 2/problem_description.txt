@@ -1,0 +1,50 @@
+# Title: Function for Computing Product with Different Function Call Patterns
+
+## Description:
+You are required to implement a function `f` that calculates the product of two numbers, `x` and `y`. The function should support two different function call patterns: `f(x, y)` and `f(x)(y)`. 
+
+## Function Signature:
+```javascript
+function f(x: number, y: number): number
+```
+or
+```javascript
+function f(x: number): (y: number) => number
+```
+
+## Constraints:
+- The function `f` should be able to handle positive and negative integer values for `x` and `y`.
+- The function call patterns `f(x, y)` and `f(x)(y)` will only involve numerical inputs.
+
+## Examples:
+
+### Example 1:
+```javascript
+f(3, 4);
+```
+#### Output:
+```
+12
+```
+
+### Example 2:
+```javascript
+f(5)(2);
+```
+#### Output:
+```
+10
+```
+
+## Explanation:
+The function `f` calculates the product of two numbers, `x` and `y`, with the option to use two different function call patterns.
+
+In Example 1, the function is called as `f(3, 4)`, providing both `x` and `y` as arguments. The function directly calculates the product of `x` and `y` and returns the result, which is 12.
+
+In Example 2, the function is called as `f(5)(2)`. In this case, `f(5)` returns a new function that takes the second argument, `y`, and calculates the product of `x` (which is 5) and `y` (which is 2). The result is 10.
+
+The function `f` checks the number of arguments passed to it. If only one argument is provided, it returns a new function that stores the first argument as `x` and waits for the second argument to calculate the product. If both arguments are provided, the function immediately computes the product.
+
+The implementation of the function `f` accounts for both function call patterns and provides the desired behavior, allowing for flexibility in how the function is called.
+
+Note: The function `f` can be used to calculate the product of any two numerical values by using either `f(x, y)` or `f(x)(y)` syntax.

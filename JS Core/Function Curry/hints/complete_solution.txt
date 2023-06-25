@@ -1,0 +1,14 @@
+function fn() {
+  let count = 1;
+
+  function innerFn(value) {
+    if (value === 0) {
+      return count;
+    } else {
+      count++;
+      return innerFn;
+    }
+  }
+
+  return innerFn;
+}
