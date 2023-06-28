@@ -1,0 +1,39 @@
+Problem Description:
+
+You are tasked with creating a polyfill for the `Object.create` method in JavaScript. The `Object.create` method is a built-in function in JavaScript that allows you to create a new object with a specified prototype object.
+
+Your goal is to create a function called `myObjectCreate` that emulates the functionality of `Object.create`. The `myObjectCreate` function should accept a single argument, `proto`, which represents the prototype object for the new object to be created.
+
+However, there are a few requirements and constraints for your implementation:
+
+1. If the `proto` argument is `null`, `undefined`, or not an object, your function should throw an `Error`. This is to ensure that the `proto` argument is a valid object to be used as the prototype.
+
+2. Your implementation should create a new object that inherits from the `proto` object. This means that any properties or methods defined on the `proto` object should be accessible by the newly created object.
+
+3. The newly created object should not have any own properties initially. Any properties or methods accessed on the new object that are not defined directly on the object should be looked up in the prototype chain.
+
+Sample Test Case:
+
+To demonstrate the usage of your `myObjectCreate` function, consider the following example:
+
+```javascript
+// Step 1: Define a prototype object
+const personPrototype = {
+  greet: function() {
+    console.log("Hello, my name is " + this.name + ".");
+  }
+};
+
+// Step 2: Call myObjectCreate and pass the prototype object
+const person = myObjectCreate(personPrototype);
+
+// Step 3: Assign the returned object to a variable
+
+// Step 4: Use the newly created object
+person.name = "John";
+person.greet(); // Output: Hello, my name is John.
+```
+
+In this example, we first define a `personPrototype` object that contains a `greet` method. We then use the `myObjectCreate` function to create a new object `person` based on the `personPrototype`. After assigning a `name` property to the `person` object, we call the `greet` method on the `person` object, which logs a greeting message with the assigned name.
+
+Your `myObjectCreate` function should be able to replicate this behavior, allowing the user to create new objects with a specified prototype and access properties and methods defined on the prototype object.

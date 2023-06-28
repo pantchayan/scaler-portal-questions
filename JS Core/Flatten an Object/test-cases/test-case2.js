@@ -30,7 +30,7 @@ test("Hidden Test Case 1", async () => {
     );
 
     // Create a function and pass it the input array
-    let runCode = new Function("obj", functionBody);
+    let runCode = new Function("ob", functionBody);
     const obj = {
       name: {
         first: "robin",

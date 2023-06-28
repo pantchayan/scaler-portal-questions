@@ -1,0 +1,51 @@
+Problem Description:
+
+You are tasked with creating a polyfill for the `Object.seal` method in JavaScript. The `Object.seal` method is a built-in function that seals an object, preventing new properties from being added and marking all existing properties as non-configurable.
+
+Your goal is to create a function called `sealPolyfill` that emulates the functionality of `Object.seal`. The `sealPolyfill` function should be added to the `Object.prototype` object to make it accessible on all objects.
+
+However, there are a few requirements and constraints for your implementation:
+
+1. If the `Object.seal` method is already defined, your polyfill should not override it. You should only provide the polyfill if it doesn't exist.
+
+2. The polyfill implementation should check if the value on which `sealPolyfill` is called is a valid object. If it's not an object or is `null`, a `TypeError` should be thrown.
+
+3. The polyfill should iterate over all the properties of the object and mark them as non-configurable using `Object.defineProperty`. This prevents the properties from being deleted or having their attributes modified.
+
+4. After sealing all existing properties, the polyfill should call `Object.preventExtensions` to prevent any new properties from being added to the object. This ensures that the object becomes a sealed object.
+
+5. The sealed object should be returned by the polyfill function.
+
+Example:
+
+To demonstrate the usage of your `sealPolyfill` function, consider the following example:
+
+```javascript
+const obj = {
+  name: 'John',
+  age: 30
+};
+
+console.log(Object.isSealed(obj)); // Output: false
+
+obj.sealPolyfill();
+
+console.log(Object.isSealed(obj)); // Output: true
+
+obj.name = 'Jane'; // Existing property can still be modified
+console.log(obj.name); // Output: Jane
+
+obj.gender = 'Female'; // Attempt to add a new property
+console.log(obj.gender); // Output: undefined (property was not added)
+
+delete obj.age; // Attempt to delete an existing property
+console.log(obj.age); // Output: 30 (property was not deleted)
+```
+
+In this example, we start with an object `obj` with two properties: `name` and `age`. Initially, the object is not sealed, as confirmed by `Object.isSealed(obj)` returning `false`.
+
+We then call the `sealPolyfill` function on the `obj` object, which seals the object using the polyfill implementation. After sealing, `Object.isSealed(obj)` returns `true`.
+
+Once sealed, we can still modify the value of existing properties (`obj.name = 'Jane'`), but we cannot add new properties (`obj.gender = 'Female'`) as the property addition is prevented. Similarly, attempting to delete an existing property (`delete obj.age`) does not work, as the property deletion is prevented.
+
+Your `sealPolyfill` function should be able to replicate this behavior, allowing users to seal objects and prevent the addition of new properties while preserving the existing ones.

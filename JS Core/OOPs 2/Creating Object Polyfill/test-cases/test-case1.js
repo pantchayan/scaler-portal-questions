@@ -15,7 +15,7 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Hidden Test Case 2", async () => {
+test("Sample Test Case 1", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
@@ -30,36 +30,26 @@ test("Hidden Test Case 2", async () => {
     );
 
     // Create a function and pass it the input array
-    let runCode = new Function("ob", functionBody);
-    const obj = {
-      flavor: "vanilla",
-      topping: {
-        drizzle: "chocolava",
-        sprinkle: "choco-chips",
-      },
-      cone: {
-        type: "waffle",
-        crust: {
-          color: "dark",
-          texture: "soft",
-        },
+    let runCode = new Function("proto", functionBody);
+    // Step 1: Define a prototype object
+    const personPrototype = {
+      greet: function () {
+        return `Hello, my name is ${this.name}.`;
       },
     };
 
-    let expectedObj = {
-      flavor: "vanilla",
-      "topping.drizzle": "chocolava",
-      "topping.sprinkle": "choco-chips",
-      "cone.type": "waffle",
-      "cone.crust.color": "dark",
-      "cone.crust.texture": "soft",
-    };
+    // Step 2: Call myObjectCreate and pass the prototype object
+    const person = runCode(personPrototype);
 
-    let result = runCode(obj);
+    // Step 3: Assign the returned object to a variable
+
+    // Step 4: Use the newly created object
+    person.name = "John";
+    let result = person.greet(); // Output: Hello, my name is John.
 
     // let scriptContent = html.querySelector("body").innerText;
     return {
-      check: JSON.stringify(result) === JSON.stringify(expectedObj),
+      check: result === "Hello, my name is John.",
     };
   }, html);
   // console.log(check.copiedObject);

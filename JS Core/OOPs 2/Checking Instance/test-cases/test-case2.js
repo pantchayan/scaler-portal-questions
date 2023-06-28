@@ -1,5 +1,5 @@
 // Description:
-// Sample Test Case 1
+// Test Case 2
 const puppeteer = require("puppeteer");
 
 let browser;
@@ -15,7 +15,7 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Hidden Test Case 2", async () => {
+test("Sample Test Case 2", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
@@ -30,36 +30,12 @@ test("Hidden Test Case 2", async () => {
     );
 
     // Create a function and pass it the input array
-    let runCode = new Function("ob", functionBody);
-    const obj = {
-      flavor: "vanilla",
-      topping: {
-        drizzle: "chocolava",
-        sprinkle: "choco-chips",
-      },
-      cone: {
-        type: "waffle",
-        crust: {
-          color: "dark",
-          texture: "soft",
-        },
-      },
-    };
+    let runCode = new Function("obj", "classFunction", functionBody);
 
-    let expectedObj = {
-      flavor: "vanilla",
-      "topping.drizzle": "chocolava",
-      "topping.sprinkle": "choco-chips",
-      "cone.type": "waffle",
-      "cone.crust.color": "dark",
-      "cone.crust.texture": "soft",
-    };
-
-    let result = runCode(obj);
-
+    let result = runCode(Date, Date)
     // let scriptContent = html.querySelector("body").innerText;
     return {
-      check: JSON.stringify(result) === JSON.stringify(expectedObj),
+      check: result === false,
     };
   }, html);
   // console.log(check.copiedObject);

@@ -15,7 +15,7 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Hidden Test Case 2", async () => {
+test("Test Case 1", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
@@ -30,36 +30,32 @@ test("Hidden Test Case 2", async () => {
     );
 
     // Create a function and pass it the input array
-    let runCode = new Function("ob", functionBody);
+    let runCode = new Function("", functionBody);
+    runCode();
+
     const obj = {
-      flavor: "vanilla",
-      topping: {
-        drizzle: "chocolava",
-        sprinkle: "choco-chips",
-      },
-      cone: {
-        type: "waffle",
-        crust: {
-          color: "dark",
-          texture: "soft",
-        },
-      },
+      name: "John",
+      age: 30,
     };
 
-    let expectedObj = {
-      flavor: "vanilla",
-      "topping.drizzle": "chocolava",
-      "topping.sprinkle": "choco-chips",
-      "cone.type": "waffle",
-      "cone.crust.color": "dark",
-      "cone.crust.texture": "soft",
-    };
 
-    let result = runCode(obj);
+    obj.sealPolyfill();
+
+    let result = Object.isSealed(obj); // Output: true
+
+    // obj.name = "Jane"; // Existing property can still be modified
+    // console.log(obj.name); // Output: Jane
+
+    // obj.gender = "Female"; // Attempt to add a new property
+    // console.log(obj.gender); // Output: undefined (property was not added)
+
+    // delete obj.age; // Attempt to delete an existing property
+    // console.log(obj.age); // Output: undefined (property was not deleted)
+
 
     // let scriptContent = html.querySelector("body").innerText;
     return {
-      check: JSON.stringify(result) === JSON.stringify(expectedObj),
+      check: result === true,
     };
   }, html);
   // console.log(check.copiedObject);
