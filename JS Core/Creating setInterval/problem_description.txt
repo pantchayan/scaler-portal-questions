@@ -1,0 +1,37 @@
+Problem Description:
+
+You are given a coding assignment where your task is to implement a custom `mySetInterval` function using the built-in `setTimeout` function in JavaScript. The `mySetInterval` function should allow you to repeatedly execute a callback function at a specified time interval until a given end time is reached.
+
+You need to complete the `main` function, which has the following signature:
+
+```javascript
+function main(intervalTime, endTime, message, arr) {
+    // Write Code Here
+}
+```
+
+The `main` function takes four parameters:
+- `intervalTime` (integer): The time interval, in milliseconds, at which the callback function should be executed.
+- `endTime` (integer): The time, in milliseconds, when the interval execution should stop.
+- `message` (string): The message to be appended to the array `arr` during each execution of the callback function.
+- `arr` (array): An array where the messages from the callback function will be stored.
+
+Your task is to implement the `mySetInterval` function and use it within the `main` function.
+
+The `mySetInterval` function should have the following signature:
+
+```javascript
+function mySetInterval(callback, time) {
+    // Write Code Here
+}
+```
+
+The `mySetInterval` function takes two parameters:
+- `callback` (function): The callback function to be executed repeatedly at the specified time interval.
+- `time` (integer): The time interval, in milliseconds, at which the callback function should be executed.
+
+Inside the `mySetInterval` function, you need to implement the logic to execute the callback function repeatedly at the specified time interval until explicitly stopped.
+
+Please note that: 
+1. Don't make changes to the boilerplate code.
+2. Use of in-built setInterval function is prohibited. 
