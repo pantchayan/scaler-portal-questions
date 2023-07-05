@@ -37,7 +37,7 @@ test("Hidden Test Case 2", async () => {
     runCode("This was a file", "This was a file", ansArr);
 
     const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-    await delay(1000);
+    await delay(250);
 
     let expectedArr = [
       "content : This was a file",

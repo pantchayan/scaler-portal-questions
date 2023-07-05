@@ -1,9 +1,0 @@
-        function nSerialReader(idx, files, ansArray) {
-            if (idx == files.length) {
-                return;
-            }
-            fetchByCb(files[idx], function (data) {
-                ansArray.push("content -> " + data);
-                nSerialReader(idx + 1, files, ansArray);
-            });
-        }

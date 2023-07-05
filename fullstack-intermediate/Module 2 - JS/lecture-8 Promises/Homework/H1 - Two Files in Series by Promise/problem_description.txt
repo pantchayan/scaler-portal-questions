@@ -4,7 +4,7 @@ Complete the function twoSeries(file1, file2, ansArray),
 which takes in two file names as file1 and file2 and ansArray
 
 Write the code such that:
-1. Both the files are serially read using the fetchByCb(fileName, callback)
+1. Both the files are serially read using the fetchByPromise(fileName)
 2. Add the content of both files in the ansArray.
 3. At the end of the contents, the ansArray should hold string "All files have been read"
 

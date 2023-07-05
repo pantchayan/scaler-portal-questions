@@ -1,16 +1,13 @@
 function twoSeries(file1, file2, ansArray) {
-            //write your code here
-            function cb1(content) {
-                ansString.push(content);
-                // start next task
-                fetchByCb(file2, cb2)
-            }
-
-
-            function cb2(content) {
-                ansString.push(content);
-                ansString.push("All files have been read");
-            }
-
-            fetchByCb(file1, cb1)
-        }
+  //write your code here
+  fetchByPromise(file1).then((res) => {
+    ansArray.push(res);
+    fetchByPromise(file2)
+      .then((res) => {
+        ansArray.push(res);
+      })
+      .then(() => {
+        ansArray.push("All files have been read");
+      });
+  });
+}

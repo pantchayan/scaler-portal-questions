@@ -49,4 +49,3 @@ test("Hidden Test Case 2", async () => {
   }, html);
   expect(check).toBeTruthy();
 });
-Hidden;

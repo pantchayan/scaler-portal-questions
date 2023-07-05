@@ -1,3 +1,0 @@
-Sample Test Case 1
-Hidden Test Case 1
-Hidden Test Case 2

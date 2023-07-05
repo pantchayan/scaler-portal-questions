@@ -11,10 +11,12 @@
 
 <body>
     <script defer>
-        function fetchByCb(fileName, cb) {
-            setTimeout(function () {
-                cb(`content : ${fileName}`);
-            }, 100 * Math.random());
+        function fetchByPromise(fileName) {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    resolve(`content : ${fileName}`);
+                }, 100 * Math.random());
+            });
         }
     </script>
     <!-- Write your code solution here, inside the twoSeries function -->
