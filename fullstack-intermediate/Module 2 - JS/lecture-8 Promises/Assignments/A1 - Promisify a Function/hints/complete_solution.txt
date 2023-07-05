@@ -1,0 +1,10 @@
+function promisify(fn) {
+    return function (...args) {
+        return new Promise((resolve) => {
+            function cb(result) {
+                resolve(result);
+            }
+            fn.apply(this, args.concat(cb))
+        })
+    }
+}

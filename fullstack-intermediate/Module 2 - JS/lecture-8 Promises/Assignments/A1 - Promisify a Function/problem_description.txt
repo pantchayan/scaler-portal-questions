@@ -1,0 +1,29 @@
+Problem Description:
+You are tasked with creating a promisify function that can turn any given function into a promisified version of itself. The objective is to convert a function that uses traditional callback-based asynchronous programming into a function that returns a promise.
+
+The promisify function should accept a single argument fn, which is the function to be promisified. The promisified function should have the same behavior as the original function but should return a promise instead of using a callback.
+
+The function fn to be promisified will always have a callback as its last argument. The callback function will have the following signature:
+
+```javascript
+function(result) {}
+```
+
+The promisify function should return a new function that wraps the original function fn.
+Once you have implemented promisify, you should apply it to the provided function exampleFn and assign the resulting promisified function to a variable called promisified.
+The promisified function should be invoked with the appropriate arguments and then chained with .then() calls to handle the resolved value of the promise.
+This is how the function should work:
+
+Example: 
+```javascript
+function exampleFn(a, b, cb) {
+    cb(a + b);
+}
+
+const promisified = promisify(exampleFn);
+promisified(5, 15).then(res => console.log(res)); 
+
+Output: 20
+```
+
+

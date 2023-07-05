@@ -1,0 +1,21 @@
+Problem Description:
+
+Complete the function nSerialReader(idx, files, ansArray), 
+which takes:
+1. idx => current index, which is initially 0
+2. files => an array of strings, which are file names
+3. ansArray => an empty array , in which the contents should be pushed 
+
+Write the code such that:
+1. All the elements in files array are serially read using the fetchByCb(fileName, callback)
+2. Add the content of each element in the ansArray.
+
+Example: 
+
+Input: 
+let ansArray = [];
+let files = ['file1.txt', 'file2.txt', 'file3.txt']
+serialReader(0, files, ansArray)
+
+Output: 
+ansArray = ['content -> content of file1.txt', 'content -> content of file2.txt', 'content -> content of file3.txt']
