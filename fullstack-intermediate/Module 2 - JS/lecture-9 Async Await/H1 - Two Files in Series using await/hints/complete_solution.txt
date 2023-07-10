@@ -1,0 +1,11 @@
+async function twoSeries(file1, file2, ansArray) {
+  await fetchByPromise(file1).then((res) => {
+    ansArray.push(res);
+  });
+
+  await fetchByPromise(file2).then((res) => {
+    ansArray.push(res);
+  });
+
+  ansArray.push("All files have been read");
+}
