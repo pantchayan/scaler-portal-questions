@@ -1,0 +1,35 @@
+Problem Description:
+
+You have been tasked with completing the implementation of a function called `makeTrap` in JavaScript. The purpose of this function is to create a trap that prevents access to private data of an object. Your task is to write the solution for this function.
+
+The `makeTrap` function takes an `object` as its parameter and should return a `Proxy` object. The Proxy object will intercept property access and control the behavior of the object. In this case, the Proxy will prevent access to the private data of the object.
+
+The `userObj` passed to `makeTrap` has two properties: `private` and `public`. The `private` property contains sensitive data, such as a date of birth, that should not be accessible directly. The `public` property contains non-sensitive data that can be accessed freely.
+
+Input:
+let userObj = {
+    private: {
+        dob: "12/3/4"
+    },
+    public: {
+        name: "Anas"
+    }
+}
+
+let p = makeTrap(userObj);
+console.log(p.private);
+console.log(p.public);
+
+Output:
+Access not granted
+{name: 'Anas'}
+
+
+Here is the brief of algorithmic requirements and steps: 
+Your solution should create a `Proxy` object using the `userObj` as the target and a `handler` object. The `handler` object should define a `get` method that intercepts property access. If the property being accessed is `"private"`, the `get` method should return the string `"Access not granted"`. Otherwise, it should allow access to the property by invoking `Reflect.get(...arguments)`.
+
+Once you have completed the implementation of `makeTrap`, execute the provided code to test your solution. The code creates a `userObj` with `private` and `public` properties and passes it to `makeTrap`. It then attempts to access both the `private` and `public` properties of the returned `Proxy` object and logs the results to the console.
+
+Your task is to complete the `makeTrap` function to implement the desired behavior and ensure that the code successfully traps the object and prevents direct access to its private data.
+
+Complete the `makeTrap` function to fulfill the requirements outlined above.

@@ -33,7 +33,7 @@ test("Hidden Test Case 1", async () => {
       async function () {}
     ).constructor;
     // Create a function and pass it the input array
-    let runCode = new AsyncFunction("file1", "file2", "ansArray", functionBody);
+    let runCode = new AsyncFunction("fileArray", "ansArray", functionBody);
 
     // Call the function with the input array
     let ansArr = [];

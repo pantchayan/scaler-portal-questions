@@ -15,13 +15,13 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Sample Test Case 1", async () => {
+test("Sample Test Case 2", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const html = await page.$("html");
 
-  const check = await page.evaluate(async (html) => {
+  const check = await page.evaluate((html) => {
     let scriptContent = html.querySelector("#solution").innerHTML;
 
     let functionBody = scriptContent.substring(
@@ -29,27 +29,21 @@ test("Sample Test Case 1", async () => {
       scriptContent.lastIndexOf("}")
     );
 
-    const AsyncFunction = Object.getPrototypeOf(
-      async function () {}
-    ).constructor;
     // Create a function and pass it the input array
-    let runCode = new AsyncFunction("fileArray", "ansArray", functionBody);
+    let runCode = new Function("userObj", functionBody);
 
-    // Call the function with the input array
-    let ansArr = [];
-    let fileArray = ["FILE 1", "FILE 2"];
-    runCode(fileArray, ansArr);
+    let userObj = {
+      private: {
+        dob: "12/3/4",
+      },
+      public: {
+        name: "Anas",
+      },
+    };
 
-    const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-    await delay(400);
-
-    let expectedArr = [
-      "content : FILE 1",
-      "content : FILE 2",
-      "All files have been read",
-    ];
-    // let scriptContent = html.querySelector("body").innerText;
-    return JSON.stringify(ansArr) == JSON.stringify(expectedArr);
+    let p = runCode(userObj);
+    return p.public === "{name: 'Anas'}";
   }, html);
+  // console.log(check.resultArr);
   expect(check).toBeTruthy();
 });

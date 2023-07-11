@@ -1,0 +1,2 @@
+Calling p.private gives => Access not granted
+Calling p.public gives => {name: 'Anas'}
