@@ -40,10 +40,13 @@ test("Sample Test Case 2", async () => {
         name: "Anas",
       },
     };
-
+    let expectedResult = { name: "Anas" };
     let p = runCode(userObj);
-    return p.public === "{name: 'Anas'}";
+    return {
+      result: p.public,
+      check: JSON.stringify(p.public) === JSON.stringify(expectedResult),
+    };
   }, html);
-  // console.log(check.resultArr);
-  expect(check).toBeTruthy();
+  console.log(check.result);
+  expect(check.check).toBeTruthy();
 });

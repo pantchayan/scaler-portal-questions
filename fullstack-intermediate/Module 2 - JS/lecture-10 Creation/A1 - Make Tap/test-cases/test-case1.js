@@ -42,7 +42,7 @@ test("Sample Test Case 1", async () => {
     };
 
     let p = runCode(userObj);
-    return p.private === "Access not granted" && p.public === "{name: 'Anas'}";
+    return p.private === "Access not granted";
   }, html);
   // console.log(check.resultArr);
   expect(check).toBeTruthy();

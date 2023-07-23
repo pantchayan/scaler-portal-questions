@@ -1,0 +1,8 @@
+       function nodeStyleMapper(nodelist, property, value) {
+         for (let i = 0; i < nodelist.length; i++) {
+           nodelist[i]["style"][property] = value;
+         }
+       }
+
+       let p = document.querySelectorAll("p")
+       nodeStyleMapper(p,"color","red")

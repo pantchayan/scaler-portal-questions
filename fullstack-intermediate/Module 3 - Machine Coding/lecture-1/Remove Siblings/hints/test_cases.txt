@@ -1,0 +1,1 @@
+Verify that all the sibling cards are removed.
