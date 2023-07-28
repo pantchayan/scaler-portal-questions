@@ -1,0 +1,5 @@
+Use querySelectorAll to get an array of card elements.
+Traverse through the array and add an evenListener of 'dblclick' on each of the card.
+Use getAttribute to fetch the color.
+Use setAttribute to change data-color attribute to 'used'.
+Access the classList and add the fetched color as a class using 'classList.add'

@@ -1,0 +1,9 @@
+```javascript
+<!-- Complete Solution : -->
+<script>
+       let container = document.querySelector(".container");
+       container.addEventListener("click", function (e) {
+         e.currentTarget.style.background = e.target.classList[0];
+       });
+</script>
+```

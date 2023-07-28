@@ -1,0 +1,16 @@
+<script>
+// 1. Use querySelectorAll to get an array of card elements.
+    let cards = document.querySelectorAll('.card')
+
+// 2. Traverse through the array and add an evenListener of 'dblclick' on each of the card.
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener('dblclick', function (e) {
+            // 3. Use getAttribute to fetch the color.
+            let classTobeAttached = e.currentTarget.getAttribute('data-color')
+            // 4. Use setAttribute to change data-color attribute to 'used'.
+            e.currentTarget.setAttribute('data-color', 'used')
+            // 5. Access the classList and add the fetched color as a class using 'classList.add'
+            e.currentTarget.classList.add(classTobeAttached)
+        })
+    }
+</script>

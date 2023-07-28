@@ -1,0 +1,2 @@
+1. Verify that the color of the card changes when double clicked (class of desired color is added)
+2. Verify that the data-color attribute is set to 'used' after double clicking

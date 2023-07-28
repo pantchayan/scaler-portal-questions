@@ -1,0 +1,11 @@
+Problem Description:
+
+Write a program in JavaScript, 
+that implements the following behaviour on above p tags:
+
+1. single clicking highlights them with red color
+2. double clicking highlights them with green color
+3. triple removes the highlights
+
+Note: 
+Here highlights means to set the background of the element to a desired color.

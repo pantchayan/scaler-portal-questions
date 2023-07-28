@@ -1,0 +1,9 @@
+Problem Description:
+
+Write a program in JavaScript to perform the below mentioned task:
+
+Use a single event handler (only one element should have event handler attached with it) and do the following:
+By clicking of the color name, change the background color of the div.container to the same. 
+
+Note:
+The colors are red, blue and green.
