@@ -1,0 +1,1 @@
+Verify that clicking on a checkbox, the program traces the path of Bishop from that checkbox.
