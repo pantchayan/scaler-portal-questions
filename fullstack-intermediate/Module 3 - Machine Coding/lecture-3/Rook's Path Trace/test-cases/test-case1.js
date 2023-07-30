@@ -21,6 +21,34 @@ test("clicking on a checkbox, the program traces the path of Rook from that chec
 
   const bodyHandle = await page.$("body");
 
+  const check1 = await page.evaluate((body) => {
+    let checkBoxesDiv = body.querySelectorAll("div.checkbox");
+    let arr = [];
+    function isCheckboxRed(idx) {
+      if (checkBoxesDiv[idx].style.backgroundColor == "red") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function checkBoardFresh() {
+      for (let i = 0; i < checkBoxesDiv.length; i++) {
+        if (isCheckboxRed(i)) {
+          arr.push("some checkboxes already have red bg");
+          return false;
+        }
+      }
+      return true;
+    }
+
+    let flag = checkBoardFresh();
+    return { flag, arr };
+  }, bodyHandle);
+
+  console.log(check1.arr);
+  expect(check1.flag).toBeTruthy();
+
   const checkbox = await page.$("#\\31 1");
   await checkbox.click();
 
@@ -57,7 +85,7 @@ test("clicking on a checkbox, the program traces the path of Rook from that chec
           ri = ri + dr;
           ci = ci + dc;
           if (!isCheckboxRed(ri * 8 + ci)) {
-            arr.push((ri * 8 + ci) + " isnt red");
+            arr.push(ri * 8 + ci + " isnt red");
             return false;
           } else {
             arr.push("checked " + (ri * 8 + ci));
