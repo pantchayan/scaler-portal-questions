@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <table id="tableBody"></table>
+
+    <script id="solution" defer>
+        function renderTable(data) {
+            const tableBody = document.getElementById('tableBody');
+            const viewportHeight = window.innerHeight;
+            let tableRowHeight  /* Specify the height of each table row in pixels */ ;
+
+            // Calculate the number of rows that can fit in the viewport
+            const visibleRowCount = Math.floor(viewportHeight / tableRowHeight);
+
+            // Determine the start and end indices of the visible rows
+            let startIndex  /* Calculate the start index based on the scroll position */ ;
+            let endIndex  /* Calculate the end index based on the start index and visible row count */ ;
+
+            // Clear the table body
+            tableBody.innerHTML = '';
+
+            // Render the visible rows in the table
+            for (let i = startIndex; i < endIndex; i++) {
+                const rowData = data[i];
+
+                // Create a new table row element
+                const row = document.createElement('tr');
+
+                // Add the row data to the table row element
+                /* Add the necessary code to append the row data to the table row element */
+
+                // Append the table row to the table body
+                /* Add the necessary code to append the table row to the table body */
+            }
+        }
+    </script>
+    <script defer>
+        // Call the renderTable function with the initial dataset
+        const initialData = [{
+                id: 1,
+                name: 'John Doe',
+                age: 25
+            },
+            {
+                id: 2,
+                name: 'Jane Smith',
+                age: 30
+            },
+            {
+                id: 3,
+                name: 'Bob Johnson',
+                age: 35
+            },
+            // Add more data objects as needed
+        ];
+        renderTable(initialData);
+    </script>
+</body>
+
+</html>

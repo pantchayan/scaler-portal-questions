@@ -20,7 +20,7 @@ test("clicking on a checkbox, the program traces the path of Bishop from that ch
   await page.goto("http://localhost:8080");
 
   const bodyHandle = await page.$("body");
-  
+
   const check1 = await page.evaluate((body) => {
     let checkBoxesDiv = body.querySelectorAll("div.checkbox");
     let arr = [];
@@ -85,7 +85,7 @@ test("clicking on a checkbox, the program traces the path of Bishop from that ch
           ri = ri + dr;
           ci = ci + dc;
           if (!isCheckboxRed(ri * 8 + ci)) {
-            arr.push((ri * 8 + ci) + " isnt red");
+            arr.push(ri * 8 + ci + " isnt red");
             return false;
           } else {
             arr.push("checked " + (ri * 8 + ci));
@@ -98,6 +98,6 @@ test("clicking on a checkbox, the program traces the path of Bishop from that ch
     let flag = checkBishopTraceByIndex(10);
     return { flag, arr };
   }, bodyHandle);
-  console.log(check.arr);
+  console.log(check2.arr);
   expect(check2.flag).toBeTruthy();
 });

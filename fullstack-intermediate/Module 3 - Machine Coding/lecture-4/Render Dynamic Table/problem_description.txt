@@ -1,0 +1,22 @@
+Problem Description:
+
+Your task to write a JS program that renders a dynamic table using the values of the object provided.
+
+Your task is to implement a function, renderTable, that takes an array of data objects as input 
+and dynamically renders the table rows based on the visible portion of the viewport. 
+The table should display only a limited number of rows at a time, determined by the height of the viewport.
+
+Please follow the comments provided in the boilerplate code for further assistance with steps.
+
+Example:
+
+Input:
+const initialData = [
+  { id: 1, name: 'John Doe', age: 25 },
+  { id: 2, name: 'Jane Smith', age: 30 },
+  { id: 3, name: 'Bob Johnson', age: 35 },
+];
+renderTable(initialData);
+
+Output:
+
