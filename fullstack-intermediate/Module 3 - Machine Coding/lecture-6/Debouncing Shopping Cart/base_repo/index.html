@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Don't make any changes to the below HTML code -->
+    <div class="container">
+        <div class="products">
+            <h3>Price: Rs300</h3>
+            <button data-price="300">Buy</button>
+        </div>
+        <div class="products">
+            <h3>Price: Rs100</h3>
+            <button data-price="100">Buy</button>
+        </div>
+        <div class="products">
+            <h3>Price: Rs200</h3>
+            <button data-price="200">Buy</button>
+        </div>
+        <div class="products">
+            <h3>Price: Rs400</h3>
+            <button data-price="400">Buy</button>
+        </div>
+    </div>
+    <div class="cart-total">
+        <h3>Total:</h3>
+        <p>Rs <span>0</span></p>
+    </div>
+
+    <script id="solution">
+        // Update the code given below to implement the debouncing functionality ======================================
+
+        let tPrice = 0;
+        let btns = document.querySelectorAll("button");
+        let pricetext = document.querySelector("p span");
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function (e) {
+                let price = Number(e.currentTarget.getAttribute("data-price"));
+                tPrice += price;
+                pricetext.innerText = tPrice;
+            });
+        }
+    </script>
+</body>
+
+</html>

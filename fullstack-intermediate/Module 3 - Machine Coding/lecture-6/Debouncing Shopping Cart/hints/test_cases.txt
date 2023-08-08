@@ -1,0 +1,2 @@
+Rapidly clicking multiple times on an item, adds it just once.
+Clicking on an item twice with a 1 second gap in between, adds it twice.

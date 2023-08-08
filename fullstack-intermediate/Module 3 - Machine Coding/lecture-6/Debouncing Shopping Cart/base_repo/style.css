@@ -1,0 +1,32 @@
+* {
+	box-sizing: border-box;
+}
+
+div {
+	border: 1px solid;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.products {
+	margin: 2rem;
+	height: 15rem;
+	width: 15rem;
+}
+
+.products {
+	text-align: center;
+}
+
+.products h3 {
+	font-size: 2rem;
+}
+
+button {
+	font-size: 1.5rem;
+	display: inline-block;
+	width: 8rem;
+}

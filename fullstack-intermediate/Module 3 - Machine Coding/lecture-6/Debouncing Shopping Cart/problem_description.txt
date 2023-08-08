@@ -1,0 +1,22 @@
+Problem Description: 
+
+Debounce-Enabled Shopping Cart
+
+In this coding exercise, you will implement a debounce mechanism to enhance the shopping cart functionality of a web page. Currently, when a user clicks on the "Buy" button of a product multiple times in quick succession, the product gets added to the cart repeatedly. This behavior is not ideal for a real e-commerce site. Your task is to modify the code to ensure that the product is added to the cart only once, even if the user clicks the "Buy" button multiple times in rapid succession.
+
+Instructions:
+
+You are provided with an HTML document that contains a list of products, each with a "Buy" button displaying the product's price.
+
+The initial code sets up event listeners on each "Buy" button to add the corresponding product's price to the total cart value. However, this leads to unwanted behavior when the user rapidly clicks on a button.
+
+To address this, implement a debounce mechanism using a debounce function. This function takes two arguments: the event handler function and a delay in milliseconds. It ensures that the event handler is triggered only after the user stops interacting for the specified delay.
+
+Inside the loop that iterates over the "Buy" buttons, update the event listener to use the debounced event handler for processing clicks.
+
+Test your implementation by clicking on the "Buy" buttons rapidly. Verify that the product is added to the cart only once, regardless of how quickly the user clicks.
+
+
+Note:
+
+Remember that debounce is a common technique to improve user experience in scenarios like search inputs, button clicks, and other interactions where rapid consecutive actions might lead to undesired results.
