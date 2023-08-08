@@ -29,24 +29,26 @@ test("Checking in backend if the debounce function is working or not. ", async (
 
     let runCode = new Function("func", "wait", functionBody);
 
-    let counter = 1;
-    let p = html.querySelector("p");
+    let counter = 0;
     function call() {
-      p.innerHTML = "String " + counter++;
+      counter++;
     }
     const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-    let debouncedFunction;
-    debouncedFunction = runCode(call, 500);
+    let debouncedFunction = runCode(call, 1000);
     debouncedFunction();
-    await delay(20);
-    debouncedFunction = runCode(call, 500);
+    await delay(100);
     debouncedFunction();
-    await delay(20);
-    debouncedFunction = runCode(call, 500);
+    await delay(100);
     debouncedFunction();
-    await delay(1000);
-    return { ans: p.innerHTML, flag: p.innerHTML === "String 3" };
+    let initialCounter = counter;
+    await delay(1200);
+    return {
+      ans: initialCounter,
+      counter,
+      flag: initialCounter === 0 && counter === 1,
+    };
   }, html);
-  console.log(check.ans);
+  // console.log(check.ans);
+  // console.log(check.counter);
   expect(check.flag).toBeTruthy();
 });
