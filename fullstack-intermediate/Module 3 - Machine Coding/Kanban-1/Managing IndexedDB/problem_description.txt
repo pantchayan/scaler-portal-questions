@@ -1,0 +1,31 @@
+Problem Description: 
+
+Managing a DB in IndexedDB
+
+Your task is to implement the below mentioned functionality using the IndexedDB API provided by the browser.
+
+You are provided with boilerplate HTML code for a simple form with 3 input fields and 1 button:
+
+1. input#name : Takes in name of an Employee
+2. input#add : Takes in address of an Employee
+3. input#ph : Takes in phone number of an Employee
+4. button : Would act as form's submit button
+
+You need to write a program in JS such that,
+1. It creates a database named 'employees' in IndexedDB, 
+2. and whenever a user fills the above input fields with data and clicks on the submit button:
+    2.1. It should create an Object Store named 'employee' in the database and add the employee's data as an entry to it.
+    2.2. Each entry should have the following syntax:
+        2.2.1  eId: Date.now(),
+        2.2.2  name: name.value,
+        2.2.3  address: address.value,
+        2.2.4  phone: phone.value.
+
+You need to ensure that the data being entered by the user is updated successfully following the above steps.
+
+While submission, the test would automate the entire update process and check if the features are implemented correctly or not.
+Please refer to the test case descriptions for more assistance. 
+
+
+
+

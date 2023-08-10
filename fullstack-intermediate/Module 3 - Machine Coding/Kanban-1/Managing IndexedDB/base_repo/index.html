@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IndexedDB</title>
+</head>
+<!-- Do not make any changes to the boilerplate code. -->
+<body>
+    <h3>Name</h3>
+    <input type="text" id="name" />
+    <h3>Address</h3>
+    <input type="text" id="add" />
+    <h3>Phone</h3>
+    <input type="text" id="ph" />
+    <button>Add to database</button>
+    <script>
+        // Please the code below to write the program to implement the features
+        let db;
+
+        let name = document.querySelector("#name");
+        let address = document.querySelector("#add");
+        let phone = document.querySelector("#ph");
+        let btn = document.querySelector("button");
+        let request = indexedDB.open("employees", 1);
+
+        
+    </script>
+</body>
+
+</html>
