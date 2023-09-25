@@ -1,0 +1,4 @@
+Use the <ol> tag to create ordered list wrapper.
+Use the <ul> tag to create unordered list wrapper.
+Use the <li> tag to mention each item.
+Use type attribute to change the list-item marker.

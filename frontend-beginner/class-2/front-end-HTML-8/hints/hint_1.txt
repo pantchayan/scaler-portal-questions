@@ -1,0 +1,4 @@
+Use a <table> tag to create a table. We can set attribute to 'border' if we want borders in our table.
+Use <tr> to define rows
+Use <th> for table heading data
+Use <td> for table data. We can use 'rowspan' and 'colspan' attribute to specify the number of rows a cell should span.

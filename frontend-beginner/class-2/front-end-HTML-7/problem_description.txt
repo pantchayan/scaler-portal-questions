@@ -1,0 +1,6 @@
+Create a basic HTML webpage that displays 2 list. One ordered, one unordered.
+Ordered List should contain a list of 5 cities from around the world. Use alphabets numbers for list-item marker.
+Unordered List should contain a list of 3 beverages. Use square for list-item marker.
+
+Note:
+Use test cases as hints to achieve the desired output.

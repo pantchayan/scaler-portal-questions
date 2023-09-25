@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- "type" attribute could also have value "A" here -->
+    <ol type="a">
+      <li>City 1</li>
+      <li>City 2</li>
+      <li>City 3</li>
+      <li>City 4</li>
+      <li>City 5</li>
+    </ol>
+    <ul type="square">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    
+  </body>
+</html>

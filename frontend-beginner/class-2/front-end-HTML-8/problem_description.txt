@@ -1,0 +1,4 @@
+Create a basic HTML webpage that displays a table like the one shown below:
+
+Note:
+Use test cases as hints to achieve the desired output.

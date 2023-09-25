@@ -1,0 +1,6 @@
+Verify that the webpage has ordered list defined with <ol> tag.
+Verify that the <ol> tag has type attribute set to "a" or "A"
+Verify that the <ol> tag has 5 items defined using <li> tag.
+Verify that the webpage has unordered list defined with <ul> tag.
+Verify that the <ul> tag has type attribute set to "square"
+Verify that the <ul> tag has 3 items defined using <li> tag.
