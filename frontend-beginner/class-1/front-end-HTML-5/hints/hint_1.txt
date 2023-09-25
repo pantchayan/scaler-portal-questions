@@ -1,0 +1,3 @@
+Add an image to your website using <img /> tag.
+Link the image to load through 'src' attribute, alternate text using 'alt' attribute, width and height of the image through 'width' and 'height' attribute.
+For heading use <h1> tag.

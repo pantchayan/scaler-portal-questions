@@ -1,0 +1,5 @@
+Verify that the webpage has an <img> tag with src and alt attribute on the image with values mentioned on the question.
+Verify 'width' and 'height' attribute on image to be set to '100px'.
+Verify <h1> tag is used with the text mentioned in the question i.e., "Scaler Academy"
+Verify <p> tag is used.
+Verify <a> tag is used.

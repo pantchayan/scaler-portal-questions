@@ -1,0 +1,3 @@
+For one line description use <p> tag.
+For link, use anchor tag (<a></a>) with href pointing to scaler's website.
+To open the link on a new tab, add an attribute "target=_blank" to anchor tag

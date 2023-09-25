@@ -1,0 +1,3 @@
+Verify that the webpage have 2 anchor tags.
+Verify that one anchor tag has the text "Interview Bit" and href attribute set to "www.interviewbit.com".
+Verify that one anchor tag has the text "Scaler", href attribute set to "www.scaler.com" and target attribute set to "_blank".

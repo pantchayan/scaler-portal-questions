@@ -1,0 +1,5 @@
+Define a <p> and write the text in it.
+Wrap content in <strong> to make it bold.
+Wrap content in <i> to make it italic.
+Wrap content in <del> to strikethrough it.
+Wrap content in <sup> to define a superscript text.

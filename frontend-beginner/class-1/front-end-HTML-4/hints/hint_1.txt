@@ -1,0 +1,3 @@
+Use Anchor tags (<a></a>) to create links.
+Set destination using the "href" attribute.
+To open link on the new tab use attribute "target='_blank'"

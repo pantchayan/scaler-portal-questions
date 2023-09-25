@@ -1,0 +1,14 @@
+Create a basic HTML website for scaler. Page should have an image on the top
+for Scaler logo (link mentioned below), heading that reads "Scaler Academy", one sentence
+description about scaler.
+
+For heading use <h1> tag.
+For one line description use <p> tag.
+
+And finally a link with text "Go to website" and which points to scaler's website on a new tab.
+Also, image alternate text should be "scaler academy logo", width and height of the image be 100px
+
+Link to Image: https://s3-ap-southeast-1.amazonaws.com/ghost-production-blog/2021/05/74797539_118431542933200_2322441253926469632_o.png
+
+Note:
+It can be possible that the link provided above doesn't work on Scaler IDE. Please make sure to utilise correct alt value. 

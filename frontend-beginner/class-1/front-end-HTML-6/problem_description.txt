@@ -1,0 +1,10 @@
+Write a paragraph "Scaler is an online transformative upskilling platform for working tech and business professionals. *"
+Make the follwoing changes using just HTML
+
+1. "online transformative" as bold.
+2. "upskilling platform" as italic.
+3. "and business" as stikethrough
+4. "*" as superscript
+
+Note:
+Use test cases as hints to achieve the desired output.

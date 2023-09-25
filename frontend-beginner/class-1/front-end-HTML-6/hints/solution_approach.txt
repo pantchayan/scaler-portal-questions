@@ -1,0 +1,5 @@
+Simply define a paragraph tag using <p> and mention the content in it.
+Whatever part of content needs to be bold, wrap it in <strong>
+Whatever part of content needs to be italic, wrap it in <i>
+Whatever part of content needs to be striked through, wrap it in <del>
+Whatever part of content needs to be superscript, wrap it in <sup>

@@ -1,0 +1,5 @@
+Verify that paragraph tag exists
+Verify "online transformative" is wrapped in <strong>
+Verify "upskilling platform" is wrapped in <i>
+Verify "and business" is wrapped in <del>
+Verify "*" is wrapped in <sup>

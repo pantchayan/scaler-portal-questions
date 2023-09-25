@@ -1,0 +1,6 @@
+Start by creating the basic structure of the HTML document using the <html>, <head>, and <body> tags.
+Use 'src' attribute on <img> tag to add the image to your webpage. Use the link mentioned in the question.
+Use 'alt' attribute on <img> to add alternate text to your image, in case bowser fails to load your image due to some reason.
+Use 'width' and 'height' on <img> to set "100px" width and height to your image.
+For heading use <h1> and provide the text mentioned "Scaler Academy".
+Use anchor tag to link to the scaler website, indicate destination using 'href' attribute and furthermore use 'target' attribute with the value '_blank'.
