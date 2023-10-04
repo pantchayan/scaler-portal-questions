@@ -1,0 +1,3 @@
+Create a simple div and add class ".styled-box"
+Write internal css by adding style tag directly in the head of html.
+Follow the CSS requirements to add styles

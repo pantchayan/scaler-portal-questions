@@ -1,0 +1,2 @@
+Use the margin and padding properties to add a margin and padding to the box.
+Use the background-color property to set the background color of the box.

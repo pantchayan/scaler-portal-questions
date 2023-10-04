@@ -1,5 +1,6 @@
 // Description:
-// Verify 'width' and 'height' attribute on image to be set to '100px'.
+// Verify the top and left position for div.elements2 to be 10px
+
 const puppeteer = require("puppeteer");
 
 let browser;
@@ -15,15 +16,19 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the webpage has an <img> tag with src attribute on the image with value mentioned on the question.", async () => {
+test("Verify the top and left position for div.elements2 to be 10px", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
+  const body = await page.$("body");
 
-  const bodyHandle = await page.$("body");
   const check = await page.evaluate((body) => {
-    let imgTag = body.querySelector("img");
-    return imgTag.src.includes("logo.png");
-  }, bodyHandle);
+    let div2 = body.querySelector("div.element2");
+
+    return (
+      window.getComputedStyle(div2).top === "10px" &&
+      window.getComputedStyle(div2).left === "10px"
+    );
+  }, body);
 
   expect(check).toBeTruthy();
 });

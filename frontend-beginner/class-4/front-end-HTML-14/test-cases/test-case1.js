@@ -1,5 +1,5 @@
 // Description:
-// Verify 'width' and 'height' attribute on image to be set to '100px'.
+// Verify that all li have padding of 20px, font size of 20px
 const puppeteer = require("puppeteer");
 
 let browser;
@@ -15,15 +15,20 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the webpage has an <img> tag with src attribute on the image with value mentioned on the question.", async () => {
+test("Verify that all li have padding of 20px, font size of 20px ", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
-  const bodyHandle = await page.$("body");
+  const body = await page.$("body");
+
   const check = await page.evaluate((body) => {
-    let imgTag = body.querySelector("img");
-    return imgTag.src.includes("logo.png");
-  }, bodyHandle);
+    let liTag = body.querySelector("li");
+
+    return (
+      window.getComputedStyle(liTag).padding === "20px" &&
+      window.getComputedStyle(liTag).fontSize === "20px"
+    );
+  }, body);
 
   expect(check).toBeTruthy();
 });

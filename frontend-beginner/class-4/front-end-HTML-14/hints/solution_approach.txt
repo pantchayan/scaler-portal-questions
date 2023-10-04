@@ -1,0 +1,3 @@
+Start styling with padding and font-size as mentioned in the image.
+Add "list-style-type" property to "none" for ul tag and set background color to yellow.
+Align li(s) on the same line by setting "display" property to either block, inline or inline-block

@@ -1,0 +1,5 @@
+Verify both divs have absolute positioning
+Verify that div.element1 has height and width of 100px
+Verify that div.element2 has height and width of 80px
+Verify the top and left position for div.elements1 to be 20px
+Verify the top and left position for div.elements2 to be 10px

@@ -1,5 +1,6 @@
 // Description:
-// Verify 'width' and 'height' attribute on image to be set to '100px'.
+// Verify that ul.nav has background color of 'yellow'
+
 const puppeteer = require("puppeteer");
 
 let browser;
@@ -15,15 +16,15 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that the webpage has an <img> tag with src attribute on the image with value mentioned on the question.", async () => {
+test("Verify that ul.nav has background color of 'yellow'", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
+  const body = await page.$("body");
 
-  const bodyHandle = await page.$("body");
   const check = await page.evaluate((body) => {
-    let imgTag = body.querySelector("img");
-    return imgTag.src.includes("logo.png");
-  }, bodyHandle);
+    let nav = body.querySelector(".nav");
+    return window.getComputedStyle(nav).backgroundColor === "rgb(255, 255, 0)";
+  }, body);
 
   expect(check).toBeTruthy();
 });

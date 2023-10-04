@@ -1,0 +1,4 @@
+Create a simple div with add class "styled-box".
+Add <style> in the head of the HTML.
+Target the div with ".styled-box"
+Add width, height, padding, margin and border for .styled-box

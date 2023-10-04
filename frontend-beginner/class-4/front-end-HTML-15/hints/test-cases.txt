@@ -1,0 +1,2 @@
+Verify div is created with class "styled-box"
+Verify the CSS properties are as mentioned in the question.

@@ -1,0 +1,10 @@
+Style a simple navigation menu. 
+You are provided with HTML of a navigation menu made using semantic tags like ul, li.
+
+On ul, background-color to yellow.
+On li tag, apply space around the element's content by 20px, set font size as 20px and "display" property to inline-block.
+Also remove the default list style using CSS.
+
+Refer to test cases in order to submit the problem successfully.
+
+Below is image to see what is the end state we want to reach. 

@@ -1,0 +1,3 @@
+1. Remember that CSS positioning can be used to control the placement of elements on the page.
+2. Explore the position property and its values to decide how to position the elements.
+3. Think about how to create the overlap effect by adjusting the top and left properties.

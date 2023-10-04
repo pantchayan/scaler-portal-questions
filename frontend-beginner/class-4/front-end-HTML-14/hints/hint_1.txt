@@ -1,0 +1,3 @@
+Make sure to set list-style-type proporty to none for <ul>.
+Add padding and font-size for li(s) to 20px.
+Align li(s) on the same line by setting "display" property appropriately.

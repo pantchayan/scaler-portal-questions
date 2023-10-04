@@ -1,0 +1,5 @@
+To achieve the overlapping effect, follow these steps:
+1. Style element1 with a specific width, height, background color, and set its position property to "absolute"
+2. Use the top and left properties to position element1 20px from the top and 20px from the left of its containing element.
+3. Style element2 similarly with a different width, height, background color, and set its position property to "absolute" as well.
+4. Adjust the top and left properties for element2 to make it overlap element1.

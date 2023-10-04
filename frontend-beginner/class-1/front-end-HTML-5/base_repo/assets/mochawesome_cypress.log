@@ -1,0 +1,87 @@
+It looks like this is your first time using Cypress: 13.2.0
+
+[STARTED] Task without title.
+[TITLE]  Verified Cypress!       /root/.cache/Cypress/13.2.0/Cypress
+[SUCCESS]  Verified Cypress!       /root/.cache/Cypress/13.2.0/Cypress
+
+Opening Cypress...
+
+================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        13.2.0                                                                         │
+  │ Browser:        Electron 114 (headless)                                                        │
+  │ Node Version:   v16.20.2 (/usr/local/bin/node)                                                 │
+  │ Specs:          1 found (CounterApp.cy.jsx)                                                    │
+  │ Searched:       **/*.cy.{js,jsx,ts,tsx}                                                        │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  CounterApp.cy.jsx                                                               (1 of 1)
+
+
+  Counter App
+    1) "before each" hook for "should increment the count when the + button is clicked"
+
+
+  0 passing (2s)
+  1 failing
+
+  1) Counter App
+       "before each" hook for "should increment the count when the + button is clicked":
+     Error: cy.visit from a component spec is not allowed
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Counter App`
+      at Context.<anonymous> (http://localhost:5173/__cypress/src/node_modules/.vite/deps/cypress_react18.js?v=ec84fd52:21660:11)
+      at overridden.fn (http://localhost:5173/__cypress/runner/cypress_runner.js:110789:21)
+      at wrapped (http://localhost:5173/__cypress/runner/cypress_runner.js:138244:43)
+      at <unknown> (http://localhost:5173/__cypress/runner/cypress_runner.js:144143:15)
+      at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1807:23)
+      at Promise._settlePromiseFromHandler (http://localhost:5173/__cypress/runner/cypress_runner.js:1519:31)
+      at Promise._settlePromise (http://localhost:5173/__cypress/runner/cypress_runner.js:1576:18)
+      at Promise._settlePromiseCtx (http://localhost:5173/__cypress/runner/cypress_runner.js:1613:10)
+      at _drainQueueStep (http://localhost:5173/__cypress/runner/cypress_runner.js:2411:12)
+
+
+
+[mochawesome] Report JSON saved to /home/app/mochawesome-report/mochawesome.json
+
+[mochawesome] Report HTML saved to /home/app/mochawesome-report/mochawesome.html
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        3                                                                                │
+  │ Passing:      0                                                                                │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      2                                                                                │
+  │ Screenshots:  1                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     1 second                                                                         │
+  │ Spec Ran:     CounterApp.cy.jsx                                                                │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  /home/app/cypress/screenshots/CounterApp.cy.jsx/Counter App -- should increment      (1280x720)
+     the count when the + button is clicked -- before each hook (failed).png                        
+
+
+================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✖  CounterApp.cy.jsx                        00:01        3        -        1        -        2 │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✖  1 of 1 failed (100%)                     00:01        3        -        1        -        2  
+
