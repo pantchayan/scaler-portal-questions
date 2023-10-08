@@ -1,0 +1,10 @@
+You are tasked with creating a simple 3x3 grid layout using CSS Grid.
+Below, you'll find the initial HTML structure and the CSS requirements to achieve
+this grid layout.
+
+CSS Requirements:
+1. Create a simple 3x3 grid layout using CSS Grid for the elements within the .grid container.
+2. Use appropriate CSS Grid properties to achieve the desired grid structure.
+3. Ensure that there is equal spacing between grid items of 10px
+
+Refer the below image to see what is the end state we want to reach. 

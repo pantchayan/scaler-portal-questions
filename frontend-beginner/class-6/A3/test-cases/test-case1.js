@@ -1,6 +1,5 @@
 // Description:
-// Check if the background color of the box is lightgray.
-
+// Verify if the following property available on .grid class grid-template-columns: repeat(3, 1fr) or 3fr 3fr 3fr;
 const puppeteer = require("puppeteer");
 
 let browser;
@@ -16,16 +15,18 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Check if the background color of the box is lightgray.", async () => {
+test("Verify if the following property available on .grid class grid-template-columns: repeat(3, 1fr) or 3fr 3fr 3fr;", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const body = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let box = body.querySelector(".box");
-    let backgroundColor = window.getComputedStyle(box).backgroundColor;
-    return backgroundColor === "rgb(211, 211, 211)";
+    let col = window.getComputedStyle(
+      body.querySelector(".grid")
+    ).gridTemplateColumns;
+    let colArr = col.split(" ");
+    return colArr.length === 3;
   }, body);
 
   expect(check).toBeTruthy();

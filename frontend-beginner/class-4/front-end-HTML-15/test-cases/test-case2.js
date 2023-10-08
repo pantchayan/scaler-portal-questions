@@ -23,33 +23,38 @@ test("Verify the CSS properties are as mentioned in the question", async () => {
 
   const check = await page.evaluate((body) => {
     let div = body.querySelector("div.styled-box");
-
+    let flag = true;
+    let message = "";
     if (
-      !(
-        window.getComputedStyle(div).width === "200px" &&
-        window.getComputedStyle(div).height === "200px"
-      )
+      window.getComputedStyle(div).width != "200px" ||
+      window.getComputedStyle(div).height != "100px"
     ) {
-      return { flag: false, message: "Height and Width of div aren't 200px" };
-    } else if (
-      !(window.getComputedStyle(div).backgroundColor === "rgb(255, 0, 0)")
-    ) {
-      return { flag: false, message: "Color of div isn't red" };
-    } else if (!(window.getComputedStyle(div).margin === "20px")) {
-      return { flag: false, message: "Margin isn't 20px" };
-    } else if (!(window.getComputedStyle(div).padding === "10px")) {
-      return { flag: false, message: "Padding isn't 10px" };
-    } else if (
-      !(window.getComputedStyle(div).border === "4px solid rgb(0, 0, 0)")
-    ) {
-      return {
-        flag: false,
-        message:
-          "Border of div isnt 'solid border with a 5px width and black color.'",
-      };
+      flag = false;
+      message = "Height and Width of div aren't 200px";
     }
 
-    return { flag: true, message: "All the stylings are perfect" };
+    if (window.getComputedStyle(div).backgroundColor != "rgb(255, 0, 0)") {
+      flag = false;
+      message = "Color of div isn't red";
+    }
+
+    if (window.getComputedStyle(div).margin != "20px") {
+      flag = false;
+      message = "Margin isn't 20px";
+    }
+
+    if (window.getComputedStyle(div).padding != "10px") {
+      flag = false;
+      message = "Padding isn't 10px";
+    }
+
+    if (window.getComputedStyle(div).border != "5px solid rgb(0, 0, 0)") {
+      flag = false;
+      message =
+        "Border of div isnt 'solid border with a 5px width and black color.'";
+    }
+
+    return { flag: flag, message: message };
   }, body);
   console.log(check.message);
   expect(check.flag).toBeTruthy();

@@ -1,0 +1,5 @@
+Verify if the following property available on .grid class grid-template-columns: repeat(3, 1fr) or 3fr 3fr 3fr;
+
+Verify if the following property available on .grid class grid-template-rows: repeat(3, 1fr) or 1fr 1fr 1fr;
+
+Verify if the following property available on .grid class gap: 10px;
