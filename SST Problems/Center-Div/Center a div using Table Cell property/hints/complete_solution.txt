@@ -1,0 +1,9 @@
+        .parent {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .child {
+            display: inline-block;
+        }

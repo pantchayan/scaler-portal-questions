@@ -1,0 +1,1 @@
+Verify that the div is centered using the mentioned properties.

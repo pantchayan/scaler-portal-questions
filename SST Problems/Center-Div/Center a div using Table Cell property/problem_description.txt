@@ -1,0 +1,12 @@
+Your task is to center a child div inside a parent div using Flexbox properties.
+
+You are provided with some boilerplate HTML and CSS code.
+The structure of HTML code has a div.parent that contains a div.child.
+As described, you need to center the div.child in div.parent.
+
+You have to use the below mentioned properties:
+1. display property of div.parent should be grid
+2. vertical-align and text-align properties of div.parent should have correct values.
+3. display property of div.child should be inline-block
+
+Refer to hints and test cases to successfully submit the problem.
