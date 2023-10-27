@@ -1,0 +1,17 @@
+Here are hints for implementing the `setCancellableTimeout` function:
+
+**Hint 1: Function Signature**
+- Start by defining the function `setCancellableTimeout` with two parameters: `callback` and `delay`.
+
+**Hint 2: Use `setTimeout`**
+- Inside the function, use the `setTimeout` function to set a timeout. This function takes two arguments:
+  - `callback`: The function to be executed after the timeout.
+  - `delay`: The time in milliseconds to wait before executing the callback.
+
+**Hint 3: Return a Cancel Function**
+- To allow the timeout to be canceled, return a function that uses `clearTimeout` to stop the timeout. This returned function will serve as a way to cancel the timeout.
+
+**Hint 4: Usage Example**
+- Provide an example of how to use the `setCancellableTimeout` function. Show how to set a timeout, run it after a certain delay, and then cancel it.
+
+With these hints, you can proceed to implement the function while ensuring that it allows you to set and cancel timeouts as needed.

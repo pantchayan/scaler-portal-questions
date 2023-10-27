@@ -1,0 +1,7 @@
+function setCancellableInterval(callback, delay) {
+            const timerId = setInterval(callback, delay);
+
+            return () => {
+                clearInterval(timerId);
+            };
+}

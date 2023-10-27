@@ -1,0 +1,48 @@
+Implement a function `setCancellableTimeout`, that acts like `setTimeout` but instead of returning a timer ID, it returns a function that when called, cancels the pending callback function. The `setCancellableTimeout` function should have the exact same signature as `setTimeout`:
+```javascript 
+setCancellableTimeout(callback, delay);
+```
+
+**Examples**
+
+**Example 1**
+
+```javascript
+let i = 0;
+// t = 0:
+const cancel = setCancellableTimeout(() => {
+    i++;
+}, 100);
+// t = 10: i is 0
+// t = 20: i is 0
+setTimeout(() => {
+    cancel();
+}, 20)
+// i is still 0 because cancel() was called and the timeout callback was never run.
+```
+
+**Output**
+```
+i = 0
+```
+
+**Example 2**
+
+```javascript
+let i = 0;
+// t = 0:
+const cancel = setCancellableTimeout(() => {
+    i++;
+}, 100);
+// t = 10: i is 0
+// t = 100: i is 1
+setTimeout(() => {
+    cancel();
+}, 120)
+// i is 1 because cancel() was called after the function was called at t=100.
+```
+
+**Output**
+```
+i = 1
+```

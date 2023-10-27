@@ -1,0 +1,15 @@
+Sure, here are hints for implementing the `setCancellableInterval` function without providing the full code:
+
+**Hint 1: Function Signature**
+- Start by defining the function `setCancellableInterval` with two parameters: `callback` and `delay`.
+
+**Hint 2: Use `setInterval`**
+- Inside the function, use the `setInterval` function to create a recurring interval. This function takes two arguments: the `callback` function to be executed and the `delay` time in milliseconds.
+
+**Hint 3: Return a Cancel Function**
+- To enable cancellation of the interval, return a function that uses `clearInterval` to stop the interval.
+
+**Hint 4: Usage Example**
+- Provide an example of how to use the `setCancellableInterval` function. Show how to set an interval, run it for a certain duration, and then cancel it.
+
+With these hints, you can proceed to implement the function while ensuring that it allows you to create and cancel intervals as needed.

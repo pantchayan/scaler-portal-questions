@@ -1,0 +1,6 @@
+function setCancellableTimeout(callback, delay) {
+  const timerId = setTimeout(callback, delay);
+  return () => {
+    clearTimeout(timerId);
+  };
+}

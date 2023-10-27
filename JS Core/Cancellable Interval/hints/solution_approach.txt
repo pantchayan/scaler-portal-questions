@@ -1,0 +1,50 @@
+To create a `setCancellableInterval` function, which allows you to set an interval that can be canceled, you can follow these steps and guidelines:
+
+**Step 1: Define the function signature**
+- Start by defining the function `setCancellableInterval` with two parameters: `callback` and `delay`. The `callback` is the function to be executed at each interval, and `delay` is the time in milliseconds between intervals.
+
+```javascript
+function setCancellableInterval(callback, delay) {
+    // Implement the function here
+}
+```
+
+**Step 2: Use `setInterval` to create an interval**
+- Inside the `setCancellableInterval` function, use `setInterval` to create an interval. `setInterval` takes two arguments, the `callback` function to be executed and the `delay` time in milliseconds.
+
+```javascript
+function setCancellableInterval(callback, delay) {
+    const timerId = setInterval(callback, delay);
+    // Implement the function here
+}
+```
+
+**Step 3: Return a cancel function**
+- To allow the interval to be canceled, return a function that clears the interval using `clearInterval`. This returned function will serve as a way to stop the interval.
+
+```javascript
+function setCancellableInterval(callback, delay) {
+    const timerId = setInterval(callback, delay);
+
+    return () => {
+        clearInterval(timerId);
+    };
+}
+```
+
+**Step 4: Usage example**
+- Provide an example of how to use the `setCancellableInterval` function. This example demonstrates setting an interval, running it for a few seconds, and then canceling it.
+
+```javascript
+// Example usage
+const cancelInterval = setCancellableInterval(() => {
+    console.log("Interval executed");
+}, 1000);
+
+// After 5 seconds, cancel the interval
+setTimeout(() => {
+    cancelInterval(); // This will stop the interval
+}, 5000);
+```
+
+This implementation of `setCancellableInterval` allows you to set an interval and provides a way to cancel it when needed. It's useful for scenarios where you want to run a recurring task but may need to stop it before it completes.

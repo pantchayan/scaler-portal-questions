@@ -1,0 +1,54 @@
+Here's the solution approach for implementing the `setCancellableTimeout` function:
+
+**Step 1: Define the function signature**
+- Start by defining the `setCancellableTimeout` function with two parameters: `callback` and `delay`. 
+  - `callback`: The function to be executed after the timeout.
+  - `delay`: The time in milliseconds to wait before executing the callback.
+
+```javascript
+function setCancellableTimeout(callback, delay) {
+  // Implement the function here
+}
+```
+
+**Step 2: Use `setTimeout` to set a timeout**
+- Inside the `setCancellableTimeout` function, use `setTimeout` to create a timeout. `setTimeout` takes two arguments:
+  - `callback`: The function to be executed after the timeout.
+  - `delay`: The time in milliseconds to wait before executing the callback.
+
+```javascript
+function setCancellableTimeout(callback, delay) {
+  const timerId = setTimeout(callback, delay);
+  // Implement the function here
+}
+```
+
+**Step 3: Return a cancel function**
+- To enable cancellation of the timeout, return a function that uses `clearTimeout` to stop the timeout. This returned function will serve as a way to cancel the timeout.
+
+```javascript
+function setCancellableTimeout(callback, delay) {
+  const timerId = setTimeout(callback, delay);
+
+  return () => {
+    clearTimeout(timerId);
+  };
+}
+```
+
+**Step 4: Usage example**
+- Provide an example of how to use the `setCancellableTimeout` function. Show how to set a timeout, run it after a certain delay, and then cancel it.
+
+```javascript
+// Example usage
+const cancelTimeout = setCancellableTimeout(() => {
+  console.log("Timeout executed");
+}, 2000);
+
+// After 1 second, cancel the timeout
+setTimeout(() => {
+  cancelTimeout(); // This will stop the timeout
+}, 1000);
+```
+
+This implementation of `setCancellableTimeout` allows you to set a timeout and provides a way to cancel it when needed. It's useful for scenarios where you want to execute a task after a delay but may need to cancel it before it runs.

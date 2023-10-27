@@ -1,0 +1,2 @@
+Test Case 1 => Calling the returned function after 20ms should make i = 0
+Test Case 2 => Calling the returned function after 120ms should make i = 1
