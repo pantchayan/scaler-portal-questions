@@ -1,0 +1,13 @@
+Here are hints to create the `parseJSON` function:
+
+1. **Function Definition**: Begin by defining the `parseJSON` function that takes a string as input.
+
+2. **Try-Catch Block**: Implement a try-catch block to handle potential errors during the JSON parsing process.
+
+3. **JSON Parsing**: Inside the try block, attempt to parse the input string as JSON using `JSON.parse()`.
+
+4. **Error Handling**: If the parsing fails (throws an error), catch it and throw a new error with the message "Invalid JSON."
+
+5. **Usage**: In your usage examples, use the `parseJSON` function to attempt to parse both valid and invalid JSON strings, and wrap the function call in a `try` and `catch` block to handle potential errors gracefully.
+
+This approach ensures that the function can handle both well-formed JSON and invalid JSON strings gracefully.

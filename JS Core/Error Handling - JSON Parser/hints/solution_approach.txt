@@ -1,0 +1,54 @@
+Here's a step-by-step solution approach for the `parseJSON` function with code:
+
+1. **Define the Function**: Begin by defining the `parseJSON` function that takes a string as input.
+
+```javascript
+function parseJSON(data) {
+    // Your code will go here
+}
+```
+
+2. **Try-Catch Block**: Implement a try-catch block to handle potential errors during the JSON parsing process.
+
+```javascript
+try {
+    // Attempt to parse JSON here
+} catch (error) {
+    // Handle parsing error here
+}
+```
+
+3. **JSON Parsing**: Inside the try block, attempt to parse the input string as JSON using `JSON.parse()`.
+
+```javascript
+try {
+    const parsedData = JSON.parse(data);
+    // Continue processing with valid JSON
+} catch (error) {
+    // Handle parsing error here
+}
+```
+
+4. **Error Handling**: If the parsing fails (throws an error), catch it and throw a new error with the message "Invalid JSON."
+
+```javascript
+try {
+    const parsedData = JSON.parse(data);
+    // Continue processing with valid JSON
+} catch (error) {
+    throw new Error("Invalid JSON");
+}
+```
+
+5. **Usage Example**: In your usage examples, use the `parseJSON` function to attempt to parse both valid and invalid JSON strings. Wrap the function call in a `try` and `catch` block to handle potential errors gracefully.
+
+```javascript
+try {
+    const validJSON = parseJSON('{"key": "value"}'); // Example of valid JSON
+    console.log("Parsed JSON:", validJSON);
+} catch (error) {
+    console.error("An error occurred:", error.message);
+}
+```
+
+This approach ensures that the function can handle both well-formed JSON and invalid JSON strings gracefully.

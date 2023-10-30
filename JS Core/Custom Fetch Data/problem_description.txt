@@ -1,0 +1,31 @@
+You are working on a function that reads data from an external API. Occasionally, the API may return an error response, and you need to handle such errors gracefully. Create a JavaScript function fetchDataFromAPI that fetches data from an API URL and handles both successful responses and error responses.
+
+Note : we will be using customFetch Function to make the request
+```javascript
+function customFetch(url) {
+    return new Promise((resolve, reject) => {
+        // Simulate a delay to mimic a real API request
+        setTimeout(() => {
+            resolve(" Dummy data from the API");
+        }, 100); // Simulate a 100-ms delay
+    });
+}
+```
+
+**Examples**
+
+**Example 1**
+
+```javascript
+// Usage
+fetchDataFromAPI("https://dummyapi.com/api/data")
+    .then(data => {
+        console.log("Data from API:", data);
+    });
+
+```
+
+**Output**
+```
+Data from API:  Dummy data from the API
+```

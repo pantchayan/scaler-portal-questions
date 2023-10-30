@@ -1,0 +1,8 @@
+async function fetchDataFromAPI(url) {
+    try {
+        const response = await customFetch(url);
+        return response;
+    } catch (error) {
+        console.error("An error occurred:", error.message);
+    }
+}

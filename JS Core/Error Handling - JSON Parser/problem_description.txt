@@ -1,0 +1,47 @@
+## Problem Description 
+You are building a function that handles parsing JSON data and want to ensure it can handle malformed JSON input gracefully. Write a JavaScript function `parseJSON` that takes a string as input and attempts to parse it as JSON. If parsing fails, the function should throw an error with the message "Invalid JSON."
+
+Demonstrate the usage of the `parseJSON` function by attempting to parse valid and invalid JSON strings.
+
+
+```javascript
+function parseJSON(data)
+```
+
+Note that the Error message should be "Invalid JSON"
+and if there is no error, then the function should return result of type Object.
+
+**Examples**
+
+Calling the parseJSON(data) function inside try and catch block with different values.
+
+**Example 1**
+```javascript
+// Usage
+try {
+    const validJSON = parseJSON('{"name": "Alice", "age": 30}');
+    console.log("Parsed JSON:", validJSON);
+} catch (error) {
+    console.error(error.message);
+}
+```
+
+**Output**
+```
+Parsed JSON: { name: 'Alice', age: 30 }
+```
+
+**Example 2**
+```javascript
+// Usage
+try {
+    parseJSON('{"name": "Bob", "age": 25'); // Invalid JSON
+} catch (error) {
+    console.error(error.message);
+}
+```
+
+**Output**
+```
+Invalid JSON
+```

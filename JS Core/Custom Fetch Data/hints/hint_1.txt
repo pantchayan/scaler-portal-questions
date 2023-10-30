@@ -1,0 +1,17 @@
+Here are hints for implementing the `fetchDataFromAPI` function:
+
+1. **Declare an Async Function**: Begin by declaring the `fetchDataFromAPI` function as an `async` function.
+
+2. **Use Try-Catch**: Implement a try-catch block to handle potential errors during the API request.
+
+3. **Make an API Request**: Inside the try block, make an API request using the `customFetch` function (assuming it's defined elsewhere).
+
+4. **Check Response**: Check the response for success using the `response.ok` property.
+
+5. **Data Extraction**: If the response is successful, extract and return the data. Use `await` and `response.json()` for JSON responses.
+
+6. **Error Handling**: If the response is not successful, throw an error with a message that includes the response status and status text.
+
+7. **Catch Block**: In the catch block, handle errors by logging an error message to the console.
+
+These hints provide a structured approach to handling both successful and error responses when fetching data from an API.
