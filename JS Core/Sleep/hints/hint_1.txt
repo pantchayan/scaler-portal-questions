@@ -1,0 +1,21 @@
+Here are hints for implementing the `sleep` function:
+
+**Hint 1: Function Signature**
+- Start by defining the function `sleep` with one parameter: `millis`. This function should return a Promise.
+  - `millis`: The number of milliseconds to wait before resolving the Promise.
+
+**Hint 2: Create a Promise**
+- Inside the `sleep` function, create a new Promise. The Promise constructor should accept a resolver function.
+
+**Hint 3: Use `setTimeout`**
+- Use the `setTimeout` function within the Promise to introduce a delay for the specified number of milliseconds. The `setTimeout` function takes two arguments:
+  - A callback function that will be executed after the delay.
+  - The delay time in milliseconds.
+
+**Hint 4: Resolve the Promise**
+- Inside the `setTimeout` callback, resolve the Promise. The value with which you resolve the Promise can be the same `millis` value provided as the input.
+
+**Hint 5: Usage Example**
+- Provide an example of how to use the `sleep` function. Show how to create a delay of a specified number of milliseconds and measure the elapsed time using the `Date.now()` function.
+
+With these hints, you can proceed to implement the `sleep` function, which introduces a delay and resolves a Promise after the specified time.

@@ -1,0 +1,17 @@
+You are building an application where you need to perform asynchronous tasks using Promises. One of the tasks involves waiting for a specific amount of time before proceeding. To achieve this, you decide to promisify the setTimeout function.
+
+Create a function delay that takes two arguments: milliseconds (a number) and message (a string). The function should return a Promise that resolves with the provided message after waiting for the specified number of milliseconds.
+
+Use the delay function to create a delay of 2000 milliseconds and a message of "Task completed." Then, log the resolved message when the Promise is fulfilled.
+
+## Example Usage:
+```js
+// Using the delay function
+delay(2000, "Task completed")
+    .then(message => {
+        console.log(message); // Should print "Task completed" after a 2-second delay
+    });
+```
+
+The above usage is used in the Background to test whether the function is correct or not. 
+Use it as reference to submit the problem successfully.

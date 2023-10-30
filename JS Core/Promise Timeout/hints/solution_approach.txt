@@ -1,0 +1,5 @@
+1. The `promiseTimeout` function takes two parameters: the original `promise` and the timeout `duration` in milliseconds.
+2. Inside the function, create and return a new `Promise` which will `reject()` with a custom error after the specified `duration`.
+3. If the `promise` argument is fulfilled before `duration` is up, we can `resolve()` the promise with the fulfilled value. If it is rejected, we can `reject()` with the rejected reason.
+4. We use `setTimeout` to set up the timeout mechanism. When the timeout is reached, the returned promise will `reject()` with the custom error message.
+5. If the promise is settled before the timeout, we should clear the timer. We can keep a reference the id returned from `setTimeout`, and in the `.finally()` method, clear the timeout using `clearTimeout` so that the `reject()` within the timeout is not unnecessarily called.

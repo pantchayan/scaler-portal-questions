@@ -1,0 +1,56 @@
+To create a class that allows getting and setting key-value pairs with associated expiration times, you can follow these steps:
+
+**Step 1: Create the `TimeLimitedCache` class**
+- Start by defining the `TimeLimitedCache` class. In the constructor, initialize an instance variable, such as a `Map`, to store key-value pairs and their associated expiration times.
+
+**Step 2: Implement the `set` method**
+- Implement the `set` method, which accepts a key, value, and a duration in milliseconds. The method should do the following:
+    - Check if the key already exists in the cache. If it does, update the value and reset the expiration timer.
+    - If the key does not exist, create a new entry with the key, value, and a timeout to remove the entry after the specified duration.
+    - Return `true` if the key already existed (value and duration updated) or `false` if it's a new entry.
+
+**Step 3: Implement the `get` method**
+- Implement the `get` method, which accepts a key and should return the associated value if the key is not expired. If the key is expired or does not exist, return `-1`.
+
+**Step 4: Implement the `count` method**
+- Implement the `count` method, which should return the count of unexpired keys in the cache.
+
+Here's a solution approach:
+
+```javascript
+class TimeLimitedCache {
+    constructor() {
+        this.memory = new Map();
+    }
+
+    set(key, value, duration) {
+        if (this.memory.has(key)) {
+            clearTimeout(this.memory.get(key)[1]);
+        }
+        const timeoutID = setTimeout(() => {
+            this.memory.delete(key);
+        }, duration);
+        this.memory.set(key, [value, timeoutID]);
+        return this.memory.has(key);
+    }
+
+    get(key) {
+        if (this.memory.has(key)) {
+            return this.memory.get(key)[0];
+        }
+        return -1;
+    }
+
+    count() {
+        return this.memory.size;
+    }
+}
+
+// Example usage:
+const timeLimitedCache = new TimeLimitedCache();
+timeLimitedCache.set(1, 42, 1000); // false (key 1 is new)
+timeLimitedCache.get(1); // 42
+timeLimitedCache.count(); // 1
+```
+
+This class allows you to store key-value pairs with associated expiration times, and you can set, get, and count unexpired keys using the `set`, `get`, and `count` methods.

@@ -1,0 +1,63 @@
+Here is the solution approach for implementing the `sleep` function along with code:
+
+**Hint 1: Function Signature**
+- Start by defining the function `sleep` with one parameter: `millis`. This function should return a Promise.
+  - `millis`: The number of milliseconds to wait before resolving the Promise.
+
+```javascript
+function sleep(millis) {
+    // Implement the function here
+}
+```
+
+**Hint 2: Create a Promise**
+- Inside the `sleep` function, create a new Promise. The Promise constructor should accept a resolver function.
+
+```javascript
+function sleep(millis) {
+    return new Promise((resolve) => {
+        // Implement the function here
+    });
+}
+```
+
+**Hint 3: Use `setTimeout`**
+- Use the `setTimeout` function within the Promise to introduce a delay for the specified number of milliseconds. The `setTimeout` function takes two arguments:
+  - A callback function that will be executed after the delay.
+  - The delay time in milliseconds.
+
+```javascript
+function sleep(millis) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            // Implement the function here
+        }, millis);
+    });
+}
+```
+
+**Hint 4: Resolve the Promise**
+- Inside the `setTimeout` callback, resolve the Promise. The value with which you resolve the Promise can be the same `millis` value provided as the input.
+
+```javascript
+function sleep(millis) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(millis);
+        }, millis);
+    });
+}
+```
+
+**Hint 5: Usage Example**
+- Provide an example of how to use the `sleep` function. Show how to create a delay of a specified number of milliseconds, and measure the elapsed time using the `Date.now()` function.
+
+```javascript
+// Example usage
+let t = Date.now();
+sleep(100).then((millis) => {
+    console.log(Date.now() - t); // This should be close to 100 milliseconds
+});
+```
+
+With these hints and code, you can implement the `sleep` function, which introduces a delay and resolves a Promise after the specified time.

@@ -1,0 +1,7 @@
+function delay(milliseconds, message) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(message);
+        }, milliseconds);
+    });
+}

@@ -1,0 +1,18 @@
+**Hint 1: Function Signature**
+- Begin by defining the function `delay` with two parameters: `milliseconds` and `message`. 
+  - `milliseconds`: The number of milliseconds to wait before resolving the Promise.
+  - `message`: The string message to be returned when the Promise is fulfilled.
+
+**Hint 2: Create a Promise**
+- Inside the `delay` function, create a new Promise. The Promise should have a resolver function.
+
+**Hint 3: Use `setTimeout`**
+- Incorporate `setTimeout` within the Promise to introduce a delay for the specified number of milliseconds.
+
+**Hint 4: Resolve the Promise**
+- In the `setTimeout` callback, resolve the Promise with the provided message.
+
+**Hint 5: Usage Example**
+- Provide an example of how to use the `delay` function. Show how to create a delay of 2000 milliseconds with a message of "Task completed" and log the resolved message when the Promise is fulfilled.
+
+These hints should guide you in implementing the `delay` function without the use of "certainly."

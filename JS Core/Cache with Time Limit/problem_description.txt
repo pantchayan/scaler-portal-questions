@@ -1,0 +1,26 @@
+Write a class that allows getting and setting key-value pairs, however a time until expiration is associated with each key.
+
+The class has three public methods:
+
+set(key, value, duration): accepts an integer key, an integer value, and a duration in milliseconds. Once the duration has elapsed, the key should be inaccessible. The method should return true if the same un-expired key already exists and false otherwise. Both the value and duration should be overwritten if the key already exists.
+
+get(key): if an un-expired key exists, it should return the associated value. Otherwise it should return -1.
+
+count(): returns the count of un-expired keys.
+
+## Example Usage:
+```js
+const timeLimitedCache = new TimeLimitedCache()
+console.log(timeLimitedCache.set(1, 42, 1000)); // false
+console.log(timeLimitedCache.get(1)) // 42
+console.log(timeLimitedCache.count()) // 1
+     
+Output:
+
+false
+42
+1
+```
+
+The above usage is used in the Background to test whether the function is correct or not. 
+Use it as reference to submit the problem successfully.
