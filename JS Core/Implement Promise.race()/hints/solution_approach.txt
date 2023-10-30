@@ -1,0 +1,89 @@
+Here's a detailed solution approach for implementing the `promiseRace` function:
+
+**Step 1: Define the Function Signature**
+- Start by defining the `promiseRace` function that takes an iterable of promises as its input.
+
+```javascript
+function promiseRace(iterable) {
+    // Implement the function here
+}
+```
+
+**Step 2: Create a New Promise**
+- Inside the `promiseRace` function, create a new Promise. This Promise will resolve or reject based on the first promise from the iterable that resolves or rejects.
+
+```javascript
+function promiseRace(iterable) {
+    return new Promise((resolve, reject) => {
+        // Implement the function here
+    });
+}
+```
+
+**Step 3: Handle the Empty Iterable Case**
+- Check if the input iterable is empty. If it is, reject the Promise with an appropriate message or error, as there are no promises to race.
+
+```javascript
+function promiseRace(iterable) {
+    return new Promise((resolve, reject) => {
+        if (iterable.length === 0) {
+            reject(new Error('Empty iterable')); // Handle empty iterable case
+        }
+        // Continue with implementation
+    });
+}
+```
+
+**Step 4: Attach a `then` Handler to Each Promise**
+- Iterate through the promises in the iterable using a loop or a method like `forEach`.
+- For each promise, attach a `then` handler.
+
+```javascript
+function promiseRace(iterable) {
+    return new Promise((resolve, reject) => {
+        if (iterable.length === 0) {
+            reject(new Error('Empty iterable')); // Handle empty iterable case
+        }
+
+        iterable.forEach((promise) => {
+            promise.then(
+                (value) => {
+                    // Resolve the new Promise as soon as a promise resolves
+                },
+                (reason) => {
+                    // Continue with error handling
+                }
+            );
+        });
+    });
+}
+```
+
+**Step 5: Capture the First Resolving Promise**
+- In the `then` handler, resolve the new Promise as soon as a promise from the iterable resolves. You only need the first promise to resolve to fulfill the new Promise.
+
+```javascript
+function promiseRace(iterable) {
+    return new Promise((resolve, reject) => {
+        if (iterable.length === 0) {
+            reject(new Error('Empty iterable')); // Handle empty iterable case
+        }
+
+        iterable.forEach((promise) => {
+            promise.then(
+                (value) => {
+                    resolve(value); // Resolve the new Promise with the value from the first resolving promise
+                },
+                (reason) => {
+                    // Continue with error handling
+                }
+            );
+        });
+    });
+}
+```
+
+**Step 6: Handle Errors**
+- If all promises in the iterable reject, the `promiseRace` function will automatically reject with the reason of the first promise to reject. This behavior aligns with the standard behavior of `Promise.race`.
+
+With this detailed approach, you can implement the `promiseRace` function, which resolves as soon as any of the input promises resolve and rejects if all input promises reject.

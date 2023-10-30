@@ -1,0 +1,23 @@
+Here are hints for implementing a `promiseRace` function:
+
+**Hint 1: Function Signature**
+- Start by defining the function `promiseRace` that takes an iterable of promises as its input.
+
+**Hint 2: Create a New Promise**
+- Inside the `promiseRace` function, create a new Promise. This Promise will resolve or reject based on the first promise from the iterable that resolves or rejects.
+
+**Hint 3: Handle the Empty Iterable Case**
+- Check if the input iterable is empty. If it is, reject the Promise with an appropriate message or error.
+
+**Hint 4: Attach a `then` Handler to Each Promise**
+- Iterate through the promises in the iterable and attach a `then` handler to each one.
+- In the `then` handler, resolve the new Promise as soon as a promise from the iterable resolves.
+
+**Hint 5: Capture the First Resolving Promise**
+- When the first promise from the iterable resolves, the `then` handler should resolve the new Promise with the result of that promise.
+- If a promise rejects, it should simply move to the next promise without rejecting the new Promise. This is what differentiates `Promise.race` from `Promise.all`.
+
+**Hint 6: Handle Errors**
+- If all promises in the iterable reject, the `promiseRace` function will automatically reject with the reason of the first promise to reject.
+
+With these hints, you can implement the `promiseRace` function, which resolves as soon as any of the input promises resolve and rejects if all input promises reject.

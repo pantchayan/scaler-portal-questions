@@ -1,0 +1,111 @@
+For a web application, fetching API data is a common task.
+
+But the API calls might fail because of Network problems. Usually we could show a screen for Network Error and ask users to retry.
+
+One approach to handle this is auto retry when network error occurs.
+
+You are asked to create a fetchWithAutoRetry(fetcher, count), which automatically fetch again when error happens, until the maximum count is met.
+
+For the problem here, there is no need to detect network error, you can just retry on all promise rejections.
+
+**Function Signature : **
+```javascript
+fetchWithAutoRetry(fetcher, maximumRetryCount)
+```
+
+**Examples**
+
+**Example 1**
+
+```javascript
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let i = 0;
+    
+    function dummyFetcher(retries) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (arr[i++] <= 5) {
+            console.log(`Simulating API call (retries left: ${retries-i})`);
+            reject(new Error('Network error'));
+          } else {
+            console.log('Simulating successful API call');
+            resolve('API data');
+          }
+        }, 100); // Simulate API call delay
+      });
+    }
+    
+        
+    function testFetchWithAutoRetry() {
+      const maximumRetryCount = 10;
+    
+      fetchWithAutoRetry(() => dummyFetcher(maximumRetryCount), maximumRetryCount)
+        .then((data) => {
+          console.log('Data received:', data);
+        })
+        .catch((error) => {
+          console.log('All retries failed. Network error:', error.message);
+        });
+    }
+    
+    // Run the test
+    testFetchWithAutoRetry();
+```
+
+**Output**
+```
+Simulating API call (retries left: 9)
+Simulating API call (retries left: 8)
+Simulating API call (retries left: 7)
+Simulating API call (retries left: 6)
+Simulating API call (retries left: 5)
+Simulating successful API call
+Data received: API data
+```
+
+**Example 2**
+
+```javascript
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let i = 0;
+    
+    function dummyFetcher(retries) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (arr[i++] <= 5) {
+            console.log(`Simulating API call (retries left: ${retries-i})`);
+            reject(new Error('Network error'));
+          } else {
+            console.log('Simulating successful API call');
+            resolve('API data');
+          }
+        }, 100); // Simulate API call delay
+      });
+    }
+    
+        
+    function testFetchWithAutoRetry() {
+      const maximumRetryCount = 3;
+    
+      fetchWithAutoRetry(() => dummyFetcher(maximumRetryCount), maximumRetryCount)
+        .then((data) => {
+          console.log('Data received:', data);
+        })
+        .catch((error) => {
+          console.log('All retries failed. Network error:', error.message);
+        });
+    }
+    
+    // Run the test
+    testFetchWithAutoRetry();
+```
+
+**Output**
+```
+Simulating API call (retries left: 2)
+Simulating API call (retries left: 1)
+Simulating API call (retries left: 0)
+Simulating API call (retries left: -1)
+All retries failed. Network error: Network error
+
+```

@@ -1,0 +1,15 @@
+The all function takes an array of promises as its input.
+
+It returns a new Promise that will eventually resolve to an array of results once all the input promises have resolved or reject with an error if any of the input promises reject.
+
+Inside the all function, it initializes an empty array called results to store the results of the promises.
+
+It also tracks the number of promises that have completed using completedCount and the total number of promises in the input array with promisesCount.
+
+The function then iterates through the input promises using forEach and attaches a then handler to each promise.
+
+When a promise resolves, the result is stored in the results array at the corresponding index. The completedCount is incremented.
+
+If the completedCount reaches the total number of promises (promisesCount), it means that all promises have resolved. In this case, the new Promise is resolved with the results array.
+
+If any of the promises reject, the reject function is called with the error, and the new Promise is rejected with that error.

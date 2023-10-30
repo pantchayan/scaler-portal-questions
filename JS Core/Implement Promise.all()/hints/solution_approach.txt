@@ -1,0 +1,25 @@
+Here is an implementation of all() function:
+
+function all(promises) {
+  return new Promise((resolve, reject) => {
+    const results = [];
+    let completedCount = 0;
+    const promisesCount = promises.length;
+
+    promises.forEach((promise, index) => {
+      Promise.resolve(promise).then(
+        (result) => {
+          results[index] = result;
+          completedCount += 1;
+          if (completedCount === promisesCount) {
+            resolve(results);
+          }
+        },
+        (error) => {
+          reject(error);
+        }
+      );
+    });
+  });
+}
+The function takes an array of promises as an input and returns a new Promise object that resolves to an array of results when all the input promises have resolved. It works by iterating through the input promises and attaching a then() handler to each one. When a promise resolves, its result is saved in the results array at the corresponding index. The completedCount is incremented, and when it reaches the total number of promises, the resolve() function of the new Promise object is called with the results array. If any of the promises reject, the reject() function of the new Promise object is called with the error.

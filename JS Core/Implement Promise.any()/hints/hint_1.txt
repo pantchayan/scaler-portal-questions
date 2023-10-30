@@ -1,0 +1,27 @@
+Here are hints for implementing the `promiseAny` function:
+
+**Hint 1: Function Signature**
+- Begin by defining the function `promiseAny` that takes an iterable as its input.
+
+**Hint 2: Create a New Promise**
+- Inside the `promiseAny` function, create a new Promise. This Promise will eventually resolve or reject based on the resolution of the input promises.
+
+**Hint 3: Handle the Empty Iterable Case**
+- Check if the input iterable is empty. If it is, reject the Promise with an `AggregateError` that contains an empty array of errors.
+
+**Hint 4: Initialize Counters and Error Array**
+- Initialize variables to track the number of pending promises (`pending`) and an array (`errors`) to store errors corresponding to each promise.
+
+**Hint 5: Iterate Through the Iterable**
+- Use a loop, such as `forEach`, to iterate through the promises in the iterable.
+
+**Hint 6: Resolve on First Fulfillment**
+- Inside the loop, attach a `then` handler to each promise. When a promise fulfills (resolves), resolve the new Promise with its value. You only need one promise to fulfill for the `promiseAny` to resolve.
+
+**Hint 7: Track Errors and Pending Promises**
+- If a promise rejects, capture the reason (error) and its index in the `errors` array. Decrease the `pending` count since that promise has been handled.
+
+**Hint 8: Reject with AggregateError on All Rejections**
+- After each promise is handled (either fulfilled or rejected), check if all promises have been handled (i.e., `pending` is zero). If all promises have been handled, reject the new Promise with an `AggregateError` that contains the array of captured errors.
+
+With these hints, you can implement the `promiseAny` function, which resolves as soon as any of the input promises resolve and rejects with an `AggregateError` if all input promises reject.
