@@ -29,22 +29,24 @@ test("Test Case 1", async () => {
       scriptContent.lastIndexOf("}")
     );
 
-    let runCode = new Function("promise", "duration", functionBody);
+    let runCode = new Function("milliseconds", "message", functionBody);
 
-    function fakeFetch(latency) {
-      return new Promise((resolve, reject) => {
-        // Simulate an asynchronous operation that resolves after `latency`.
-        setTimeout(() => {
-          resolve('Data successfully fetched!');
-        }, latency);
-      });
-    }
-    const response = await runCode(fakeFetch(10), 20);
+    let response;
+    // let bool = false;
+    runCode(50, "Task completed").then((message) => {
+      response = message; // Should print "Task completed" after a 2-second delay
+    });
 
+    // if (!response) {
+    //   bool = true;
+    // }
+
+    const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+    await delay(100);
 
     return {
       ans: response,
-      flag: response === 'Data successfully fetched!',
+      flag: response === "Task completed",
     };
   }, html);
   console.log(check.ans);

@@ -29,26 +29,32 @@ test("Test Case 1", async () => {
       scriptContent.lastIndexOf("}")
     );
 
-    let runCode = new Function("promises", functionBody);
+    let finalFB =
+      `function customFetch(url) {
+      return new Promise((resolve, reject) => {
+          // Simulate a delay to mimic a real API request
+          setTimeout(() => {
+              resolve(" Dummy data from the API");
+          }, 100); // Simulate a 100-ms delay
+      });
+  }` + functionBody;
 
-    let i = 1;
-    let ans = "";
-    let func1 = () => {
-      setTimeout(() => {
-        ans += `setTimeout called for ${i++} - `;
-      }, Math.random * 100);
-    };
-
-    await runCode([func1(), func1(), func1()]);
+    const AsyncFunction = Object.getPrototypeOf(
+      async function () {}
+    ).constructor;
+    // Create a function and pass it the input array
+    let runCode = new AsyncFunction("url", finalFB);
+    let ans;
+    runCode("DummyLink").then((data) => {
+      ans = "Data from API: " + data;
+    });
 
     const delay = (ms) => new Promise((res) => setTimeout(res, ms));
     await delay(500);
 
     return {
       ans: ans,
-      flag:
-        ans ==
-        `setTimeout called for 1 - setTimeout called for 2 - setTimeout called for 3 - `,
+      flag: ans == `Data from API:  Dummy data from the API`,
     };
   }, html);
   console.log(check.ans);

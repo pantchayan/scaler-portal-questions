@@ -15,10 +15,50 @@
         Don't make any changes outside the given function. (would fail test cases)
         Write the required code and return the correct answer. -->
     <script id='solution' defer>
-        function sleep(millis) {
-            //write your code here ===============================================
+        function main(key, value, duration) {
 
-            return new Promise(resolve => {});
+            var TimeLimitedCache = function () {
+                this.memory = new Map();
+            };
+
+            /** 
+             * @param {number} key
+             * @param {number} value
+             * @param {number} duration time until expiration in ms
+             * @return {boolean} if un-expired key already existed
+             */
+            TimeLimitedCache.prototype.set = function (key, value, duration) {
+            };
+
+            /** 
+             * @param {number} key
+             * @return {number} value associated with key
+             */
+            TimeLimitedCache.prototype.get = function (key) {
+            };
+
+            /** 
+             * @return {number} count of non-expired keys
+             */
+            TimeLimitedCache.prototype.count = function () {
+            };
+
+            /**
+             * const timeLimitedCache = new TimeLimitedCache()
+             * timeLimitedCache.set(1, 42, 1000); // false
+             * timeLimitedCache.get(1) // 42
+             * timeLimitedCache.count() // 1
+             */
+
+            // This is testing code, please don't make any changes to it.
+
+            const timeLimitedCache = new TimeLimitedCache()
+
+            return {
+                setOutput: timeLimitedCache.set(key, value, duration),
+                getOutput: timeLimitedCache.get(key),
+                countOutput: timeLimitedCache.count()
+            }
         }
     </script>
 </body>

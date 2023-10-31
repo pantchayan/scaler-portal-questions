@@ -31,7 +31,6 @@ test("Test Case 1", async () => {
 
     let runCode = new Function("iterable", functionBody);
 
-    const p0 = Promise.reject("p0");
     const p1 = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve("p1");
@@ -39,15 +38,15 @@ test("Test Case 1", async () => {
     });
     const p2 = new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve("p2");
+        reject("p2");
       }, 20);
     });
 
-    const ans = await runCode([p0, p1, p2]);
+    const ans = await runCode([p1, p2]);
 
     return {
       ans: ans,
-      flag: ans == `p2`,
+      flag: ans == `p1`,
     };
   }, html);
   console.log(check.ans);
