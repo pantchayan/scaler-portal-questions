@@ -1,0 +1,22 @@
+You are building a user authentication system, and you need to create a function that generates a unique token for each user. To ensure the uniqueness of tokens, you decide to use JavaScript symbols. Implement a function that generates and returns a unique symbol for each user.
+
+1. Create a function `generateUserToken` that generates a unique symbol for each user. The symbol should be based on the user's username.
+    
+2. The function should accept a single argument, the `username`, which is a string representing the user's username.
+    
+3. The generated symbol should have a description that includes the username, such as "User Token for: [username]."
+    
+4. The symbol should be unique for each user.
+    
+5. Demonstrate the usage of the `generateUserToken` function by generating symbols for multiple users and checking their uniqueness.
+
+## Example usage
+```javascript
+const user1Token = generateUserToken("alice");
+const user2Token = generateUserToken("bob");
+const user3Token = generateUserToken("alice"); // Reusing the same username (should still generate a unique symbol)
+
+console.log(user1Token.description); // Should print 'User Token for: alice'
+console.log(user2Token.description); // Should print 'User Token for: bob'
+console.log(user1Token === user3Token); // Should be false (different symbols)
+```

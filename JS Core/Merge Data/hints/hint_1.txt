@@ -1,0 +1,19 @@
+Here are hints for implementing the `mergeData` function:
+
+1. **Initialize Results Array**: Begin by creating an empty array to store the merged session data for each user.
+
+2. **Use a Map for User Sessions**: Use a data structure like a `Map` to efficiently store sessions for each user. The user ID can be the key, and the session data can be the value.
+
+3. **Iterate Over Sessions**: Loop through each session in the input data.
+
+4. **Check if User Exists**: For each session, check if the user already exists in the `sessionsForUser` map.
+
+5. **Merge Sessions**: If the user exists, merge the session data with the existing user data. Update the duration by adding the current session's duration to the user's total. Combine the equipment data while removing duplicates and sorting it alphabetically.
+
+6. **Add New Users**: If the user doesn't exist in the map, create a new session entry with the user's session data and equipment.
+
+7. **Finalize Results**: After merging and updating the equipment data, sort the equipment alphabetically for each user's session.
+
+8. **Return Results**: Return the merged and sorted session data as the final result.
+
+These hints provide a structured approach to merging session data by user while preserving the original order of the sessions and ensuring that equipment is sorted alphabetically.

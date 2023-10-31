@@ -1,0 +1,4 @@
+function generateUserToken(username) {
+    const description = `User Token for: ${username}`;
+    return Symbol(description);
+}

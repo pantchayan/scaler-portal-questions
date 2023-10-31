@@ -27,21 +27,28 @@ test("Test Case 2", async () => {
       scriptContent.lastIndexOf("}")
     );
 
-    let runCode = new Function("data", functionBody);
-    let result;
-    try {
-      // const validJSON = runCode('{"name": "Alice", "age": 30}');
-      // result = validJSON;
+    let runCode = new Function("sessions", functionBody);
 
-      runCode('{"name": "Bob", "age": 25'); // Invalid JSON
-    } catch (error) {
-      result = error.message;
-    }
+    let sessions = [
+      { user: 8, duration: 50, equipment: ["bench"] },
+      { user: 7, duration: 100, equipment: ["dumbbell"] },
+      { user: 1, duration: 10, equipment: ["barbell"] },
+      { user: 7, duration: 100, equipment: ["bike"] },
+      { user: 7, duration: 200, equipment: ["bike"] },
+      { user: 2, duration: 200, equipment: ["treadmill"] },
+      { user: 2, duration: 100, equipment: ["bike"] },
+    ];
+
+    let mergedData = runCode(sessions);
+
+    console.log(mergedData);
 
     return {
-      ans: result,
+      ans: mergedData,
       // flag: result.name === "Alice" && result.age === 30,
-      flag : result == 'Invalid JSON'
+      flag:
+        (mergedData[1].equipment.length === 2) &
+          (mergedData[1].duration === 400) && mergedData[3].duration === 300,
     };
   }, html);
   console.log(check.ans);

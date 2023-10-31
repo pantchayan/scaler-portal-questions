@@ -13,7 +13,7 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Test Case 2", async () => {
+test("Test Case 1", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
@@ -27,21 +27,17 @@ test("Test Case 2", async () => {
       scriptContent.lastIndexOf("}")
     );
 
-    let runCode = new Function("data", functionBody);
-    let result;
-    try {
-      // const validJSON = runCode('{"name": "Alice", "age": 30}');
-      // result = validJSON;
+    let runCode = new Function("username", functionBody);
 
-      runCode('{"name": "Bob", "age": 25'); // Invalid JSON
-    } catch (error) {
-      result = error.message;
-    }
+    // Demonstrate the usage of the generateUserToken function
+    const user1Token = runCode("alice");
+    const user2Token = runCode("bob");
+    const user3Token = runCode("alice"); // Reusing the same username
 
     return {
-      ans: result,
+      ans: user2Token.description,
       // flag: result.name === "Alice" && result.age === 30,
-      flag : result == 'Invalid JSON'
+      flag: user1Token !== user3Token,
     };
   }, html);
   console.log(check.ans);

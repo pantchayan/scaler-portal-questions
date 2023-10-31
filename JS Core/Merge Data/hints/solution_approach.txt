@@ -1,0 +1,44 @@
+Here's the `mergeData` function with comments for each step:
+
+```javascript
+function mergeData(sessions) {
+  // Step 1: Initialize Data Structures
+  const results = []; // Initialize an array to store merged session data
+  const sessionsForUser = new Map(); // Initialize a map to store sessions for each user
+
+  // Step 2: Iterate Over Sessions
+  sessions.forEach((session) => {
+    // Step 3: Check if User Exists
+    if (sessionsForUser.has(session.user)) {
+      // User already exists in the map
+      const userSession = sessionsForUser.get(session.user);
+
+      // Step 4: Merge Sessions
+      userSession.duration += session.duration;
+      session.equipment.forEach((equipment) => {
+        userSession.equipment.add(equipment);
+      });
+    } else {
+      // Step 5: Add New Users
+      // User doesn't exist in the map
+      const clonedSession = {
+        ...session,
+        equipment: new Set(session.equipment),
+      };
+      sessionsForUser.set(session.user, clonedSession);
+      results.push(clonedSession);
+    }
+  });
+
+  // Step 6: Finalize Results
+  // Sort equipment of each session and convert back into an array
+  results.forEach((session) => {
+    session.equipment = Array.from(session.equipment).sort();
+  });
+
+  // Step 7: Return Results
+  return results;
+}
+```
+
+This code provides a step-by-step implementation of the `mergeData` function, following the approach outlined in the problem description.
