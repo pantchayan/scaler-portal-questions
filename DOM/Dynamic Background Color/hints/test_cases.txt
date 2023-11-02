@@ -1,0 +1,3 @@
+Verify that the background changes for laptop to red
+Verify that the background changes for tablet to blue
+Verify that the background changes for mobile to green

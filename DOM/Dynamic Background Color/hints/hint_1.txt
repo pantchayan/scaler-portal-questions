@@ -1,0 +1,13 @@
+Here are some hints and steps to help you write the code:
+
+1. Start by selecting the target HTML element (in this case, a `div` element) using the DOM API.
+
+2. Attach an event listener to the window object for the "resize" event. This will allow you to respond to changes in the window size.
+
+3. Inside the event listener, check the `window.innerWidth` to determine the width of the window after the resize event.
+
+4. Depending on the window width, update the style of the selected `div` element to change its background color. You can use conditional statements (if-else) to handle different width ranges.
+
+5. Make sure to consider different width ranges and choose appropriate background colors for the `div` element.
+
+Remember to structure your code and use JavaScript functions and event handling to make it clean and maintainable.

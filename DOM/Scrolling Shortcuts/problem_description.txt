@@ -1,0 +1,9 @@
+Implement key taps such that on: 
+1. pressing 1 you scroll to section 1,  
+2. pressing 2 you scroll to section 2 and  
+3. pressing 3 you scroll to section 3. 
+4. Also implement key tap b to go to bottom of the page 
+5. and key tap t to go to top of the page
+
+Note:
+Write code in the script.js file

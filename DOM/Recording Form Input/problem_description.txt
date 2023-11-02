@@ -1,0 +1,27 @@
+Problem Description:
+
+Write a script which takes the entry from the form and add it into the table
+
+The HTML has majorly 2 components: 
+table, form
+
+Here,
+
+1. table:
+    1.1. contains the entire table
+    1.2. has thead and tbody as immediate children
+    1.2. has a total 3 tr, 1 in thead and 2 in tbody
+    1.3. each tr in tbody
+
+2. form:
+    2.1. contains three input tags of type: 
+        2.1.1. text for name, 
+        2.1.2. number for marks,
+        2.1.3. submit for button.
+
+
+Your task is to:
+1. Add a new <tr> element inside <tbody> whenever the form is filled and the submit button is clicked. 
+2. The new <tr> element should have 3 <td> elements for SNO., Name and Marks.
+3. Name and Marks are to be retrieved from user input in the form and the SNO. is to be increased by 1 at every new addition.
+

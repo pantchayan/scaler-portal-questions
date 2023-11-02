@@ -1,0 +1,19 @@
+Here are some hints to help you achieve the desired functionality:
+
+1. **Event Listener**: You'll need to add an event listener to the form element that listens for a specific event.
+
+2. **Prevent Default**: Inside the event listener, use the `preventDefault()` method to prevent the default form submission behavior, as you want to handle the form submission yourself.
+
+3. **Retrieve Input Values**: Use the `querySelector` method to retrieve the values of the input fields (Name and Marks) from the form when the submit button is clicked.
+
+4. **Generate Serial Number (SNO)**: Calculate the serial number (SNO) for the new row. You can do this by counting the number of existing rows and incrementing it by 1 for the new row.
+
+5. **Create New Elements**: Create new HTML elements for the new row (e.g., create a `<tr>` element with three `<td>` elements inside).
+
+6. **Insert the New Row**: Use the appropriate methods to insert the newly created row (with the SNO, Name, and Marks) into the table's `<tbody>`.
+
+7. **Clear Form**: Optionally, you can clear the form fields after the data is added to the table to provide a better user experience.
+
+8. **Testing**: It's important to test your code to ensure that it works as expected. Verify that new rows are added to the table with the correct data when the form is submitted.
+
+By following these hints and using the provided solution as a reference, you should be able to create a script that adds form input data to the table as described in the problem.

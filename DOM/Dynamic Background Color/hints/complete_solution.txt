@@ -1,0 +1,12 @@
+let div = document.querySelector("div");
+
+window.addEventListener("resize", function () {
+  console.log(1);
+  if (window.innerWidth <= 600) {
+    div.style.background = "green";
+  } else if (window.innerWidth <= 1024) {
+    div.style.background = "blue";
+  } else {
+    div.style.background = "red";
+  }
+});

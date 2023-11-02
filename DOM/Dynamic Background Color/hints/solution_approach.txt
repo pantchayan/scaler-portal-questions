@@ -1,0 +1,46 @@
+Here's a step-by-step approach with code snippets:
+
+1. First, select the target `div` element and define your event listener function.
+
+```javascript
+const div = document.querySelector("div");
+
+function handleResize() {
+  // Add code here to change the background color based on window.innerWidth
+}
+```
+
+2. Inside the `handleResize` function, you can access the `window.innerWidth` property to determine the width of the window.
+
+```javascript
+function handleResize() {
+  const windowWidth = window.innerWidth;
+  // Add code here to change the background color based on windowWidth
+}
+```
+
+3. Next, use conditional statements (if-else) to change the background color of the `div` element based on the window width.
+
+```javascript
+function handleResize() {
+  const windowWidth = window.innerWidth;
+
+  if (windowWidth <= 600) {
+    div.style.background = "green";
+  } else if (windowWidth <= 1024) {
+    div.style.background = "blue";
+  } else {
+    div.style.background = "red";
+  }
+}
+```
+
+4. To complete the setup, add an event listener for the "resize" event on the `window` object and call the `handleResize` function when the event is triggered.
+
+```javascript
+window.addEventListener("resize", handleResize);
+```
+
+The code above listens for the "resize" event, and when the event is triggered, it calls the `handleResize` function, which updates the `div` element's background color based on the window width.
+
+Make sure to place this code within an HTML document and include it after the `div` element you want to target. Additionally, you can further enhance the code by debouncing the event handler to avoid excessive function calls during rapid window resizing, but the above steps provide a basic working solution.

@@ -1,0 +1,8 @@
+Without using media queries do the following things:
+1- For desktop sizes, i.e. window.innerWidth > 1024,  make the background of above div 'red'
+2- For tablet sizes, i.e. window.innerWidth > 600 & <= 1024, make the background of above div 'blue'
+3- For mobile sizes, i.e. window.innerWidth <= 600, make the background of above div 'green'
+
+Note:
+Please use JS to enable the above feature whenever the window resizes.
+

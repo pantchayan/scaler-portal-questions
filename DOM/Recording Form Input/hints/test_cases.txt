@@ -1,0 +1,4 @@
+Verify that submitting a form adds a new <tr> element to <tbody>.
+Verify that submitting a form adds Sno. with increased value.
+Verify that submitting a form adds Name.
+Verify that submitting a form adds Marks.

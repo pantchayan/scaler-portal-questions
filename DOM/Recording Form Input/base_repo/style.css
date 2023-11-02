@@ -1,0 +1,36 @@
+tr,
+table,
+td,
+th {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 1.5rem;
+}
+
+table {
+    margin: auto;
+    margin-top: 5rem;
+}
+
+th {
+    font-size: 1.5rem;
+    background: black;
+    color: white;
+}
+
+td {
+    font-size: 1.2rem;
+}
+
+form {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+h1 {
+    text-align: center;
+}

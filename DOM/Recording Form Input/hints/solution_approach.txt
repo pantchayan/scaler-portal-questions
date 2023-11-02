@@ -1,0 +1,62 @@
+Here's the step-by-step approach with code for adding form input data to a table in a boilerplate HTML structure:
+
+1. **Select the Form and Add an Event Listener**:
+   - Select the form element.
+   - Add an event listener for the "submit" event.
+
+```javascript
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent default form submission behavior
+
+        // Your code for the following steps goes here
+    });
+});
+```
+
+2. **Retrieve Input Values**:
+   - Retrieve the values entered by the user in the Name and Marks input fields.
+
+```javascript
+const name = document.querySelector("#name").value;
+const marks = document.querySelector("#marks").value;
+```
+
+3. **Calculate SNO**:
+   - Determine the SNO by counting the number of rows already present in the table's `<tbody>`.
+
+```javascript
+const tableBody = document.querySelector("table tbody");
+const sNo = tableBody.children.length + 1;
+```
+
+4. **Create New Row**:
+   - Create a new row (`<tr>`) element.
+   - Inside the new row, create three cell elements (`<td>`) for SNO, Name, and Marks.
+   - Populate the cell elements with the values obtained from user input.
+
+```javascript
+const newRow = document.createElement("tr");
+newRow.innerHTML = `
+    <td>${sNo}</td>
+    <td>${name}</td>
+    <td>${marks}</td>
+`;
+```
+
+5. **Insert the New Row**:
+   - Append the newly created row to the table's `<tbody>`.
+
+```javascript
+tableBody.appendChild(newRow);
+```
+
+6. **Clear the Form**:
+   - Optionally, you can clear the form fields to provide a better user experience.
+
+```javascript
+form.reset();
+```
+
+With this code, you'll be able to add form input data to the table in your boilerplate HTML structure.

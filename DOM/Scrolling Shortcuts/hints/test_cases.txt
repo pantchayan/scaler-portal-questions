@@ -1,0 +1,5 @@
+Verify that pressing 1 takes us to section 1
+Verify that pressing 2 takes us to section 2
+Verify that pressing 3 takes us to section 3
+Verify that pressing b takes us to bottom
+Verify that pressing t takes us to top

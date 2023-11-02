@@ -1,0 +1,24 @@
+Problem Description:
+
+Write a single click event handler that helps to delete any list item when clicked on it, attach that handler to above list
+
+The HTML has majorly 3 components in following hierarchy: 
+ul > li > a
+
+Here,
+
+1. ul#listToDestroy:
+    1.1. contains the entire list
+    1.2. has 5 li tags with unique id.
+
+2. li:
+    2.1. contains an anchor tag <a> in it.
+
+3. a:
+    3.1. contains unique innerText in it.
+
+
+Your task is to:
+1. Whenevr clicked the specific list item, <li> element, from the list ul#listToDestroy.
+2. The new list should have list items 1 less than the previous state.
+3. Unique ID and innerText should remain intact for each list item.
