@@ -19,19 +19,19 @@ test("Verify that clicking on a specific li, deletes it. ", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
-  const body = await page.$("body");
+  // let bodyHandle = await page.$("body");
 
-  // Click a button by its CSS selector
-  await page.click(`#Item-1 a`);
-
-  const check = await page.evaluate((body) => {
+  const check = await page.evaluate(() => {
+    document.querySelector("#Item-1>a").click();
     // CHECK HERE===
-    let li = body.querySelectorAll("li");
-    let a = body.querySelector("a");
+    let li = document.querySelectorAll("li");
+    let a = document.querySelector("a");
     return {
-      flag: li.length == 4 && li[0].id == 'Item-2' && a.innerText == "second item",
+      ans: document.querySelector("body").innerHTML,
+      flag:
+        li.length == 4 && li[0].id == "Item-2" && a.innerText == "second item",
     };
-  }, body);
-  // console.log(check.ans);
+  });
+  console.log(check.ans);
   expect(check.flag).toBeTruthy();
 });
