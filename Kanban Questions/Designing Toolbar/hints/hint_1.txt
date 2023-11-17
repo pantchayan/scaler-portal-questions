@@ -1,0 +1,24 @@
+Toolbox Container Styles:
+
+Create a class named .toolbox-cont for the toolbox container.
+Set the background color to #4b4b4b.
+Use display: flex to make it a flex container.
+Use align-items: center to center the child items along the vertical axis.
+Toolbox Priority Container Styles:
+
+Create a class named .toolbox-priority-cont for the priority container inside the toolbox.
+Set the background color to #3d3d3d.
+Use display: flex to make it a flex container.
+Use align-items: center to center the child items along the vertical axis.
+Use justify-content: space-evenly to evenly distribute the child items along the horizontal axis.
+Action Button Container Styles:
+
+Create a class named .action-btn-cont for the action button container.
+Set the background color to #3d3d3d.
+Use display: flex to make it a flex container.
+Action Button Child Items Styles:
+
+Target the child elements of .action-btn-cont using .action-btn-cont > *.
+Set display: flex on the child items.
+Use justify-content: center and align-items: center to center the content of the child items.
+Set the text color to white using color: white.

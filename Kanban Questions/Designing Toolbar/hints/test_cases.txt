@@ -1,0 +1,5 @@
+Test cases:
+1. Verify that .toolbox-cont has correct CSS
+2. Verify that .toolbox-priority-cont has correct CSS
+3. Verify that .action-btn-cont has correct CSS
+4. Verify that .action-btn-cont>* has correct CSS

@@ -1,0 +1,20 @@
+Problem Description :
+
+Your task is to write CSS for the ticket. 
+
+You have been given HTML boilerplate code and you have to apply the below CSS rules:
+
+.main-cont should have:
+1. display of flex
+2. gap property set to 2rem
+3. padding of 2rem
+4. main-axis items are centered
+
+.ticket-cont should have:
+1. height of 12rem
+2. width set to 15rem
+3. background color set to 'coral' 
+
+.ticket-color should have height of 1 rem
+
+.ticket-id should have background color of 'yellow' and height as 2rem

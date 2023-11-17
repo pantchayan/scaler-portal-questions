@@ -1,0 +1,3 @@
+Test cases:
+1. Verify that .modal-cont has correct CSS
+2. Verify that .priority-colors-container has correct CSS

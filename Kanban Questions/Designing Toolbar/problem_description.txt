@@ -1,0 +1,26 @@
+Problem Description :
+
+Your task is to write CSS for the toolbar. 
+
+You have been given HTML boilerplate code and you have to apply the below CSS rules:
+
+.toolbox-cont should have:
+1. Background color set to '#4b4b4b'
+2. display set as flex
+3. align-items set as center
+
+.toolbox-priority-cont should have:
+1. Background color set to '#3d3d3d'
+2. display set as flex
+3. align-items set as center
+4. justify-content set as space-evenly
+
+.action-btn-cont should have:
+1. Background color set to '#3d3d3d'
+2. display set as flex
+
+.action-btn-cont>* should have:
+1. display set as flex
+2. align-items set as center
+3. justify-content set as center
+4. color set as 'white'

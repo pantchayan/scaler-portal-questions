@@ -1,0 +1,21 @@
+Container Styles:
+Create a container class named .main-cont.
+Set the display property to flex.
+Add a gap between the flex items using the gap property.
+Center the content horizontally using justify-content: center.
+Add padding to the container using padding: 2rem.
+Allow the flex items to wrap to the next line with flex-wrap: wrap.
+
+Ticket Container Styles:
+Create a class named .ticket-cont for the ticket container.
+Set the height and width of the ticket container to 12rem and 15rem respectively.
+Set the background color of the ticket container to coral.
+
+Ticket Color Bar Styles:
+Create a class named .ticket-color for the color bar within the ticket container.
+Set the height of the color bar to 1rem.
+
+Ticket ID Styles:
+Create a class named .ticket-id for the ticket ID section within the ticket container.
+Set the background color of the ticket ID section to yellow.
+Set the height of the ticket ID section to 2rem.

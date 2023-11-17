@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.textArea-cont {
+    height: 100%;
+    width: 75%;
+    background-color: #dfe4ea;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.priority-colors-container {
+    height: 100%;
+    width: 25%;
+    background-color: #4b4b4b
+}
+
+.priority-color {
+    height: 3rem;
+    width: 5rem;
+}
+
+.lightpink {
+    background-color: lightpink;
+}
+
+.lightgreen {
+    background-color: lightgreen;
+}
+
+.lightblue {
+    background-color: lightblue;
+}
+
+.black {
+    background-color: black;
+}

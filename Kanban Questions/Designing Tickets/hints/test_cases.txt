@@ -1,0 +1,4 @@
+Test cases:
+1. Verify that .main-cont has correct CSS
+2. Verify that .ticket-cont has correct CSS
+3. Verify that .ticket-id has correct CSS

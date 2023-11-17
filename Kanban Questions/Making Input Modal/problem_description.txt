@@ -1,0 +1,16 @@
+Problem Description :
+
+Your task is to write CSS for the modal to create a new ticket. 
+
+You have been given HTML and CSS boilerplate code and you have to apply the below CSS rules:
+
+.modal-cont should have:
+1. display of flex
+2. background color of 'lightblue'
+3. height of 300px and width of 500px
+
+.priority-colors-container should have:
+1. display of flex
+2. flex direction of column
+3. align items is set to 'center'
+4. justify content is set to 'space-around'

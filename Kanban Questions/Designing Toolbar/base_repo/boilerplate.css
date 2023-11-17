@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .toolbox-cont {
+    height: 5rem;
+  }
+  
+  .toolbox-cont>* {
+    margin-left: 4rem;
+  }
+  
+  .toolbox-priority-cont {
+    height: 3.5rem;
+    width: 18rem;
+  }
+  
+  
+  .action-btn-cont {
+    height: 3.5rem;
+    width: 8rem;
+    background-color: #3d3d3d;
+    display: flex
+  }
+  
+  .action-btn-cont>* {
+    width: 50%;
+    font-size: 2rem;
+  }
+  
+  .color {
+    height: 1.5rem;
+    width: 3rem;
+  }
+  
+  .lightpink {
+    background-color: lightpink;
+  }
+  
+  .lightgreen {
+    background-color: lightgreen;
+  }
+  
+  .lightblue {
+    background-color: lightblue;
+  }
+  
+  .black {
+    background-color: black;
+  }
+  

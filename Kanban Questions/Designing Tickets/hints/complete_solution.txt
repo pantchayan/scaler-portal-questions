@@ -1,0 +1,23 @@
+/* complete soluttion */
+        .main-cont {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            padding: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .ticket-cont {
+            height: 12rem;
+            width: 15rem;
+            background-color: coral;
+        }
+
+        .ticket-color {
+            height: 1rem;
+        }
+
+        .ticket-id {
+            background-color: yellow;
+            height: 2rem;
+        }

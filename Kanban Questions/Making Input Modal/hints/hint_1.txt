@@ -1,0 +1,15 @@
+Modal Container Styles:
+
+Create a class named .modal-cont for the modal container.
+Set the height and width of the modal container to 300px and 500px respectively.
+Set the background color of the modal container to light blue using the background property.
+Use display: flex to make it a flex container.
+
+
+Priority Colors Container Styles:
+
+Create a class named .priority-colors-container for the container inside the modal.
+Set the display property to flex to make it a flex container.
+Use flex-direction: column to arrange the child items in a column.
+Use align-items: center to center the child items along the horizontal axis.
+Use justify-content: space-around to distribute the child items evenly along the vertical axis with space around them.

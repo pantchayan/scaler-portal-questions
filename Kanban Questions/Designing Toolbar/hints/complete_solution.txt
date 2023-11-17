@@ -1,0 +1,24 @@
+        .toolbox-cont {
+            background-color: #4b4b4b;
+            display: flex;
+            align-items: center;
+        }
+
+        .toolbox-priority-cont {
+            background-color: #3d3d3d;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .action-btn-cont {
+            background-color: #3d3d3d;
+            display: flex
+        }
+
+        .action-btn-cont>* {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        } 
