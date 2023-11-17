@@ -20,7 +20,7 @@ test(" Verify that .priority-colors-container has correct CSS", async () => {
   const bodyHandle = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let colorsContainer = body.querySelectorAll(".priority-colors-container");
+    let colorsContainer = body.querySelector(".priority-colors-container");
     return (
       window.getComputedStyle(colorsContainer).justifyContent ===
         "space-around" &&

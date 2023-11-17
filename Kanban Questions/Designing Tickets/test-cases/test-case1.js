@@ -20,7 +20,7 @@ test("Verify that .main-cont has correct CSS", async () => {
   const bodyHandle = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let mainContainer = body.querySelectorAll(".main-cont");
+    let mainContainer = body.querySelector(".main-cont");
     return (
       window.getComputedStyle(mainContainer).display === "flex" &&
       window.getComputedStyle(mainContainer).justifyContent === "center"

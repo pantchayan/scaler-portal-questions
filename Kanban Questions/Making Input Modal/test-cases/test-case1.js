@@ -20,7 +20,7 @@ test("Verify that .modal-cont has correct CSS", async () => {
   const bodyHandle = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let modalContainer = body.querySelectorAll(".modal-cont");
+    let modalContainer = body.querySelector(".modal-cont");
     return (
       window.getComputedStyle(modalContainer).height === "300px" &&
       window.getComputedStyle(modalContainer).width === "500px" &&

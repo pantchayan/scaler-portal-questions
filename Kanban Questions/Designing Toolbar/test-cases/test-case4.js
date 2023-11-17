@@ -20,7 +20,7 @@ test("Verify that .action-btn-cont>* has correct CSS", async () => {
   const bodyHandle = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let element = body.querySelectorAll(".action-btn-cont>*");
+    let element = body.querySelector(".action-btn-cont>*");
     return (
       window.getComputedStyle(element).display === "flex" &&
       window.getComputedStyle(element).alignItems === "center" &&

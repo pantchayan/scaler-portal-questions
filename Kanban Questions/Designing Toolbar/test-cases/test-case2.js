@@ -20,7 +20,7 @@ test("Verify that .toolbox-priority-cont has correct CSS", async () => {
   const bodyHandle = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let element = body.querySelectorAll(".toolbox-priority-cont");
+    let element = body.querySelector(".toolbox-priority-cont");
     return (
       window.getComputedStyle(element).display === "flex" &&
       window.getComputedStyle(element).alignItems === "center" &&

@@ -20,7 +20,7 @@ test("Verify that .ticket-cont has correct CSS", async () => {
   const bodyHandle = await page.$("body");
 
   const check = await page.evaluate((body) => {
-    let ticketContainer = body.querySelectorAll(".ticket-cont");
+    let ticketContainer = body.querySelector(".ticket-cont");
     return (
       window.getComputedStyle(ticketContainer).backgroundColor === "rgb(255, 127, 80)"
     );
