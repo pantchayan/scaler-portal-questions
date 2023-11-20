@@ -1,0 +1,2 @@
+Test cases:
+1. Verify that div.modal-cont is visible when div.add-btn is clicked. 

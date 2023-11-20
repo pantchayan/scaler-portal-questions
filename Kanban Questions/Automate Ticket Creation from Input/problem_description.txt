@@ -1,0 +1,28 @@
+Problem Description :
+
+Write JS program that can create a new ticket based in the input being provided.
+
+You have been given boilerplate HTML and CSS code that you need to study and utilise. 
+
+.textArea-cont in the input modal would take in the content of the ticket. 
+Whenever, user inputs the content and presses 'shift' key it should:
+
+1. Create a new ticket (div.ticket-cont) with the below html sturcture:
+```
+    <div class="ticket-color ${ticketColor}"></div>
+     <div class="ticket-id">#${id}</div>
+     <div class="task-area">${ticketTask}</div>
+     <div class="ticket-lock">
+       <i class="fa-solid fa-lock"></i>
+    </div>
+```
+2. Where out of the variables in the above boilerplate:
+    2.1. ticketColor can be of any color.
+    2.2. id should be from ticketID var, it should start from 0 and increment for each ticket.
+    2.3. ticketTask should be the text input by user in the .textArea-cont
+
+3. You need to add this new ticket to the div.main-cont
+
+The boilerplate JS code contains a createTicket() function that you need to complete in order to make the feature work. 
+
+Write the code in script.js file.

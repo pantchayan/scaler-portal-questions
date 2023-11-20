@@ -1,0 +1,113 @@
+Here's the complete code for each step:
+
+### Step 1: Function Definition
+
+```javascript
+function createTicket(ticketTask, ticketColor) {
+  // Code for the function goes here
+}
+```
+
+### Step 2: Generate Unique ID
+
+```javascript
+let ticketID = 1; // Initialize a counter variable outside the function
+
+function createTicket(ticketTask, ticketColor) {
+  let id = ticketID++; // Increment the counter to get a unique ID
+  // Rest of the code goes here
+}
+```
+
+### Step 3: Create Ticket Container
+
+```javascript
+function createTicket(ticketTask, ticketColor) {
+  let id = ticketID++;
+  let ticketCont = document.createElement("div"); // Create a new div element
+  ticketCont.setAttribute("class", "ticket-cont"); // Set class attribute
+  // Rest of the code goes here
+}
+```
+
+### Step 4: Set Ticket Content
+
+```javascript
+function createTicket(ticketTask, ticketColor) {
+  let id = ticketID++;
+  let ticketCont = document.createElement("div");
+  ticketCont.setAttribute("class", "ticket-cont");
+
+  ticketCont.innerHTML = `<div class="ticket-color ${ticketColor}"></div>
+    <div class="ticket-id">#${id}</div>
+    <div class="task-area">${ticketTask}</div>
+    <div class="ticket-lock">
+      <i class="fa-solid fa-lock"></i>
+    </div>`;
+  // Rest of the code goes here
+}
+```
+
+### Step 5: Append to Main Container
+
+Assuming `mainCont` is a reference to the main container:
+
+```javascript
+function createTicket(ticketTask, ticketColor) {
+  let id = ticketID++;
+  let ticketCont = document.createElement("div");
+  ticketCont.setAttribute("class", "ticket-cont");
+
+  ticketCont.innerHTML = `<div class="ticket-color ${ticketColor}"></div>
+    <div class="ticket-id">#${id}</div>
+    <div class="task-area">${ticketTask}</div>
+    <div class="ticket-lock">
+      <i class="fa-solid fa-lock"></i>
+    </div>`;
+
+  mainCont.append(ticketCont); // Append the ticket container to the main container
+}
+```
+
+### Step 6: Dynamic Ticket Color
+
+```javascript
+function createTicket(ticketTask, ticketColor) {
+  let id = ticketID++;
+  let ticketCont = document.createElement("div");
+  ticketCont.setAttribute("class", "ticket-cont");
+
+  ticketCont.innerHTML = `<div class="ticket-color ${ticketColor}"></div>
+    <div class="ticket-id">#${id}</div>
+    <div class="task-area">${ticketTask}</div>
+    <div class="ticket-lock">
+      <i class="fa-solid fa-lock"></i>
+    </div>`;
+
+  mainCont.append(ticketCont);
+}
+```
+
+### Step 7: Final Code
+
+```javascript
+let ticketID = 1; // Initialize a counter variable outside the function
+let mainCont = document.querySelector(".main-cont"); // Assuming mainCont is a reference to the main container
+
+function createTicket(ticketTask, ticketColor) {
+  let id = ticketID++;
+  let ticketCont = document.createElement("div");
+  ticketCont.setAttribute("class", "ticket-cont");
+
+  ticketCont.innerHTML = `<div class="ticket-color ${ticketColor}"></div>
+    <div class="ticket-id">#${id}</div>
+    <div class="task-area">${ticketTask}</div>
+    <div class="ticket-lock">
+      <i class="fa-solid fa-lock"></i>
+    </div>`;
+
+  mainCont.append(ticketCont);
+}
+```
+
+This provides a complete `createTicket` function that creates a new ticket with unique features and appends it to the main container.

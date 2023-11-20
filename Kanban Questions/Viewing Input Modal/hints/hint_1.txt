@@ -1,0 +1,26 @@
+Here are hints for understanding the provided JavaScript code:
+
+1. **Variable Declarations:**
+   - There are three variable declarations: `addBtn`, `modalCont`, and `addFlag`.
+   - `addBtn` is likely a reference to a button with a class of "add-btn".
+   - `modalCont` is likely a reference to a modal container with a class of "modal-cont".
+   - `addFlag` is a boolean variable used to track the state of whether the modal should be displayed or hidden.
+
+2. **Event Listener Setup:**
+   - An event listener is set up on the `addBtn` element.
+   - The event being listened for is a "click" event on the button.
+
+3. **Toggle Flag:**
+   - When the "addBtn" is clicked, the `addFlag` is toggled between `true` and `false`.
+   - This toggle is achieved by negating the current value of `addFlag` (`!addFlag`).
+
+4. **Conditional Statement:**
+   - There is a conditional statement (`if` statement) that checks the value of `addFlag`.
+   - If `addFlag` is `true`, the style of `modalCont` is adjusted to make it visible (e.g., `flex` display).
+   - If `addFlag` is `false`, the style of `modalCont` is adjusted to hide it (e.g., `none` display).
+
+5. **Toggle Modal Visibility:**
+   - The code effectively toggles the visibility of the modal container based on the state of `addFlag`.
+   - If `addFlag` is `true`, the modal is displayed; if `addFlag` is `false`, the modal is hidden.
+
+By understanding these hints, you should have a clearer picture of how the code manages the visibility of the modal container in response to the button click.

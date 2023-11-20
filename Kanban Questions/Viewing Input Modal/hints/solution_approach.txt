@@ -1,0 +1,70 @@
+Here's a step-by-step solution approach with code:
+
+### Step 1: Select Elements
+
+Use `document.querySelector` to select the button (`addBtn`) and the modal container (`modalCont`). Ensure that the classes specified in the query selectors match the actual classes used in your HTML.
+
+```javascript
+let addBtn = document.querySelector(".add-btn");
+let modalCont = document.querySelector(".modal-cont");
+```
+
+### Step 2: Set Initial State
+
+Declare a boolean variable (`addFlag`) to track the state of the modal visibility. Set it to `false` initially.
+
+```javascript
+let addFlag = false;
+```
+
+### Step 3: Add Event Listener
+
+Use `addEventListener` to listen for the "click" event on the `addBtn`. When the button is clicked, a callback function is executed.
+
+```javascript
+addBtn.addEventListener("click", function () {
+    // Code inside the event listener will be executed when the button is clicked.
+});
+```
+
+### Step 4: Toggle the Flag
+
+Inside the event listener, toggle the value of `addFlag` using the logical NOT operator (`!`). This flips the boolean value between `true` and `false`.
+
+```javascript
+addFlag = !addFlag;
+```
+
+### Step 5: Adjust Modal Visibility
+
+Use an `if` statement to check the value of `addFlag`. If `addFlag` is `true`, set the `display` property of `modalCont` to "flex" (or any other appropriate value for displaying). If `addFlag` is `false`, set it to "none" (or any value for hiding).
+
+```javascript
+if (addFlag) {
+    modalCont.style.display = "flex";
+} else {
+    modalCont.style.display = "none";
+}
+```
+
+### Step 6: Final Code
+
+Combine all the steps into the final JavaScript code:
+
+```javascript
+let addBtn = document.querySelector(".add-btn");
+let modalCont = document.querySelector(".modal-cont");
+let addFlag = false;
+
+addBtn.addEventListener("click", function () {
+    addFlag = !addFlag;
+
+    if (addFlag) {
+        modalCont.style.display = "flex";
+    } else {
+        modalCont.style.display = "none";
+    }
+});
+```
+
+Make sure to replace the class names and adjust styles as needed based on your HTML and design. This code creates a toggle effect, showing and hiding the modal container when the button is clicked.

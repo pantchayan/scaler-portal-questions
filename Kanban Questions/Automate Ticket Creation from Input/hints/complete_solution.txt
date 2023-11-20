@@ -1,0 +1,15 @@
+// ADDING TICKET TO DOM
+function createTicket(ticketTask, ticketColor) {
+  let id = ticketID++;
+  let ticketCont = document.createElement("div");
+  ticketCont.setAttribute("class", "ticket-cont");
+
+  ticketCont.innerHTML = `<div class="ticket-color ${ticketColor}"></div>
+     <div class="ticket-id">#${id}</div>
+     <div class="task-area">${ticketTask}</div>
+     <div class="ticket-lock">
+       <i class="fa-solid fa-lock"></i>
+    </div>`;
+
+  mainCont.append(ticketCont);
+}

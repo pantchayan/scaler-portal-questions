@@ -13,20 +13,19 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that .action-btn-cont>* has correct CSS", async () => {
+test("Verify that a ticket (div.ticket-cont) is added to div.main-cont when 'shift' key is pressed.", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const bodyHandle = await page.$("body");
 
+  // const addBtn = await page.$("body");
+  page.keyboard.press("Shift");
+
   const check = await page.evaluate((body) => {
-    let element = body.querySelector(".action-btn-cont>*");
-    return (
-      window.getComputedStyle(element).display === "flex" &&
-      window.getComputedStyle(element).alignItems === "center" &&
-      window.getComputedStyle(element).justifyContent === "center" &&
-      window.getComputedStyle(element).color === "rgb(255, 255, 255)"
-    );
+    let mainCont = body.querySelector("div.main-cont");
+
+    return mainCont.contains(body.querySelector("div.ticket-cont"));
   }, bodyHandle);
 
   expect(check).toBeTruthy();

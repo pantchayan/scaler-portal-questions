@@ -1,0 +1,11 @@
+Problem Description :
+
+You need to write JS program that:
+
+When add button (div.add-btn) is clicked, it
+makes the input modal (div.modal-cont) visible.
+
+Visible means -> display is set to flex
+Not Visible means -> display is set to none
+
+Write the code in script.js file, and utilise the flag boolean to manage states for when the modal is visible and not visible.

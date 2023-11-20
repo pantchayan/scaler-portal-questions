@@ -13,19 +13,20 @@ afterAll(async () => {
   await browser.close();
 });
 
-test("Verify that .action-btn-cont>* has correct CSS", async () => {
+test("Verify that div.modal-cont is visible when div.add-btn is clicked. ", async () => {
   const page = await browser.newPage();
   await page.goto("http://localhost:8080");
 
   const bodyHandle = await page.$("body");
 
+  // const addBtn = await page.$("body");
+
   const check = await page.evaluate((body) => {
-    let element = body.querySelector(".action-btn-cont>*");
+    let addBtn = body.querySelector("div.add-btn");
+    addBtn.click();
+    let modalContainer = body.querySelector("div.modal-cont");
     return (
-      window.getComputedStyle(element).display === "flex" &&
-      window.getComputedStyle(element).alignItems === "center" &&
-      window.getComputedStyle(element).justifyContent === "center" &&
-      window.getComputedStyle(element).color === "rgb(255, 255, 255)"
+      window.getComputedStyle(modalContainer).display === "flex"
     );
   }, bodyHandle);
 

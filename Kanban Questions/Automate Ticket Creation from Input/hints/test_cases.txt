@@ -1,0 +1,2 @@
+Test cases:
+1. Verify that a ticket (div.ticket-cont) is added to div.main-cont when 'shift' key is pressed.
