@@ -1,0 +1,28 @@
+Problem Description :
+
+You need to write JS program, so that
+
+When the ticket color band (div.ticket-color) is clicked:
+1. It changes the color.
+2. The new color should be picked from 'colors' Array.
+3. The new color should be the next color mentioned in the 'colors' Array.
+
+For example:
+
+let colors = ["lightpink", "lightgreen", "lightblue", "black"];
+
+According to the colors array if the color of the ticket-band is 'lightpink',
+Then after clicking on it, the new color should be 'lightgreen'
+
+4. To change the color you just need to add the color name as a class to the div.ticket-color element.
+5. Make sure to remove the previous color class from the element.
+
+For example:
+
+<div class="ticket-color lightpink"></div>
+
+after clicking, should become:
+
+<div class="ticket-color lightgreen"></div>
+
+Write the code in the script.js file, you have been provided some boilerplate code to help. 

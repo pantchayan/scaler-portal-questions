@@ -1,0 +1,28 @@
+let ticket = document.querySelector(".ticket-cont");
+
+let colors = ["lightpink", "lightgreen", "lightblue", "black"];
+
+handleColor(ticket)
+
+
+function handleColor(ticket) {
+    let ticketColorBand = ticket.querySelector(".ticket-color");
+  
+    ticketColorBand.addEventListener("click", function () {
+      let currentTicketColor = ticketColorBand.classList[1];
+  
+      let currentColorIdx = colors.findIndex(function (color) {
+        return currentTicketColor === color;
+      });
+  
+      currentColorIdx++;
+  
+      let newTicketColorIdx = currentColorIdx % colors.length;
+  
+      let newTicketColor = colors[newTicketColorIdx];
+  
+      ticketColorBand.classList.remove(currentTicketColor);
+      ticketColorBand.classList.add(newTicketColor);
+
+    });
+  }
