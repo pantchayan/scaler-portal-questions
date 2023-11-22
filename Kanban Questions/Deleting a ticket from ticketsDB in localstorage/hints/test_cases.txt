@@ -1,0 +1,2 @@
+Test cases:
+1. Verify that deleting the ticket from UI, also deletes it from the ticketsDB in localstorage

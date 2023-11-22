@@ -1,0 +1,2 @@
+Test cases:
+1. Verify that the tickets are created in the UI based on the values in the ticketsDB

@@ -1,0 +1,22 @@
+// Step 1: Retrieve Ticket ID from HTML Element
+let ticketID = ticketContArr[i].querySelector(".ticket-id").innerText;
+
+// Step 2: Get the Index of the Ticket in the Array
+let idx = getTicketIdx(ticketID);
+
+// Step 3: Remove the Ticket from the Array
+ticketsArr.splice(idx, 1);
+
+// Step 4: Update Local Storage with Modified Array
+localStorage.setItem("ticketsDB", JSON.stringify(ticketsArr));
+
+// Step 5: Define the getTicketIdx function
+function getTicketIdx(id) {
+  // Step 6: Use findIndex to locate the index of the ticket in the ticketsArr array
+  let ticketIdx = ticketsArr.findIndex(function (ticketObj) {
+    return ticketObj.ticketID === id;
+  });
+
+  // Step 7: Return the index of the ticket
+  return ticketIdx;
+}

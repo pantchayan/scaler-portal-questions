@@ -1,0 +1,16 @@
+Problem Description:
+Write a JavaScript program in the script.js file to:
+
+To update the ticketsArr and ticketsDB Storage Object in the localstorage.
+
+This question is a succession to the question, "Kanban Q8: Button to Delete Ticket from UI"
+
+You have been provided the boilerplate code that handles the deletion of the ticket from UI,
+you need to add new code to the area marked in the script.js file to ensure the task to update ticketsDB in localstorage. 
+
+Hint:
+You need to write a function first to get the index of the ticket being deleted by matching the ids,
+then use this index to delete the item from the ticketArr and then update the ticketsDB with the updated array after stringifying it.
+
+You can visit the "Kanban Q8: Button to Delete Ticket from UI" question again to get better idea of the boilerplate code.
+Further, please focus on passing testcases to submit the problem successfully.
