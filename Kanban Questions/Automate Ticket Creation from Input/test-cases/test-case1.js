@@ -20,6 +20,7 @@ test("Verify that a ticket (div.ticket-cont) is added to div.main-cont when 'shi
   const bodyHandle = await page.$("body");
 
   // const addBtn = await page.$("body");
+  await page.click("div.textArea-cont");
   page.keyboard.press("Shift");
 
   const check = await page.evaluate((body) => {

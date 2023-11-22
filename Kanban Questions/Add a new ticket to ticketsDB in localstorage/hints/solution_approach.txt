@@ -1,0 +1,11 @@
+
+The following snippet accesses the current domain's local Storage object and adds a data item to it using Storage.setItem().
+```
+localStorage.setItem("myCat", "Tom");
+```
+
+Using the above syntax we can devise the solution
+```
+  ticketsArr.push({ ticketTask, ticketColor, ticketID: id });
+  localStorage.setItem("ticketsDB", JSON.stringify(ticketsArr));
+```

@@ -1,0 +1,3 @@
+
+  ticketsArr.push({ ticketTask, ticketColor, ticketID: id });
+  localStorage.setItem("ticketsDB", JSON.stringify(ticketsArr));

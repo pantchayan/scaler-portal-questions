@@ -1,0 +1,5 @@
+
+The following snippet accesses the current domain's local Storage object and adds a data item to it using Storage.setItem().
+```
+localStorage.setItem("myCat", "Tom");
+```

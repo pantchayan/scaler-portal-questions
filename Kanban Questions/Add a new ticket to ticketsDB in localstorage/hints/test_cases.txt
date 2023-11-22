@@ -1,0 +1,2 @@
+Test cases:
+1. Verify that the new ticket's data is added to the ticketsDB in localstorage. 

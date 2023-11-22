@@ -1,0 +1,2 @@
+Test cases:
+1. Verify that Storage Object 'ticketsDB' is created in localstorage. 
