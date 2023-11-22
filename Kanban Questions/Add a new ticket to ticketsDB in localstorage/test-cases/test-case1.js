@@ -18,8 +18,8 @@ test("Verify that the new ticket's data is added to the ticketsDB in localstorag
   await page.goto("http://localhost:8080");
 
   const bodyHandle = await page.$("body");
-  await page.type("div.textArea-cont", "task 1");
-  await page.click("div.textArea-cont");
+  await page.type("textarea.textArea-cont", "task 1");
+  await page.click("textarea.textArea-cont");
 
   page.keyboard.press("Shift");
 
