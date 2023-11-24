@@ -1,0 +1,50 @@
+This is a follow up on 'JS Core - Debounce Function', please refer to it for detailed explanation.
+
+In this problem, you are asked to implement an enhanced debounce() which accepts third parameter, option: {leading: boolean, trailing: boolean}
+
+leading: whether to invoke right away
+trailing: whether to invoke after the delay.
+
+'JS Core - Debounce Function' is the default case with {leading: false, trailing: true}.
+
+Function signature:
+```
+function debounce(func, wait, option = {leading: false, trailing: true}) 
+```
+
+Below given code will be used to perform testing in the background:
+```
+const run = (input, leading, trailing) => {
+      const calls = [];
+
+      const func = (arg) => {
+        calls.push(`${arg}`);
+      };
+
+      const debounced = debounce(func, 3, {leading, trailing});
+      input.forEach((call) => {
+        const [arg, time] = call.split("@");
+        setTimeout(() => debounced(arg), time);
+      });
+      return calls;
+};
+```
+Example 1:
+Input:
+```
+run(["A@0", "B@2", "C@3"], false, true)
+```
+Ouput:
+```
+['C']
+```
+
+Example 2:
+Input:
+```
+run(["A@0", "B@2", "C@3"], true, false)
+```
+Ouput:
+```
+['A']
+```
