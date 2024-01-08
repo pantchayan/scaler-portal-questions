@@ -1,0 +1,5 @@
+
+// Solution Approach:
+
+// Iterate through the array of callback functions.
+// Use setTimeout to introduce a delay of 500 milliseconds between each function execution.

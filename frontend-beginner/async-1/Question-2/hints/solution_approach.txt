@@ -1,0 +1,2 @@
+// Use setInterval to repeatedly execute a function.
+// The function should print the provided message.

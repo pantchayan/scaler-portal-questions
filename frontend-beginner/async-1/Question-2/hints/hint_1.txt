@@ -1,0 +1,5 @@
+// Hints:
+
+// Utilize the setInterval function to execute a given function at regular intervals.
+// Use a variable to keep track of the interval ID.
+// To stop the periodic printing, you can use clearInterval and provide the interval ID.

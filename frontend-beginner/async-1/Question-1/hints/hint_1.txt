@@ -1,0 +1,3 @@
+// Utilize the setTimeout function to introduce the delay.
+// Make use of arrow functions for concise code.
+// Pay attention to the order of operations.

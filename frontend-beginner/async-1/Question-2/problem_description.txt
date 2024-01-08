@@ -1,0 +1,23 @@
+Write a function periodicPrinter that takes a callback function and an interval timeInterval in milliseconds. 
+The function should use setInterval to call the callback function every timeInterval milliseconds until explicitly stopped.
+
+You need to implement the periodicPrinter function, which will use setInterval to repeatedly print the provided message at the specified time interval until stopped.
+
+Note:
+Please make sure to return the intervalId from the function, or else the code would never terminate from backend, resulting in failed testcase.
+
+```javascript
+function periodicPrinter(callback, timeInterval)
+```
+
+**Example**
+
+```javascript
+periodicPrinter(() => {
+      console.log("This is callback");
+}, 1000);
+
+Output:
+Prints "This is callback" at every 1000ms
+```
+

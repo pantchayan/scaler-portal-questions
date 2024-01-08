@@ -1,0 +1,7 @@
+function periodicPrinter(callback, timeInterval) {
+    const intervalId = setInterval(() => {
+        console.log(message);
+    }, timeInterval);
+
+    return intervalId;
+}

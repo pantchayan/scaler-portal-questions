@@ -1,0 +1,5 @@
+Solution Approach:
+
+// Use setTimeout to introduce a delay of 1000 milliseconds.
+// Calculate the sum of a and b.
+// Call the provided callback function with the sum as an argument.

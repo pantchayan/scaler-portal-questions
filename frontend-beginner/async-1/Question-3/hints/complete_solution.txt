@@ -1,0 +1,15 @@
+
+function callbackChain(callbacks) {
+    let index = 0;
+
+    function executeCallback() {
+        if (index < callbacks.length) {
+            callbacks[index]();
+            index++;
+            setTimeout(executeCallback, 500);
+        }
+    }
+
+    executeCallback();
+}
+

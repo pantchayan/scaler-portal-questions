@@ -1,0 +1,4 @@
+// Hints:
+
+// Utilize a loop or recursion to iterate through the array of callbacks.
+// Use the index of the array to calculate the delay.
