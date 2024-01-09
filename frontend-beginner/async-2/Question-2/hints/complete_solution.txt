@@ -1,0 +1,8 @@
+
+function timeoutPromise(delay) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(`Promise resolved after ${delay} milliseconds`);
+        }, delay);
+    });
+}

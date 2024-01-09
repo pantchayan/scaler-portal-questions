@@ -1,0 +1,4 @@
+Hints:
+
+// Utilize the Promise constructor and setTimeout.
+// Remember that the resolve function can be called to fulfill the Promise.

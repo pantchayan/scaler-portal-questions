@@ -1,0 +1,5 @@
+Solution Approach:
+
+// Use the Promise constructor to create a new Promise.
+// Use setTimeout to introduce the specified delay.
+// Resolve the Promise after the delay.

@@ -1,0 +1,2 @@
+Test Case 1 => If promise is resolved in 1000ms delay.
+Test Case 2 => If promise is resolved in 500ms delay.

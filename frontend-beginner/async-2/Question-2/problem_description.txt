@@ -1,0 +1,19 @@
+Write a function timeoutPromise that takes a delay time in milliseconds and returns a Promise. The Promise should resolve after the specified delay.
+
+You need to implement the timeoutPromise function, which returns a Promise. The Promise should resolve after the specified delay time.
+
+Note:
+Please make sure to return the intervalId from the function, or else the code would never terminate from backend, resulting in failed testcase.
+
+```javascript
+function timeoutPromise(delay) 
+```
+
+```javascript
+
+// Test Cases
+timeoutPromise(2000)
+    .then(result => console.log(result)) // Expected output after 2000ms: "Promise resolved after 2000 milliseconds"
+    .catch(error => console.error(error));
+```
+
